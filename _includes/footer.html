@@ -1,0 +1,11 @@
+<footer>
+  <div class="container text-center">
+    <div class="icons">
+      <a href="https://twitter.com/{{ site.twitter_username }}"><span class="icon icon-twitter hvr-pop">{% include icon-twitter.svg %}</span></a>
+      <a href="https://facebook.com/{{ site.facebook_username }}"><span class="icon icon-facebook hvr-pop">{% include icon-facebook.svg %}</span></a>
+      <a href="https://github.com/{{ site.github_username }}"><span class="icon icon-github hvr-pop">{% include icon-github.svg %}</span></a>
+      <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="icon icon-rss hvr-pop">{% include icon-rss.svg %}</span></a>
+    </div>
+    <p class="text-muted small">© {{ site.name }}</p>
+  </div>
+</footer>

@@ -1,0 +1,30 @@
+---
+layout: post
+title: "THLabel – UILabel subclass"
+date: 2012-12-22
+---
+I am releasing a UILabel subclass, which allows shadow blur, stroke text and fill gradient. You can find it here: [tobihagemann/THLabel][thlabel]
+
+<div class="thumbnail thumbnail-right">
+  <img width="160px" src="{{ "/img/2012-12-22-thlabel-screenshot.png" | prepend: site.baseurl }}" alt="THLabel screenshot" class="img-responsive"/>
+  <div class="caption">
+    <small>THLabel screenshot</small>
+  </div>
+</div>
+
+I know that there are already classes out there like [OHAttributedLabel][ohattributedlabel], [FXLabel][fxlabel] and [KSLabel][kslabel], but none of them fulfilled all my needs for my game. My motivation was:
+
+- I needed an outer stroke, which seems to be kind of special, because Core Graphics only can centered stroke. I found the neat solution in KSLabel, which doubles the stroke size and draws the text just over it again, which cuts the stroke into halves.
+- The stroke manipulates the character glyph widths, which has to be dealt with in all style operations. I came up with the idea of using invisible strokes, which works perfectly.
+- Shadow has to be also thrown off by the stroke, not the text only!
+
+Thanks to Kai Schweiger for making [KSLabel][kslabel], which started my own implementation, and Nick Lockwood for making [FXLabel][fxlabel], which is just insanely great, and I adapted most of his framework.
+
+I had to reorganize the `drawRect:` method several times, which caused me a lot of headache. :smile: For learning purposes I built the class from ground up, that's why I didn't just enhance FXLabel for example.
+
+If you find any bugs or want to give feedback, I'm happy to hear them! :smile:
+
+[thlabel]: https://github.com/tobihagemann/THLabel "THLabel"
+[ohattributedlabel]: https://github.com/AliSoftware/OHAttributedLabel "OHAttributedLabel"
+[fxlabel]: https://github.com/nicklockwood/FXLabel "FXLabel"
+[kslabel]: https://github.com/vigorouscoding/KSLabel "KSLabel"

@@ -1,0 +1,22 @@
+# Site settings
+title: tobiha.de
+name: Tobias Hagemann
+email: tobias [dot] hagemann [at] gmail [dot] com
+description: Tobias Hagemann • Independent iOS App Developer & Designer
+baseurl: ""
+url: "https://tobiha.de"
+twitter_username: tobihagemann
+facebook_username: hagemann.tobias
+github_username: tobihagemann
+
+# Plugins
+gems:
+  - jekyll-paginate
+  - jemoji
+
+# Outputting
+permalink: /:year/:month/:day/:title/
+
+# Pagination
+paginate: 10
+paginate_path: /blog/page/:num/

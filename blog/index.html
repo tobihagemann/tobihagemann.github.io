@@ -1,0 +1,39 @@
+---
+layout: page
+title: Blog
+---
+<dl class="dl-horizontal">
+  {% for post in paginator.posts %}
+  <dt>{{ post.date | date: "%Y-%m-%d" }}</dt>
+  <dd>
+    <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 320 }}</p>
+  </dd>
+  {% endfor %}
+</dl>
+
+{% if paginator.total_pages > 1 %}
+<nav class="text-center">
+  <ul class="pagination">
+  {% if paginator.previous_page %}
+    <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+  {% else %}
+    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+  {% endif %}
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <li class="active"><a href="#">{{ page }} <span class="sr-only">(current)</span></a></li>
+    {% elsif page == 1 %}
+      <li><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a></li>
+    {% else %}
+      <li><a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a></li>
+    {% endif %}
+  {% endfor %}
+  {% if paginator.next_page %}
+    <li><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+  {% else %}
+    <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+  {% endif %}
+  </ul>
+</nav>
+{% endif %}
