@@ -1,14 +1,6 @@
 /**
  * Basic
  */
-body {
-  padding-bottom: $spacing-unit * 2;
-}
-
-hr {
-  margin: $spacing-unit 0;
-}
-
 img.avatar {
   width: 230px;
   height: 230px;
@@ -16,10 +8,6 @@ img.avatar {
 }
 
 .post {
-  padding-bottom: $spacing-unit / 2;
-}
-
-.pagination {
   padding-bottom: $spacing-unit / 2;
 }
 
@@ -33,10 +21,6 @@ img.avatar {
   float: right !important;
   margin-left: $spacing-unit / 2;
   max-width: 40%;
-}
-
-.caption {
-  word-wrap: break-word;
 }
 
 
@@ -59,50 +43,40 @@ footer .icon {
 
 .icon-tobiha {
   &:hover, &:focus, &:active {
-    > svg {
-      path {
-        fill: #34495e;
-      }
+    > svg path {
+      fill: #34495e;
     }
   }
 }
 
 .icon-twitter {
   &:hover, &:focus, &:active {
-    > svg {
-      path {
-        fill: #55acee;
-      }
+    > svg path {
+      fill: #55acee;
     }
   }
 }
 
 .icon-facebook {
   &:hover, &:focus, &:active {
-    > svg {
-      path {
-        fill: #3b5998;
-      }
+    > svg path {
+      fill: #3b5998;
     }
   }
 }
 
 .icon-github {
   &:hover, &:focus, &:active {
-    > svg {
-      path {
-        fill: #333333;
-      }
+    > svg path {
+      fill: #333333;
     }
   }
 }
 
 .icon-rss {
   &:hover, &:focus, &:active {
-    > svg {
-      path {
-        fill: #f26522;
-      }
+    > svg path {
+      fill: #f26522;
     }
   }
 }

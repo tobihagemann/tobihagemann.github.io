@@ -23,6 +23,11 @@ body {
   -o-font-feature-settings: "kern" 1;
   font-feature-settings: "kern" 1;
   font-kerning: normal;
+  padding-bottom: $spacing-unit * 2;
+}
+
+hr {
+  margin: $spacing-unit 0;
 }
 
 
@@ -58,6 +63,10 @@ figure > img {
 
 figcaption {
   font-size: $small-font-size;
+}
+
+.caption {
+  word-wrap: break-word;
 }
 
 
@@ -206,5 +215,29 @@ pre {
     path {
       fill: $grey-color;
     }
+  }
+}
+
+
+
+/**
+ * Pagination
+ */
+.pagination {
+  padding-bottom: $spacing-unit / 2;
+
+  > .active > a, > .active > span {
+    pointer-events: none;
+    background-color: $brand-color;
+    border-color: $brand-color;
+
+    &:hover, &:focus {
+      background-color: $brand-color;
+      border-color: $brand-color;
+    }
+  }
+
+  > .disabled > a {
+    pointer-events: none;
   }
 }
