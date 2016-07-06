@@ -3,7 +3,7 @@
  */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+dl, dt, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
 }
@@ -76,13 +76,18 @@ li {
   }
 }
 
+dt {
+  font-weight: $base-font-weight;
+}
+
 
 
 /**
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+  font-family: $head-font-family;
+  font-weight: $head-font-weight;
 }
 
 
@@ -99,7 +104,7 @@ a {
   }
 
   &:hover {
-    color: $text-color;
+    color: darken($brand-color, 30%);
     text-decoration: underline;
   }
 }
@@ -132,7 +137,8 @@ code {
   font-size: 15px;
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: $highlight-color;
+  color: $text-color;
 }
 
 code {

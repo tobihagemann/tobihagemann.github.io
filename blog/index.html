@@ -4,8 +4,8 @@ title: Blog
 ---
 <dl class="dl-horizontal">
   {% for post in paginator.posts %}
-  <dt>{{ post.date | date: "%Y-%m-%d" }}</dt>
-  <dd>
+  <dt class="text-muted">{{ post.date | date: "%Y-%m-%d" }}</dt>
+  <dd class="post">
     <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
     <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 320 }}</p>
   </dd>
