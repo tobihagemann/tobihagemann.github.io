@@ -46,15 +46,30 @@ img.avatar {
  * from https://github.com/danleech/simple-icons/tree/gh-pages/icons
  * with http://brandcolors.net/
  */
-footer .icons > a {
-  display: inline-block;
+.navbar-brand.icon > svg {
+  width: 20px;
+  height: 20px;
+  vertical-align: sub;
+}
+
+footer .icon {
   margin: $spacing-unit $spacing-unit / 2;
   text-decoration: none;
 }
 
+.icon-tobiha {
+  &:hover, &:focus, &:active {
+    > svg {
+      path {
+        fill: #34495e;
+      }
+    }
+  }
+}
+
 .icon-twitter {
-  > svg {
-    &:hover, &:focus, &:active {
+  &:hover, &:focus, &:active {
+    > svg {
       path {
         fill: #55acee;
       }
@@ -63,8 +78,8 @@ footer .icons > a {
 }
 
 .icon-facebook {
-  > svg {
-    &:hover, &:focus, &:active {
+  &:hover, &:focus, &:active {
+    > svg {
       path {
         fill: #3b5998;
       }
@@ -73,8 +88,8 @@ footer .icons > a {
 }
 
 .icon-github {
-  > svg {
-    &:hover, &:focus, &:active {
+  &:hover, &:focus, &:active {
+    > svg {
       path {
         fill: #333333;
       }
@@ -83,8 +98,8 @@ footer .icons > a {
 }
 
 .icon-rss {
-  > svg {
-    &:hover, &:focus, &:active {
+  &:hover, &:focus, &:active {
+    > svg {
       path {
         fill: #f26522;
       }
