@@ -6,7 +6,7 @@ date: 2012-05-09
 I mentioned in the [first post][first-post] that I'm using cocos2d for Spectrum Run. It basically is a 2D game framework. You can import images/sprites, move them around, do whatever you want with them and much more! I'm using [Texture Packer][texture-packer] by Andreas Löw / code'n'web, which is a VERY handy tool for organizing sprite sheets. I was thinking about improving performance and generally how I should handle textures better. I didn't really know all features of Texture Packer until I recently came across [this tutorial][rw-tutorial] by Ray Wenderlich and this tool just became more awesome!
 
 <div class="thumbnail thumbnail-right">
-  <img width="320px" src="{{ "/img/2012-05-09-dithering-comparison.png" | prepend: site.baseurl }}" alt="&quot;NearestNeighbour&quot; (left) vs. &quot;FloydSteinberg&quot; (right)" class="img-responsive"/>
+  <img width="320px" src="{{ "/assets/2012-05-09-dithering-comparison.png" | prepend: site.baseurl }}" alt="&quot;NearestNeighbour&quot; (left) vs. &quot;FloydSteinberg&quot; (right)" class="img-responsive"/>
   <div class="caption">
     <small>&quot;NearestNeighbour&quot; (left) vs. &quot;FloydSteinberg&quot; (right)</small>
   </div>

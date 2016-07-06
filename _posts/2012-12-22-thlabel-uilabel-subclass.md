@@ -2,15 +2,16 @@
 layout: post
 title: "THLabel – UILabel subclass"
 date: 2012-12-22
+excerpt: "I am releasing a UILabel subclass, which allows shadow blur, stroke text and fill gradient. You can find it here: tobihagemann/THLabel"
 ---
-I am releasing a UILabel subclass, which allows shadow blur, stroke text and fill gradient. You can find it here: [tobihagemann/THLabel][thlabel]
-
 <div class="thumbnail thumbnail-right">
-  <img width="160px" src="{{ "/img/2012-12-22-thlabel-screenshot.png" | prepend: site.baseurl }}" alt="THLabel screenshot" class="img-responsive"/>
+  <img width="160px" src="{{ "/assets/2012-12-22-thlabel-screenshot.png" | prepend: site.baseurl }}" alt="THLabel screenshot" class="img-responsive"/>
   <div class="caption">
     <small>THLabel screenshot</small>
   </div>
 </div>
+
+I am releasing a UILabel subclass, which allows shadow blur, stroke text and fill gradient. You can find it here: [tobihagemann/THLabel][thlabel]
 
 I know that there are already classes out there like [OHAttributedLabel][ohattributedlabel], [FXLabel][fxlabel] and [KSLabel][kslabel], but none of them fulfilled all my needs for my game. My motivation was:
 

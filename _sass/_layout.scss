@@ -26,11 +26,17 @@ img.avatar {
 .thumbnail-left {
   float: left !important;
   margin-right: $spacing-unit / 2;
+  max-width: 40%;
 }
 
 .thumbnail-right {
   float: right !important;
   margin-left: $spacing-unit / 2;
+  max-width: 40%;
+}
+
+.caption {
+  word-wrap: break-word;
 }
 
 
