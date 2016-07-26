@@ -13,25 +13,25 @@ There are two Frameworks out there, which are both dealing with the same thing: 
 
 So I was looking for an alternative to CocosDenshion and found ObjectAL, which sounded really promising. There is an interesting flag you can set called "useHardwareIfAvailable". I'm not quite sure what it internally does, but deactivating it causes at least no fadings. In fact it's just like Angry Birds now, where both ingame and iPod musics are playing. So the last thing to do is to mute or resume the ingame music, if there is iPod music playing or not. This is something you can google, if you dig deep enough. Add an observer to the `NSNotificationCenter` in your init:
 
-{% highlight objc %}
+```objc
 MPMusicPlayerController *iPodController = [MPMusicPlayerController iPodMusicPlayer];
 [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(iPodStateChanged:) name:MPMusicPlayerControllerPlaybackStateDidChangeNotification object:iPodController];
 [iPodController beginGeneratingPlaybackNotifications];
-{% endhighlight %}
+```
 
 Don't forget to remove the observer in your dealloc:
 
-{% highlight objc %}
+```objc
 [[NSNotificationCenter defaultCenter] removeObserver:self];
-{% endhighlight %}
+```
 
-{% highlight objc %}
+```objc
 - (void)iPodStateChanged:(NSNotification *)notification {
   NSParameterAssert([notification.object isKindOfClass:MPMusicPlayerController.class]);
   MPMusicPlayerController *iPodController = (MPMusicPlayerController*)[notification object];
   // e.g. use [iPodController playbackState] to set [[OALSimpleAudio sharedInstance] bgVolume] accordingly
 }
-{% endhighlight %}
+```
 
 That's it! As simple as that! Have fun listening to your own music and switch instantly to the ingame music whenever you want!
 

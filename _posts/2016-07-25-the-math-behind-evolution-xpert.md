@@ -44,7 +44,7 @@ INT remainingCandies = availableCandies + requiredTransfers - (possibleEvolution
 RETURN possibleEvolutions, requiredTransfers, remainingPokemon, remainingCandies
 ```
 
-That's it! :tada: I've run some unit tests and ran the old algorithm against the new one (0-10000 `availablePokemon` and 0-10000 `availableCandies`). As far as I can tell, the output is identical. If you'd like to use this calculation in your own calculator, please attribute my name and link to this blog post. Thank you!
+That's it! :tada: I've run some unit tests and ran the old algorithm against the new one (0-10000 `availablePokemon` and 0-10000 `availableCandies`). As far as I can tell, the output is identical. If you find any errors or even better if you find any possible optimizations, please tell me!
 
 [evoxpert-ios]: https://itunes.apple.com/app/id1135176839 "Evolution XPert for iOS"
 [manu]: http://manuel-kehl.de/ "Manuel Kehl"
