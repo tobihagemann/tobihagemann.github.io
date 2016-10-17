@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/tobihagemann
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://tobiha.de
+  * I am tobihagemann (https://keybase.io/tobihagemann) on keybase.
+  * I have a public key with fingerprint B6A3 38A2 F6C1 4F09 6C1A  8525 69CE FAD5 1959 8989
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101d7936ea828cda0215f9695a991a0c55e62753ea0648761bf8ad45b11c56580600a",
+            "fingerprint": "b6a338a2f6c14f096c1a852569cefad519598989",
+            "host": "keybase.io",
+            "key_id": "69cefad519598989",
+            "kid": "0101d7936ea828cda0215f9695a991a0c55e62753ea0648761bf8ad45b11c56580600a",
+            "uid": "2962962762dceeafe3d7bfe000266119",
+            "username": "tobihagemann"
+        },
+        "service": {
+            "hostname": "tobiha.de",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1476735316,
+    "expire_in": 157680000,
+    "prev": "b50c30b23123483bcaa49f0802c67eda69b707a73698db947f9bdc6b0ccc90a9",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.58
+Comment: https://keybase.io/crypto
+
+yMIiAnicrVJJaBRBFJ2Jk6hxiYKIoh5s8KCOQ1X3VHXXeBCDIklA3BD3saq6OmnH
+dI/TPXGJMTEIWQhEUEGDigdBwSjBHMSImgSJxgVPAZVBYSBgEHGJGgVRq4MeBI9S
+BZ/69d7773/+vWkTQsXhlubjvefgme7wo77T2dCWQripVmGueVBJ1CopMR7EXlN4
+fjJlm0pCARBAUycaFtRQDW5SoEJkEUwQJQRSwBESWNWRJijAcUPHkFkGNeOIQcgR
+RgbAAFAlqli2Uyky6Yzt+FKWYappBlUtzGHcAkQGaiAVYcKFRU0ECSKGPJJY5XoB
+Q5pj1BMx25U5+UiO2/sH/j/7zo7LqQQHV8eqyYWgltBMnVkCAKBiDGFQN+uJjEOr
+hUT7LrOraKWopo6j1EUV+VNjcxEMN+jmL1TMFJKczri+y929Ml3l+2kvEdD8g+kA
+t1+w5G+FJLMdUw5SMmpExrNdR0lAieS+HUjCuI51DWkQRxVxIG1nRNIOEEjHhrQK
+gjqiJhg/AlwDTNWgqsUNjXFK48QCBlA51oVJMWE60KmuYWKYjMR1izCTYwY45wTQ
+oF1P7HNcJRGXNmmllPTsSof62YxQ6vp7d0RC4eJQUWFBsGCh4skz/qzd3RUTf5bx
+sUWbrVnl5ezr/OTw/aHklIabPZPXTIq8vnW0o3z62YGZNZlv2ZFwOFHx7Gnh0IKu
+hwtxOz1dYnRNXfs89v6O1egu+5ROb20r+7iOvo017X53onnlxgs3em/nTu7Ytjrn
+fq3vOBUbVadFVzXlKsZWRJZvyDV0tl+O0Lbk+WvbQej7lZ6PrR3DRTvRkfw7dirc
+vazNiV7sHDVaDKu0KT99ZMarNyMT0YH8pV3dhW/P7sl/ntl//cVS0bdkXueaxQXD
+V0t/RIZ3q19KWs0bL18e6j8869iPxkFyOf9JLRjtq/bqHyhNqQ/7h3rWXy8efDK7
+PpIamzun6lBF9+uigc3K41+Fqj62
+=fclG
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tobihagemann
+
+==================================================================
