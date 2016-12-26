@@ -1,0 +1,50 @@
+---
+# front matter to make sure, jekyll translates this scss file
+---
+@charset "utf-8";
+@import "variables";
+
+.container-fluid {
+  padding: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+#home {
+  background: url("/assets/background.jpg") no-repeat center;
+  @include image-2x("/assets/background@2x.jpg");
+  background-size: cover;
+  height: 100%;
+  color: #fff;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:visited {
+      color: darken(#fff, 15%);
+    }
+
+    &:hover {
+      color: darken(#fff, 30%);
+      text-decoration: none;
+    }
+  }
+}
+
+.avatar {
+  width: 230px;
+  padding: 0 $spacing-unit/2;
+  margin-top: $spacing-unit*1.5;
+  margin-bottom: $spacing-unit/2;
+}
+
+.headings {
+  padding: $spacing-unit $spacing-unit/2;
+  background: -webkit-linear-gradient(transparent, $brand-color-dark);
+  background: -o-linear-gradient(transparent, $brand-color-dark);
+  background: -moz-linear-gradient(transparent, $brand-color-dark);
+  background: linear-gradient(transparent, $brand-color-dark);
+}

@@ -1,11 +1,13 @@
 ---
 layout: default
 ---
-<header class="page-header">
-  <h1>{{ page.title }}</h1>
-  <p class="text-muted">{{ page.date | date: "%Y-%m-%d" }}</p>
-</header>
+<div class="container">
+  <header class="page-header">
+    <h1>{{ page.title }}</h1>
+    <p class="text-muted">{{ page.date | date: "%Y-%m-%d" }}</p>
+  </header>
 
-<article>
-  {{ content }}
-</article>
+  <article>
+    {{ content }}
+  </article>
+</div>
