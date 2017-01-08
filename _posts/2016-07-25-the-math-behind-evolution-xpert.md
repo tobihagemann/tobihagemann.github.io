@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Math behind Evolution XPert"
+title: "The Math Behind Evolution XPert"
 date: 2016-07-25
 ---
 I've released [Evolution XPert for iOS][evoxpert-ios] last week (a calculator app for Pokémon GO; [Manu][manu] made the [Android app][evoxpert-android]) and I wanted to share with you the math behind it. Obviously, there are similar projects due to the massive success of Pokémon GO, but all the calculators I've seen so far lack in their implementation. Projects like [PidgeyCalc][pidgeycalc] are at least doing the correct calculation, but the algorithm used has a complexity of `O(n)`, which is fine for low numbers. Others like [PokéLevel][pokelevel] are calculating the wrong numbers, which doesn't make any sense for a calculator and should be precise by definition, but can be fixed very quickly.

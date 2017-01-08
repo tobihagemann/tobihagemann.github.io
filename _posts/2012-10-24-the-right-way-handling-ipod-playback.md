@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The right way handling iPod playback"
+title: "The Right Way Handling iPod Playback"
 date: 2012-10-24
 ---
 I am pretty unhappy with the current implementation of audio handling in Spectrum Run. In fact a lot of games have mediocre or really bad audio handling. I'm talking specifically about dealing with iPod playback. I don't know if it's just me, but sometimes I want to hear my own music while playing games. And I want the possiblity to switch to the ingame music instantly. No stupid fade ins and fade outs (don't get me wrong, I love smooth transitions, but this one is just annoying).

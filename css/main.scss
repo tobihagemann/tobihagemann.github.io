@@ -5,6 +5,17 @@
 
 
 
+@media print {
+  a[href] {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: none;
+  }
+}
+
+
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
   "variables",

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "THLabel – UILabel subclass"
+title: "THLabel – UILabel Subclass"
 date: 2012-12-22
 excerpt: "I am releasing a UILabel subclass, which allows shadow blur, stroke text and fill gradient. You can find it here: tobihagemann/THLabel"
 ---
