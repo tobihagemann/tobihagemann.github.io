@@ -33,6 +33,9 @@
 footer .icon {
   margin: $spacing-unit $spacing-unit / 2;
   text-decoration: none;
+  @media (max-width: 356px) {
+    margin: $spacing-unit $spacing-unit / 3;
+  }
 }
 
 .icon-tobiha {
