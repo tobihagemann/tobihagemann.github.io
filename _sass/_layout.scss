@@ -46,7 +46,7 @@ footer .icon {
 .icon-twitter {
   &:hover, &:focus, &:active {
     > svg path {
-      fill: #55acee;
+      fill: #1da1f2;
     }
   }
 }
@@ -63,6 +63,14 @@ footer .icon {
   &:hover, &:focus, &:active {
     > svg path {
       fill: #333333;
+    }
+  }
+}
+
+.icon-keybase {
+  &:hover, &:focus, &:active {
+    > svg path {
+      fill: #ff6f21;
     }
   }
 }
