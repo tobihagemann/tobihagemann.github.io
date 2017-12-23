@@ -2,6 +2,7 @@
 layout: post
 title: "Updates, Updates, Updates"
 date: 2013-03-23
+stylesheets: ['/css/blog-post.css']
 ---
 I haven't been really creative in the last couple of days/weeks. I guess I had to step back a little from all the hard work. There is no way I can stop completely though, because I enjoy coding and designing apps too much! :smile:
 

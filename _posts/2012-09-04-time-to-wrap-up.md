@@ -2,9 +2,11 @@
 layout: post
 title: "Time to Wrap Up!"
 date: 2012-09-04
+stylesheets: ['/css/blog-post.css']
 ---
 Recently I got an E-Mail from Apple that it's time to upload Spectrum Run:
 
+{:.blockquote}
 > Dear Tobias Hagemann,
 >
 > You have not yet uploaded a binary for your app, Spectrum Run. Our records show that this app was created in iTunes Connect more than 150 days ago.

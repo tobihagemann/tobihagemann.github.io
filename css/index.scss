@@ -2,22 +2,31 @@
 # front matter to make sure, jekyll translates this scss file
 ---
 @charset "utf-8";
+@import "custom";
+@import "functions";
 @import "variables";
+
+@mixin image-2x($image) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+  }
+}
 
 .container-fluid {
   padding: 0;
-}
-
-.navbar {
-  margin-bottom: 0;
 }
 
 #home {
   background: url("/assets/background.jpg") no-repeat center;
   @include image-2x("/assets/background@2x.jpg");
   background-size: cover;
-  height: 100%;
   color: #fff;
+  height: 100%;
 
   a {
     color: #fff;
@@ -35,16 +44,16 @@
 }
 
 .avatar {
-  width: 230px;
-  padding: 0 $spacing-unit/2;
-  margin-top: $spacing-unit*1.5;
-  margin-bottom: $spacing-unit/2;
+  margin-bottom: $spacer;
+  margin-top: $spacer * 3;
+  padding: 0 $spacer;
+  width: 232px;
 }
 
 .headings {
-  padding: $spacing-unit $spacing-unit/2;
-  background: -webkit-linear-gradient(transparent, $brand-color-dark);
-  background: -o-linear-gradient(transparent, $brand-color-dark);
-  background: -moz-linear-gradient(transparent, $brand-color-dark);
-  background: linear-gradient(transparent, $brand-color-dark);
+  background: -webkit-linear-gradient(transparent, theme-color("secondary"));
+  background: -o-linear-gradient(transparent, theme-color("secondary"));
+  background: -moz-linear-gradient(transparent, theme-color("secondary"));
+  background: linear-gradient(transparent, theme-color("secondary"));
+  padding: $spacer * 2 $spacer;
 }

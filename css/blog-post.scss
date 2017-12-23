@@ -1,0 +1,53 @@
+---
+# front matter to make sure, jekyll translates this scss file
+---
+@charset "utf-8";
+@import "custom";
+@import "functions";
+@import "variables";
+@import "mixins/breakpoints";
+@import "mixins/clearfix";
+
+article {
+  @include clearfix();
+}
+
+blockquote {
+  border-left: $spacer * .25 solid gray("200");
+  padding: $spacer * .75 $spacer;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+pre,
+code {
+  background-color: $highlight;
+  border-radius: $border-radius;
+  color: $body-color;
+}
+
+pre {
+  padding: $spacer * .75;
+
+  > code {
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    figure.float#{$infix}-left {
+      margin-right: $spacer;
+    }
+
+    figure.float#{$infix}-right {
+      margin-left: $spacer;
+    }
+  }
+}

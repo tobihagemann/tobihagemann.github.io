@@ -2,13 +2,15 @@
 layout: post
 title: "Making Vector Graphics Like Nerds"
 date: 2012-10-15
+stylesheets: ['/css/blog-post.css']
+
 excerpt: "I'm working on a minor update for Spectrum Run. As for now, you can only see the global ranking of your scores in the \"End Game\" screen. I want to add friends ranking to it, so you don't have to switch to Game Center all the time to check your ranking. Instead of using texts I decided to visualize these separate rankings with icons."
 ---
-<div class="thumbnail thumbnail-right">
-  <img width="80px" src="{{ "/assets/2012-10-15-friends-icon.png" | prepend: site.baseurl }}" alt="Friends Icon" class="img-responsive"/>
-  <div class="caption">
-    <small>Friends Icon</small>
-  </div>
+<div class="text-center">
+  <figure class="figure float-md-right" style="max-width: 80px;">
+    <img class="figure-img img-fluid rounded" src="{{ "/assets/2012-10-15-friends-icon.png" | prepend: site.baseurl }}" alt="Friends Icon"/>
+    <figcaption class="figure-caption text-center">Friends Icon</figcaption>
+  </figure>
 </div>
 
 I'm working on a minor update for Spectrum Run. As for now, you can only see the global ranking of your scores in the "End Game" screen. I want to add friends ranking to it, so you don't have to switch to Game Center all the time to check your ranking. Instead of using texts I decided to visualize these separate rankings with icons.

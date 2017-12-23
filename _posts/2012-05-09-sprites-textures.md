@@ -2,14 +2,15 @@
 layout: post
 title: "Sprites & Textures"
 date: 2012-05-09
+stylesheets: ['/css/blog-post.css']
 ---
 I mentioned in the [first post][first-post] that I'm using cocos2d for Spectrum Run. It basically is a 2D game framework. You can import images/sprites, move them around, do whatever you want with them and much more! I'm using [Texture Packer][texture-packer] by Andreas Löw / code'n'web, which is a VERY handy tool for organizing sprite sheets. I was thinking about improving performance and generally how I should handle textures better. I didn't really know all features of Texture Packer until I recently came across [this tutorial][rw-tutorial] by Ray Wenderlich and this tool just became more awesome!
 
-<div class="thumbnail thumbnail-right">
-  <img width="320px" src="{{ "/assets/2012-05-09-dithering-comparison.png" | prepend: site.baseurl }}" alt="&quot;NearestNeighbour&quot; (left) vs. &quot;FloydSteinberg&quot; (right)" class="img-responsive"/>
-  <div class="caption">
-    <small>&quot;NearestNeighbour&quot; (left) vs. &quot;FloydSteinberg&quot; (right)</small>
-  </div>
+<div class="text-center">
+  <figure class="figure float-md-right" style="max-width: 320px;">
+    <img class="figure-img img-fluid rounded" src="{{ "/assets/2012-05-09-dithering-comparison.png" | prepend: site.baseurl }}" alt="&quot;NearestNeighbour&quot; (left) vs. &quot;FloydSteinberg&quot; (right)"/>
+    <figcaption class="figure-caption text-center">&quot;NearestNeighbour&quot; (left) vs. &quot;FloydSteinberg&quot; (right)</figcaption>
+  </figure>
 </div>
 
 I already knew that I should use the RGBA4444 pixel format, but I was so shocked about the low quality, I reverted the changes instantly. So the first thing I've learned is that I can turn on "FloydSteinberg(+Alpha)" dithering. The textures looked much better after that! The second thing is that I should use the ".pvr.ccz" format instead of ".png" to save memory and even let the game start up much faster! Memory is expensive on mobile devices, I want to use as less as possible.

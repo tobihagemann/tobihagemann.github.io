@@ -2,24 +2,187 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
+@import "custom";
+@import "bootstrap";
+@import "syntax-highlighting";
 
+//
+// Responsive Headings
+//
+@include media-breakpoint-down(sm) {
+  h1, .h1 { font-size: $h2-font-size; }
+  h2, .h2 { font-size: $h3-font-size; }
+  h3, .h3 { font-size: $h4-font-size; }
+  h4, .h4 { font-size: $h5-font-size; }
+  h5, .h5 { font-size: $h6-font-size; }
+}
 
+@include media-breakpoint-down(xs) {
+  h1, .h1 { font-size: $h3-font-size; }
+  h2, .h2 { font-size: $h4-font-size; }
+  h3, .h3 { font-size: $h5-font-size; }
+  h4, .h4 { font-size: $h6-font-size; }
+  h5, .h5 { font-size: $h6-font-size; }
+}
 
-@media print {
-  a[href] {
-    text-decoration: underline;
-  }
-  a[href]:after {
-    content: none;
+//
+// Icons
+// from https://github.com/danleech/simple-icons/tree/gh-pages/icons
+// with http://brandcolors.net/
+//
+.icon > svg {
+  display: inline-block;
+  height: 2rem;
+  vertical-align: middle;
+  width: 2rem;
+
+  path {
+    fill: gray("600");
   }
 }
 
+//
+// Header & Footer
+//
+.navbar-brand {
+  > svg {
+    height: 1.25rem;
+    vertical-align: text-bottom;
+    width: 1.25rem;
 
+    path {
+      fill: $navbar-light-color;
+    }
+  }
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-  "variables",
-  "base",
-  "layout",
-  "syntax-highlighting"
-;
+  .tobiha {
+    color: $navbar-light-color;
+  }
+
+  &.icon-tobiha {
+    &:hover, &:focus, &:active, &.active {
+      > svg path {
+        fill: theme-color("secondary");
+      }
+
+      .tobiha {
+        color: theme-color("secondary");
+      }
+    }
+  }
+}
+
+header {
+  border-bottom: 1px solid gray("200");
+  margin-bottom: $spacer;
+  margin-top: $spacer * 3;
+}
+
+footer {
+  margin-bottom: $spacer * 3;
+  margin-top: $spacer;
+
+  .icon {
+    margin: $spacer * 2 $spacer;
+
+    @include media-breakpoint-down(xs) {
+      margin: $spacer * 2 $spacer * .5;
+    }
+  }
+
+  .icon-twitter {
+    &:hover, &:focus, &:active {
+      > svg path {
+        fill: #1da1f2;
+      }
+    }
+  }
+
+  .icon-facebook {
+    &:hover, &:focus, &:active {
+      > svg path {
+        fill: #3b5998;
+      }
+    }
+  }
+
+  .icon-github {
+    &:hover, &:focus, &:active {
+      > svg path {
+        fill: #333333;
+      }
+    }
+  }
+
+  .icon-keybase {
+    &:hover, &:focus, &:active {
+      > svg path {
+        fill: #ff6f21;
+      }
+    }
+  }
+
+  .icon-rss {
+    &:hover, &:focus, &:active {
+      > svg path {
+        fill: #f26522;
+      }
+    }
+  }
+}
+
+//
+// Description List
+//
+dt {
+  margin-bottom: $spacer * .5;
+}
+
+dd {
+  margin-bottom: $spacer;
+
+  &:last-child,
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+//
+// Animations
+// from https://github.com/IanLunn/Hover/blob/master/css/hover.css
+//
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}

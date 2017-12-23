@@ -1,0 +1,19 @@
+---
+# front matter to make sure, jekyll translates this scss file
+---
+@charset "utf-8";
+@import "functions";
+@import "variables";
+@import "mixins/breakpoints";
+
+dt {
+  text-align: right;
+
+  @include media-breakpoint-down(md) {
+    text-align: left;
+  }
+}
+
+.nav-blog {
+  margin: $spacer * 2 0;
+}

@@ -11,7 +11,7 @@ github_username: tobihagemann
 keybase_username: tobihagemann
 
 # Plugins
-gems:
+plugins:
   - jekyll-paginate
   - jemoji
 

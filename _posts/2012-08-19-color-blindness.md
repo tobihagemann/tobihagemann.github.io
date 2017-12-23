@@ -2,6 +2,7 @@
 layout: post
 title: "Color Blindness"
 date: 2012-08-19
+stylesheets: ['/css/blog-post.css']
 ---
 This is one of the "facepalm moments". My upcoming game is all about colors and I haven't even considered color blind people. The most frequent form is red-green color blindness (7 to 10% of all males, females should be under 1%, it's a chromosome thing) [[source][wp-color-blindness]]. That's a lot of people and I'm glad I got this hint before release. :smile:
 

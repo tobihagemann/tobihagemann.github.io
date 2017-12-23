@@ -2,13 +2,15 @@
 layout: post
 title: "THLabel – UILabel Subclass"
 date: 2012-12-22
+stylesheets: ['/css/blog-post.css']
+
 excerpt: "I am releasing a UILabel subclass, which allows shadow blur, stroke text and fill gradient. You can find it here: tobihagemann/THLabel"
 ---
-<div class="thumbnail thumbnail-right">
-  <img width="160px" src="{{ "/assets/2012-12-22-thlabel-screenshot.png" | prepend: site.baseurl }}" alt="THLabel screenshot" class="img-responsive"/>
-  <div class="caption">
-    <small>THLabel screenshot</small>
-  </div>
+<div class="text-center">
+  <figure class="figure float-md-right" style="max-width: 160px;">
+    <img class="figure-img img-fluid rounded" src="{{ "/assets/2012-12-22-thlabel-screenshot.png" | prepend: site.baseurl }}" alt="THLabel screenshot"/>
+    <figcaption class="figure-caption text-center">THLabel screenshot</figcaption>
+  </figure>
 </div>
 
 I am releasing a UILabel subclass, which allows shadow blur, stroke text and fill gradient. You can find it here: [tobihagemann/THLabel][thlabel]

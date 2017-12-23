@@ -1,20 +1,22 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
   <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-collapse" aria-expanded="false">
-        <span class="sr-only">{{ i18n.navbar.toggle }} </span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand icon icon-tobiha" href="{{ site.baseurl }}/">{% include icon-tobiha.svg %} tobiha.de</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="nav-collapse">
-      <ul class="nav navbar-nav navbar-right">
-      {% for item in site.data.menu %}
-        <li><a href="{{ item.url }}">{{ item.text }}</a></li>
-      {% endfor %}
+{% if page.url == "/" %}
+    <a class="navbar-brand icon icon-tobiha active" href="{{ site.baseurl }}/">{% include icon-tobiha.svg %} <span class="tobiha">tobiha.de</span></a>
+{% else %}
+    <a class="navbar-brand icon icon-tobiha" href="{{ site.baseurl }}/">{% include icon-tobiha.svg %} <span class="tobiha">tobiha.de</span></a>
+{% endif %}
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+{% for item in site.data.menu %}
+  {% if page.url == item.url %}
+        <li class="nav-item active"><a class="nav-link" href="{{ item.url }}">{{ item.text }} <span class="sr-only">(current)</span></a></li>
+  {% else %}
+        <li class="nav-item"><a class="nav-link" href="{{ item.url }}">{{ item.text }}</a></li>
+  {% endif %}
+{% endfor %}
       </ul>
     </div>
   </div>

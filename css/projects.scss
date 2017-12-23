@@ -2,22 +2,14 @@
 # front matter to make sure, jekyll translates this scss file
 ---
 @charset "utf-8";
+@import "functions";
 @import "variables";
+@import "mixins/breakpoints";
 
 dt {
-  margin-bottom: $spacing-unit/2;
-  @media (max-width: 767px) {
-    text-align: center;
-  }
+  text-align: right;
 
-  > img {
-    @media (min-width: 768px) {
-      float: right!important;
-    }
-    @media (max-width: 767px) {
-      display: block;
-      margin-right: auto;
-      margin-left: auto;
-    }
+  @include media-breakpoint-down(md) {
+    text-align: center;
   }
 }
