@@ -24,6 +24,27 @@
 }
 
 //
+// Hover Mixin
+//
+@mixin hover-focus-active-active {
+  @if $enable-hover-media-query {
+    &:focus,
+    &:active,
+    &.active {
+      @content;
+    }
+    @include hover { @content; }
+  } @else {
+    &:focus,
+    &:active,
+    &.active,
+    &:hover {
+      @content;
+    }
+  }
+}
+
+//
 // Icons
 // from https://github.com/danleech/simple-icons/tree/gh-pages/icons
 // with http://brandcolors.net/
@@ -42,8 +63,8 @@
 //
 // Header & Footer
 //
-.navbar-brand {
-  > svg {
+.navbar {
+  .icon > svg {
     height: 1.25rem;
     vertical-align: text-bottom;
     width: 1.25rem;
@@ -53,18 +74,14 @@
     }
   }
 
-  .tobiha {
+  .icon-tobiha {
     color: $navbar-light-color;
-  }
 
-  &.icon-tobiha {
-    &:hover, &:focus, &:active, &.active {
+    @include hover-focus-active-active {
+      color: theme-color("secondary");
+
       > svg path {
         fill: theme-color("secondary");
-      }
-
-      .tobiha {
-        color: theme-color("secondary");
       }
     }
   }
@@ -89,7 +106,7 @@ footer {
   }
 
   .icon-twitter {
-    &:hover, &:focus, &:active {
+    @include hover-focus-active {
       > svg path {
         fill: #1da1f2;
       }
@@ -97,7 +114,7 @@ footer {
   }
 
   .icon-facebook {
-    &:hover, &:focus, &:active {
+    @include hover-focus-active {
       > svg path {
         fill: #3b5998;
       }
@@ -105,7 +122,7 @@ footer {
   }
 
   .icon-github {
-    &:hover, &:focus, &:active {
+    @include hover-focus-active {
       > svg path {
         fill: #333333;
       }
@@ -113,7 +130,7 @@ footer {
   }
 
   .icon-keybase {
-    &:hover, &:focus, &:active {
+    @include hover-focus-active {
       > svg path {
         fill: #ff6f21;
       }
@@ -121,7 +138,7 @@ footer {
   }
 
   .icon-rss {
-    &:hover, &:focus, &:active {
+    @include hover-focus-active {
       > svg path {
         fill: #f26522;
       }
@@ -166,12 +183,9 @@ dd {
 .hvr-pop {
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
 }
 
 .hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {

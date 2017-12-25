@@ -18,37 +18,30 @@
   }
 }
 
-.container-fluid {
-  padding: 0;
-}
-
 #home {
   background: url("/assets/background.jpg") no-repeat center;
   @include image-2x("/assets/background@2x.jpg");
   background-size: cover;
-  color: #fff;
+  color: $white;
   height: 100%;
+  padding: 0;
 
   a {
-    color: #fff;
+    color: $white;
     text-decoration: underline;
 
-    &:visited {
-      color: darken(#fff, 15%);
-    }
-
-    &:hover {
-      color: darken(#fff, 30%);
+    @include hover {
+      color: darken($white, 15%);
       text-decoration: none;
     }
   }
 }
 
-.avatar {
+.img-profile {
   margin-bottom: $spacer;
   margin-top: $spacer * 3;
+  max-width: 232px;
   padding: 0 $spacer;
-  width: 232px;
 }
 
 .headings {
