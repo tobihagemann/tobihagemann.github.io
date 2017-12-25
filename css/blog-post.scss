@@ -2,11 +2,13 @@
 # front matter to make sure, jekyll translates this scss file
 ---
 @charset "utf-8";
-@import "custom";
+@import "custom-variables";
 @import "functions";
 @import "variables";
-@import "mixins/breakpoints";
-@import "mixins/clearfix";
+@import "mixins";
+@import "images";
+@import "code";
+@import "syntax-highlighting";
 
 article {
   @include clearfix();
@@ -23,7 +25,6 @@ blockquote {
 
 pre,
 code {
-  background-color: $highlight;
   border-radius: $border-radius;
   color: $body-color;
 }

@@ -2,9 +2,11 @@
 # front matter to make sure, jekyll translates this scss file
 ---
 @charset "utf-8";
+@import "custom-variables";
 @import "functions";
 @import "variables";
-@import "mixins/breakpoints";
+@import "mixins";
+@import "pagination";
 
 dt {
   text-align: right;

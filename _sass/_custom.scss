@@ -1,9 +1,44 @@
-// Bootstrap overrides
-//
-// Copy variables from `_variables.scss` to this file to override default values
-// without modifying source files.
+// Custom.scss
+// Include parts of Bootstrap
 
-$primary: #3498db;
-$secondary: #34495e;
+// Variable overrides
+@import "custom-variables";
 
-$highlight: #ecf0f1;
+// Required
+@import "functions";
+@import "variables";
+@import "mixins";
+
+// Optional
+@import "root";
+@import "print";
+@import "reboot";
+@import "type";
+// @import "images";
+// @import "code";
+@import "grid";
+// @import "tables";
+// @import "forms";
+// @import "buttons";
+// @import "transitions";
+// @import "dropdown";
+// @import "button-group";
+// @import "input-group";
+// @import "custom-forms";
+@import "nav";
+@import "navbar";
+// @import "card";
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "jumbotron";
+// @import "alert";
+// @import "progress";
+// @import "media";
+// @import "list-group";
+// @import "close";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+@import "utilities";
