@@ -9,7 +9,7 @@ excerpt: "I'm working on a minor update for Spectrum Run. As for now, you can on
 <div class="text-center">
   <figure class="figure float-md-right" style="max-width: 80px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2012-10-15-friends-icon.png" | prepend: site.baseurl }}" alt="Friends Icon"/>
-    <figcaption class="figure-caption text-center">Friends Icon</figcaption>
+    <figcaption class="figure-caption">Friends Icon</figcaption>
   </figure>
 </div>
 

@@ -14,6 +14,14 @@ article {
   @include clearfix();
 }
 
+dt {
+  text-align: right;
+
+  @include media-breakpoint-down(md) {
+    text-align: left;
+  }
+}
+
 blockquote {
   border-left: $spacer * .25 solid gray("200");
   padding: $spacer * .75 $spacer;

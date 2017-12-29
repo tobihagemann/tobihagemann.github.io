@@ -9,7 +9,7 @@ excerpt: "I am releasing a UILabel subclass, which allows shadow blur, stroke te
 <div class="text-center">
   <figure class="figure float-md-right" style="max-width: 160px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2012-12-22-thlabel-screenshot.png" | prepend: site.baseurl }}" alt="THLabel screenshot"/>
-    <figcaption class="figure-caption text-center">THLabel screenshot</figcaption>
+    <figcaption class="figure-caption">THLabel screenshot</figcaption>
   </figure>
 </div>
 

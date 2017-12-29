@@ -9,7 +9,7 @@ I mentioned in the [first post][first-post] that I'm using cocos2d for Spectrum 
 <div class="text-center">
   <figure class="figure float-md-right" style="max-width: 320px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2012-05-09-dithering-comparison.png" | prepend: site.baseurl }}" alt="&quot;NearestNeighbour&quot; (left) vs. &quot;FloydSteinberg&quot; (right)"/>
-    <figcaption class="figure-caption text-center">&quot;NearestNeighbour&quot; (left) vs. &quot;FloydSteinberg&quot; (right)</figcaption>
+    <figcaption class="figure-caption">&quot;NearestNeighbour&quot; (left) vs. &quot;FloydSteinberg&quot; (right)</figcaption>
   </figure>
 </div>
 

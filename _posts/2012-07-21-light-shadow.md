@@ -9,7 +9,7 @@ excerpt: "I'm not an artist. I have no clue how lights and shadows work, but I'm
 <div class="text-center">
   <figure class="figure float-md-right" style="max-width: 320px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2012-07-21-wall-comparison.png" | prepend: site.baseurl }}" alt="Influences of lights and shadows"/>
-    <figcaption class="figure-caption text-center">Influences of lights and shadows</figcaption>
+    <figcaption class="figure-caption">Influences of lights and shadows</figcaption>
   </figure>
 </div>
 

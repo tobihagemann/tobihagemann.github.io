@@ -11,7 +11,7 @@ The year 2016 had been an incredible one for me. It was overwhelming to receive 
 <div class="text-center">
   <figure class="figure" style="max-width: 720px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-cebit-award.jpg" | prepend: site.baseurl }}" alt="CeBIT Innovation Award 2016"/>
-    <figcaption class="figure-caption text-center">CeBIT Innovation Award 2016 for Cryptomator – Sebastian and I received the special award for "Usable Security and Privacy" worth €20,000</figcaption>
+    <figcaption class="figure-caption">CeBIT Innovation Award 2016 for Cryptomator – Sebastian and I received the special award for "Usable Security and Privacy" worth €20,000</figcaption>
   </figure>
 </div>
 
@@ -25,7 +25,7 @@ Everyone has a _passion_ for something. It can be any topic, e.g. politics, or h
 <div class="text-center">
   <figure class="figure" style="max-width: 720px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-tobi-1994.jpg" | prepend: site.baseurl }}" alt="Tobi 1994"/>
-    <figcaption class="figure-caption text-center">Playing some educational game on my dad's <a href="https://en.wikipedia.org/wiki/Macintosh_Quadra_650" title="Macintosh Quadra 650">Macintosh Quadra 650</a> in 1994 (5 years old)</figcaption>
+    <figcaption class="figure-caption">Playing some educational game on my dad's <a href="https://en.wikipedia.org/wiki/Macintosh_Quadra_650" title="Macintosh Quadra 650">Macintosh Quadra 650</a> in 1994 (5 years old)</figcaption>
   </figure>
 </div>
 
@@ -41,7 +41,7 @@ I started to learn programming when I was 11 years old (so around 2000), iirc. I
 <div class="text-center">
   <figure class="figure" style="max-width: 640px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-somnio.jpg" | prepend: site.baseurl }}" alt="Somnio"/>
-    <figcaption class="figure-caption text-center">Somnio – my first passion project, developed from 2003 to 2006; it's an MMORPG written in REALbasic with RPG Maker XP placeholder graphics; never finished it</figcaption>
+    <figcaption class="figure-caption">Somnio – my first passion project, developed from 2003 to 2006; it's an MMORPG written in REALbasic with RPG Maker XP placeholder graphics; never finished it</figcaption>
   </figure>
 </div>
 
@@ -50,7 +50,7 @@ As you can imagine, I did it all for fun. Programming was my _hobby_ and it stil
 <div class="text-center">
   <figure class="figure" style="max-width: 720px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-tobi-2004.jpg" | prepend: site.baseurl }}" alt="Tobi 2004"/>
-    <figcaption class="figure-caption text-center">Playing the original Ghost Recon on my <a href="https://en.wikipedia.org/wiki/EMac" title="eMac">eMac</a> in 2004 (14 years old)</figcaption>
+    <figcaption class="figure-caption">Playing the original Ghost Recon on my <a href="https://en.wikipedia.org/wiki/EMac" title="eMac">eMac</a> in 2004 (14 years old)</figcaption>
   </figure>
 </div>
 
@@ -59,7 +59,7 @@ I graduated from school in 2007 and there was a period of time when playing a ga
 <div class="text-center">
   <figure class="figure" style="max-width: 720px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-world-of-warcraft.jpg" | prepend: site.baseurl }}" alt="World of Warcraft"/>
-    <figcaption class="figure-caption text-center">One of my highlights in World of Warcraft in 2009, getting realm first on the <a href="http://www.wowhead.com/achievement=3819/a-tribute-to-insanity-25-player" title="A Tribute to Insanity (25 player)">Tribute to Insanity</a> achievement, which granted the <a href="http://www.wowhead.com/title=170/grand-crusader" title="Grand Crusader">Grand Crusader</a> title; I've also made a <a href="https://www.youtube.com/watch?v=ja7g3P_-Ix8" title="Sturmreiter vs. Anub'arak (Tribute to Insanity)">video</a></figcaption>
+    <figcaption class="figure-caption">One of my highlights in World of Warcraft in 2009, getting realm first on the <a href="http://www.wowhead.com/achievement=3819/a-tribute-to-insanity-25-player" title="A Tribute to Insanity (25 player)">Tribute to Insanity</a> achievement, which granted the <a href="http://www.wowhead.com/title=170/grand-crusader" title="Grand Crusader">Grand Crusader</a> title; I've also made a <a href="https://www.youtube.com/watch?v=ja7g3P_-Ix8" title="Sturmreiter vs. Anub'arak (Tribute to Insanity)">video</a></figcaption>
   </figure>
 </div>
 
@@ -75,7 +75,7 @@ This actually backfired later, but we'll get to that. The courses with economics
 <div class="text-center">
   <figure class="figure" style="max-width: 567px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-vier-gewinnt-challenge.jpg" | prepend: site.baseurl }}" alt="Vier Gewinnt Challenge"/>
-    <figcaption class="figure-caption text-center">Happily examining my newly won iPod shuffle after taking third place at the <em>Vier Gewinnt Challenge</em> (Connect Four Challenge) in 2010</figcaption>
+    <figcaption class="figure-caption">Happily examining my newly won iPod shuffle after taking third place at the <em>Vier Gewinnt Challenge</em> (Connect Four Challenge) in 2010</figcaption>
   </figure>
 </div>
 
@@ -86,7 +86,7 @@ My team leader at Accenture noticed that I was an Apple geek and loved video gam
 <div class="text-center">
   <figure class="figure" style="max-width: 720px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-spectrum-run.jpg" | prepend: site.baseurl }}" alt="Spectrum Run"/>
-    <figcaption class="figure-caption text-center">Spectrum Run – my first iOS game, developed and released in 2012</figcaption>
+    <figcaption class="figure-caption">Spectrum Run – my first iOS game, developed and released in 2012</figcaption>
   </figure>
 </div>
 
@@ -99,7 +99,7 @@ In winter semester, I took courses of semesters 1, 3, and 5 at the same time. In
 <div class="text-center">
   <figure class="figure" style="max-width: 885px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-visualized-cv.png" | prepend: site.baseurl }}" alt="Visualized CV"/>
-    <figcaption class="figure-caption text-center">Visualized CV with particular focus on the academic career – assignment for the course <em>Scientific Visualization</em> in 2014</figcaption>
+    <figcaption class="figure-caption">Visualized CV with particular focus on the academic career – assignment for the course <em>Scientific Visualization</em> in 2014</figcaption>
   </figure>
 </div>
 
