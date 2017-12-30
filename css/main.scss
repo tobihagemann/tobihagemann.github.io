@@ -46,8 +46,8 @@
 
 //
 // Icons
-// from https://github.com/danleech/simple-icons/tree/gh-pages/icons
-// with http://brandcolors.net/
+// from https://github.com/simple-icons/simple-icons/tree/develop/icons
+// with https://brandcolors.net/
 //
 .icon > svg {
   display: inline-block;
@@ -113,14 +113,6 @@ footer {
     }
   }
 
-  .icon-facebook {
-    @include hover-focus-active {
-      > svg path {
-        fill: #3b5998;
-      }
-    }
-  }
-
   .icon-github {
     @include hover-focus-active {
       > svg path {
@@ -129,10 +121,26 @@ footer {
     }
   }
 
+  .icon-facebook {
+    @include hover-focus-active {
+      > svg path {
+        fill: #3b5998;
+      }
+    }
+  }
+
+  .icon-youtube {
+    @include hover-focus-active {
+      > svg path {
+        fill: #ff0000;
+      }
+    }
+  }
+
   .icon-keybase {
     @include hover-focus-active {
       > svg path {
-        fill: #ff6f21;
+        fill: #33a0ff;
       }
     }
   }
