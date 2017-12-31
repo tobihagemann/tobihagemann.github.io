@@ -95,13 +95,17 @@ header {
 
 footer {
   margin-bottom: $spacer * 3;
-  margin-top: $spacer;
+  margin-top: $spacer * 2;
+
+  .icons {
+    margin-bottom: $spacer;
+  }
 
   .icon {
-    margin: $spacer * 2 $spacer;
+    margin: $grid-gutter-width / 2;
 
     @include media-breakpoint-down(xs) {
-      margin: $spacer * 2 $spacer * .5;
+      margin: $grid-gutter-width / 4;
     }
   }
 

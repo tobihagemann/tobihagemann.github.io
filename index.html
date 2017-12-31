@@ -3,7 +3,9 @@ layout: default
 stylesheets: ['/css/index.css']
 ---
 <div id="home" class="container-fluid text-center">
-  <img class="rounded-circle img-profile" src="https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=400" alt="Responsive image"/>
+  <div class="img-profile" style="max-width: 200px;">
+    <img class="img-fluid rounded-circle" src="https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=200" srcset="https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=200 1x, https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=400 2x"/>
+  </div>
   <div class="headings">
     <h1>{{ site.name }}</h1>
     <h2>iOS App Developer &amp; Designer</h2>
