@@ -4,7 +4,7 @@ title: "Sprites & Textures"
 date: 2012-05-09
 stylesheets: ['/css/blog-post.css']
 ---
-I mentioned in the [first post][first-post] that I'm using cocos2d for Spectrum Run. It basically is a 2D game framework. You can import images/sprites, move them around, do whatever you want with them and much more! I'm using [Texture Packer][texture-packer] by Andreas Löw / code'n'web, which is a VERY handy tool for organizing sprite sheets. I was thinking about improving performance and generally how I should handle textures better. I didn't really know all features of Texture Packer until I recently came across [this tutorial][rw-tutorial] by Ray Wenderlich and this tool just became more awesome!
+I mentioned in the [first post][first-post] that I'm using cocos2d for Spectrum Run. It basically is a 2D game framework. You can import images/sprites, move them around, do whatever you want with them and much more! I'm using [Texture Packer][texture-packer]{:target="_blank"} by Andreas Löw / code'n'web, which is a VERY handy tool for organizing sprite sheets. I was thinking about improving performance and generally how I should handle textures better. I didn't really know all features of Texture Packer until I recently came across [this tutorial][rw-tutorial]{:target="_blank"} by Ray Wenderlich and this tool just became more awesome!
 
 <div class="text-center">
   <figure class="figure float-md-right" style="max-width: 320px;">
@@ -21,6 +21,6 @@ You can even automate the whole exporting process by writing a script, which is 
 
 There are some other challenges I have to deal with right now to find the best method on how to draw sprites. Sprite positions aren't absolute values, because calculation is done with floating-point numbers. Some problems came up with that, because you can't draw "a half a pixel", it has to be interpolated, which can cause gaps between sprites. There are several highly discussed approaches, so I still have to find the perfect solution for my needs.
 
-[first-post]: {{ "/blog/2012/04/29/first.html" | prepend: site.baseurl }} "First!"
+[first-post]: {{ "/2012/04/29/first/" | prepend: site.baseurl }} "First!"
 [texture-packer]: https://www.codeandweb.com/texturepacker "Texture Packer"
 [rw-tutorial]: https://www.raywenderlich.com/32049/texture-packer-tutorial-how-to-create-and-optimize-sprite-sheets-in-cocos2d "How to Create and Optimize Sprite Sheets in Cocos2D with Texture Packer and Pixel Formats"

@@ -12,7 +12,7 @@ _tooPassword_ has been updated to 1.0.2, which includes some critical bug and cr
 
 I'm working on another app, which needs a lot of my attention right now, but it's nothing I can talk about. Bummer. :stuck_out_tongue_winking_eye:
 
-_THLabel_ got some attention in the last days, because it was posted on [CocoaPods][cocoapods]. Didn't expect that at all. That's why I've submitted it to [Cocoa Controls][cocoa-controls], maybe it will have a similar effect. ;)
+_THLabel_ got some attention in the last days, because it was posted on [CocoaPods][cocoapods]{:target="_blank"}. Didn't expect that at all. That's why I've submitted it to [Cocoa Controls][cocoa-controls]{:target="_blank"}, maybe it will have a similar effect. ;)
 
 Sebastian has updated _SETOlib_ with a new class called `SETOBlockingAlertView`. It's able to show an alert view, that blocks the background thread until the alert has been dismissed. Neat stuff!
 

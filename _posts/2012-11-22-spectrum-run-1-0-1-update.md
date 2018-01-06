@@ -4,7 +4,7 @@ title: "Spectrum Run 1.0.1 Update"
 date: 2012-11-22
 stylesheets: ['/css/blog-post.css']
 ---
-The first "minor" update of Spectrum Run is [out now][spectrum-run] and took about a month with an unfortunate 1-week-delay because of a crash bug. I didn't expect it would take that long. My initial plan was to fix some bugs and optimize the game. Just small things that would fit into a "minor" update. The official changes are:
+The first "minor" update of Spectrum Run is [out now][spectrum-run]{:target="_blank"} and took about a month with an unfortunate 1-week-delay because of a crash bug. I didn't expect it would take that long. My initial plan was to fix some bugs and optimize the game. Just small things that would fit into a "minor" update. The official changes are:
 
 - Added both Friends and Global Rankings to Scores Menu
 - Massive Improvements: Performance, Tutorial, Balancing, Audio, Graphics
@@ -29,5 +29,5 @@ _On a side note:_ Internally I upgraded from cocos2d v1.0.1 to v2.0, which was a
 This update doesn't seem that minor anymore, does it? Already working on the next update, making good progress! :smile:
 
 [spectrum-run]: https://itunes.apple.com/app/id516387678 "Spectrum Run on the App Store"
-[making-vector-graphics-like-nerds-post]: {{ "/blog/2012/10/15/making-vector-graphics-like-nerds.html" | prepend: site.baseurl }} "Making Vector Graphics like Nerds"
-[the-right-way-handling-ipod-playback-post]: {{ "/blog/2012/10/24/the-right-way-handling-ipod-playback.html" | prepend: site.baseurl }} "The right way handling iPod playback"
+[making-vector-graphics-like-nerds-post]: {{ "/2012/10/15/making-vector-graphics-like-nerds/" | prepend: site.baseurl }} "Making Vector Graphics like Nerds"
+[the-right-way-handling-ipod-playback-post]: {{ "/2012/10/24/the-right-way-handling-ipod-playback/" | prepend: site.baseurl }} "The right way handling iPod playback"
