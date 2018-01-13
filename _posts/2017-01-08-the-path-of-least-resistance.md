@@ -25,7 +25,7 @@ Everyone has a _passion_ for something. It can be any topic, e.g. politics, or h
 <div class="text-center">
   <figure class="figure" style="max-width: 720px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-tobi-1994.jpg" | prepend: site.baseurl }}" alt="Tobi 1994"/>
-    <figcaption class="figure-caption" markdown="1">Playing some educational game on my dad's [Macintosh Quadra 650][macintosh-quadra-650]{:target="_blank"} in 1994 (5 years old)</figcaption>
+    <figcaption class="figure-caption">Playing some educational game on my dad's <a href="https://en.wikipedia.org/wiki/Macintosh_Quadra_650" title="Macintosh Quadra 650" target="_blank">Macintosh Quadra 650</a> in 1994 (5 years old)</figcaption>
   </figure>
 </div>
 
@@ -50,7 +50,7 @@ As you can imagine, I did it all for fun. Programming was my _hobby_ and it stil
 <div class="text-center">
   <figure class="figure" style="max-width: 720px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-tobi-2004.jpg" | prepend: site.baseurl }}" alt="Tobi 2004"/>
-    <figcaption class="figure-caption" markdown="1">Playing the original Ghost Recon on my [eMac][emac]{:target="_blank"} in 2004 (14 years old)</figcaption>
+    <figcaption class="figure-caption">Playing the original Ghost Recon on my <a href="https://en.wikipedia.org/wiki/EMac" title="eMac" target="_blank">eMac</a> in 2004 (14 years old)</figcaption>
   </figure>
 </div>
 
@@ -59,7 +59,7 @@ I graduated from school in 2007 and there was a period of time when playing a ga
 <div class="text-center">
   <figure class="figure" style="max-width: 720px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-world-of-warcraft.jpg" | prepend: site.baseurl }}" alt="World of Warcraft"/>
-    <figcaption class="figure-caption" markdown="1">One of my highlights in World of Warcraft in 2009, getting realm first on the [Tribute to Insanity][wow-tribute-to-insanity]{:target="_blank"} achievement, which granted the [Grand Crusader][wow-grand-crusader]{:target="_blank"} title; I've also made a [video][wow-video]{:target="_blank"}</figcaption>
+    <figcaption class="figure-caption">One of my highlights in World of Warcraft in 2009, getting realm first on the <a href="http://www.wowhead.com/achievement=3819/a-tribute-to-insanity-25-player" title="A Tribute to Insanity (25 player)" target="_blank">Tribute to Insanity</a> achievement, which granted the <a href="http://www.wowhead.com/title=170/grand-crusader" title="Grand Crusader" target="_blank">Grand Crusader</a> title; I've also made a <a href="https://www.youtube.com/watch?v=ja7g3P_-Ix8" title="Sturmreiter vs. Anub'arak (Tribute to Insanity)" target="_blank">video</a></figcaption>
   </figure>
 </div>
 
@@ -75,7 +75,7 @@ This actually backfired later, but we'll get to that. The courses with economics
 <div class="text-center">
   <figure class="figure" style="max-width: 567px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-vier-gewinnt-challenge.jpg" | prepend: site.baseurl }}" alt="Vier Gewinnt Challenge"/>
-    <figcaption class="figure-caption" markdown="1">Happily examining my newly won iPod shuffle after taking third place at the _Vier Gewinnt Challenge_ (Connect Four Challenge) in 2010</figcaption>
+    <figcaption class="figure-caption">Happily examining my newly won iPod shuffle after taking third place at the <em>Vier Gewinnt Challenge</em> (Connect Four Challenge) in 2010</figcaption>
   </figure>
 </div>
 
@@ -99,7 +99,7 @@ In winter semester, I took courses of semesters 1, 3, and 5 at the same time. In
 <div class="text-center">
   <figure class="figure" style="max-width: 885px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-visualized-cv.png" | prepend: site.baseurl }}" alt="Visualized CV"/>
-    <figcaption class="figure-caption" markdown="1">Visualized CV with particular focus on the academic career – assignment for the course _Scientific Visualization_ in 2014</figcaption>
+    <figcaption class="figure-caption">Visualized CV with particular focus on the academic career – assignment for the course <em>Scientific Visualization</em> in 2014</figcaption>
   </figure>
 </div>
 
@@ -115,17 +115,12 @@ I'm so excited for 2017. I wish you all the very best! :tada:
 [cebit-award]: http://www.cebitaward.de/preistraeger/preistraeger-2016/cryptomator.html "CeBIT Innovation Award 2016: Cryptomator"
 [cryptomator]: https://cryptomator.org/ "Cryptomator"
 [system-7]: https://en.wikipedia.org/wiki/System_7 "System 7"
-[macintosh-quadra-650]: https://en.wikipedia.org/wiki/Macintosh_Quadra_650 "Macintosh Quadra 650"
 [ktoons]: http://ktoons.org/portfolio/ "ktoons.org"
 [ktoons-dribbble]: https://dribbble.com/ktoons "ktoons on Dribbble"
 [ktoons-instagram]: https://www.instagram.com/ktoons_/ "ktoons on Instagram"
 [nyonya-cooking]: https://www.nyonyacooking.com/ "Nyonya Cooking"
 [nyonya-cooking-youtube]: https://www.youtube.com/user/nyonyacooking "Nyonya Cooking on YouTube"
 [youtube-nextup-berlin-jun-2016]: https://www.youtube.com/yt/nextup/classes.html?noapp=1#Berlin "YouTube NextUp Berlin (June 2016)"
-[emac]: https://en.wikipedia.org/wiki/EMac "eMac"
-[wow-tribute-to-insanity]: http://www.wowhead.com/achievement=3819/a-tribute-to-insanity-25-player "A Tribute to Insanity (25 player)"
-[wow-grand-crusader]: http://www.wowhead.com/title=170/grand-crusader "Grand Crusader"
-[wow-video]: https://www.youtube.com/watch?v=ja7g3P_-Ix8 "Sturmreiter vs. Anub'arak (Tribute to Insanity)"
 [focus-gehaltsreport-2016]: http://www.focus.de/finanzen/karriere/gehaltsreport-2016-mit-diesen-studiengaengen-verdienen-sie-spaeter-die-hoechsten-gehaelter_id_5369251.html "FOCUS Gehaltsreport 2016"
 [vier-gewinnt-challenge]: https://www.h-brs.de/de/inf/news/vier-gewinnt-challenge "Vier Gewinnt Challenge"
 [loss-aversion-sunk-cost-fallacy]: https://en.wikipedia.org/wiki/Sunk_cost#Loss_aversion_and_the_sunk_cost_fallacy "Loss Aversion and the Sunk Cost Fallacy"
