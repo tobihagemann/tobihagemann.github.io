@@ -22,7 +22,7 @@ dt {
 }
 
 blockquote {
-  border-left: $spacer * .25 solid gray("200");
+  border-left: $border-width * 4 solid $border-color;
   padding: $spacer * .75 $spacer;
 
   > :last-child {
