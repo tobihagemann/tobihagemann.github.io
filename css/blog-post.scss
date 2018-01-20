@@ -9,10 +9,6 @@
 @import "code";
 @import "syntax-highlighting";
 
-article {
-  @include clearfix();
-}
-
 dt {
   text-align: right;
 

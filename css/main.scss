@@ -5,6 +5,31 @@
 @import "custom";
 
 //
+// Header & Footer
+//
+.navbar {
+  .icon > svg {
+    height: 1.25rem;
+    vertical-align: text-bottom;
+    width: 1.25rem;
+
+    path {
+      fill: $navbar-light-color;
+    }
+  }
+}
+
+footer {
+  .icon {
+    margin: $grid-gutter-width / 2;
+
+    @include media-breakpoint-down(xs) {
+      margin: $grid-gutter-width / 4;
+    }
+  }
+}
+
+//
 // Responsive Headings
 //
 @include media-breakpoint-down(sm) {
@@ -60,99 +85,62 @@
   }
 }
 
-//
-// Header & Footer
-//
-.navbar {
-  .icon > svg {
-    height: 1.25rem;
-    vertical-align: text-bottom;
-    width: 1.25rem;
+.icon-tobiha {
+  color: $navbar-light-color;
 
-    path {
-      fill: $navbar-light-color;
-    }
-  }
+  @include hover-focus-active-active {
+    color: theme-color("secondary");
 
-  .icon-tobiha {
-    color: $navbar-light-color;
-
-    @include hover-focus-active-active {
-      color: theme-color("secondary");
-
-      > svg path {
-        fill: theme-color("secondary");
-      }
+    > svg path {
+      fill: theme-color("secondary");
     }
   }
 }
 
-header {
-  margin-bottom: $spacer;
-  margin-top: $spacer * 3;
+.icon-twitter {
+  @include hover-focus-active {
+    > svg path {
+      fill: #1da1f2;
+    }
+  }
 }
 
-footer {
-  margin-bottom: $spacer * 3;
-  margin-top: $spacer * 2;
-
-  .icons {
-    margin-bottom: $spacer;
-  }
-
-  .icon {
-    margin: $grid-gutter-width / 2;
-
-    @include media-breakpoint-down(xs) {
-      margin: $grid-gutter-width / 4;
+.icon-github {
+  @include hover-focus-active {
+    > svg path {
+      fill: #333333;
     }
   }
+}
 
-  .icon-twitter {
-    @include hover-focus-active {
-      > svg path {
-        fill: #1da1f2;
-      }
+.icon-facebook {
+  @include hover-focus-active {
+    > svg path {
+      fill: #3b5998;
     }
   }
+}
 
-  .icon-github {
-    @include hover-focus-active {
-      > svg path {
-        fill: #333333;
-      }
+.icon-youtube {
+  @include hover-focus-active {
+    > svg path {
+      fill: #ff0000;
     }
   }
+}
 
-  .icon-facebook {
-    @include hover-focus-active {
-      > svg path {
-        fill: #3b5998;
-      }
+.icon-keybase {
+  @include hover-focus-active {
+    > svg path {
+      fill: #33a0ff;
     }
   }
+}
 
-  .icon-youtube {
-    @include hover-focus-active {
-      > svg path {
-        fill: #ff0000;
-      }
-    }
-  }
-
-  .icon-keybase {
-    @include hover-focus-active {
-      > svg path {
-        fill: #33a0ff;
-      }
-    }
-  }
-
-  .icon-rss {
-    @include hover-focus-active {
-      > svg path {
-        fill: #f26522;
-      }
+.icon-rss {
+  @include hover-focus-active {
+    > svg path {
+      fill: #f26522;
     }
   }
 }

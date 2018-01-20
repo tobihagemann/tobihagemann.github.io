@@ -23,7 +23,6 @@
   @include image-2x("/assets/background@2x.jpg");
   background-size: cover;
   color: $white;
-  padding: 0;
 
   a {
     color: $white;
@@ -37,25 +36,10 @@
 }
 
 .img-profile {
-  display: inline-block;
-  margin: $spacer * 3 $grid-gutter-width / 2 $spacer;
-
-  img {
-    box-shadow: 0 1px 0 rgba($black, .2);
-  }
+  box-shadow: 0 1px 0 rgba($black, .2);
 }
 
 .headings {
   background: linear-gradient(transparent, rgba(theme-color("secondary"), .8));
-  padding: $spacer * 2 0;
   text-shadow: 0 1px 0 rgba($black, .2);
-
-  @include media-breakpoint-down(xs) {
-    padding: $spacer * 1.5 0;
-  }
-
-  h1, h2, h3 {
-    margin-left: $grid-gutter-width / 2;
-    margin-right: $grid-gutter-width / 2;
-  }
 }
