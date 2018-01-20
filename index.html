@@ -12,3 +12,17 @@ stylesheets: ['/css/index.css']
     <h3>Currently working on <a href="https://cryptomator.org/">Cryptomator</a></h3>
   </div>
 </div>
+<div class="container my-4 my-sm-5">
+  <div class="card-deck">
+{% for post in site.posts limit:3 %}
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title mb-0">{{ post.title }}</h4>
+        <div class="mb-1 text-muted">{{ post.date | date: "%Y-%m-%d" }}</div>
+        <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
+        <a href="{{ post.url }}" class="btn btn-link">Continue reading</a>
+      </div>
+    </div>
+{% endfor %}
+  </div>
+</div>
