@@ -36,11 +36,18 @@
   }
 }
 
-.img-profile {
+.img-shadow {
   box-shadow: 0 1px 0 rgba($black, .2);
 }
 
 .headings {
   background: linear-gradient(transparent, rgba(theme-color("secondary"), .8));
+}
+
+.text-shadow {
   text-shadow: 0 1px 0 rgba($black, .2);
+}
+
+.card-shadow {
+  box-shadow: 0 2px 2px rgba($black, .05);
 }
