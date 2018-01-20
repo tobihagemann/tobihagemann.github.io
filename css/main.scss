@@ -5,6 +5,27 @@
 @import "custom";
 
 //
+// Hover Mixin
+//
+@mixin hover-focus-active-active {
+  @if $enable-hover-media-query {
+    &:focus,
+    &:active,
+    &.active {
+      @content;
+    }
+    @include hover { @content; }
+  } @else {
+    &:focus,
+    &:active,
+    &.active,
+    &:hover {
+      @content;
+    }
+  }
+}
+
+//
 // Header & Footer
 //
 .navbar {
@@ -15,6 +36,14 @@
 
     path {
       fill: $navbar-light-color;
+    }
+  }
+
+  .navbar-brand {
+    color: $navbar-light-color;
+
+    @include hover-focus-active-active {
+      color: theme-color("secondary");
     }
   }
 }
@@ -49,27 +78,6 @@ footer {
 }
 
 //
-// Hover Mixin
-//
-@mixin hover-focus-active-active {
-  @if $enable-hover-media-query {
-    &:focus,
-    &:active,
-    &.active {
-      @content;
-    }
-    @include hover { @content; }
-  } @else {
-    &:focus,
-    &:active,
-    &.active,
-    &:hover {
-      @content;
-    }
-  }
-}
-
-//
 // Icons
 // from https://github.com/simple-icons/simple-icons/tree/develop/icons
 // with https://brandcolors.net/
@@ -86,11 +94,7 @@ footer {
 }
 
 .icon-tobiha {
-  color: $navbar-light-color;
-
   @include hover-focus-active-active {
-    color: theme-color("secondary");
-
     > svg path {
       fill: theme-color("secondary");
     }
