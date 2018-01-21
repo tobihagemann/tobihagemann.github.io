@@ -78,7 +78,7 @@ projects:
       <img class="project-img mr-3" src="{{ project.img }}" srcset="{{ project.img }} 1x, {{ project.img2x }} 2x">
 {% endif %}
       <div>
-        <h2 class="card-title h4">{{ project.title }}</h2>
+        <h2 class="card-title h3 mb-2">{{ project.title }}</h2>
         <p class="card-text">{{ project.text }}</p>
 {% for link in project.links %}
         <div><a href="{{ link.url }}" class="btn btn-link">{{ link.text }}</a></div>
@@ -97,7 +97,7 @@ projects:
         <img class="project-img mr-3" src="{{ project.img }}" srcset="{{ project.img }} 1x, {{ project.img2x }} 2x">
   {% endif %}
         <div>
-          <h2 class="card-title h4">{{ project.title }}</h2>
+          <h2 class="card-title h3 mb-2">{{ project.title }}</h2>
           <p class="card-text">{{ project.text }}</p>
   {% for link in project.links %}
           <div><a href="{{ link.url }}" class="btn btn-link">{{ link.text }}</a></div>

@@ -18,7 +18,7 @@ stylesheets: ['/css/index.css']
     <div class="card card-shadow">
       <div class="card-body">
         <h4 class="card-title mb-0">{{ post.title }}</h4>
-        <div class="mb-1 text-muted">{{ post.date | date: "%Y-%m-%d" }}</div>
+        <div class="text-muted mb-1">{{ post.date | date: "%Y-%m-%d" }}</div>
         <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
         <a href="{{ post.url }}" class="btn btn-link">Continue reading</a>
       </div>

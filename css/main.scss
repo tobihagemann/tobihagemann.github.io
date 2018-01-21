@@ -157,22 +157,6 @@ footer {
 }
 
 //
-// Description List
-//
-dt {
-  margin-bottom: $spacer * .5;
-}
-
-dd {
-  margin-bottom: $spacer;
-
-  &:last-child,
-  p:last-child {
-    margin-bottom: 0;
-  }
-}
-
-//
 // Animations
 // from https://github.com/IanLunn/Hover/blob/master/css/hover.css
 //

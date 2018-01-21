@@ -9,14 +9,6 @@
 @import "code";
 @import "syntax-highlighting";
 
-dt {
-  text-align: right;
-
-  @include media-breakpoint-down(md) {
-    text-align: left;
-  }
-}
-
 blockquote {
   border-left: $border-width * 4 solid $border-color;
   padding: $spacer * .75 $spacer;
