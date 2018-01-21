@@ -7,10 +7,31 @@
 @import "variables";
 @import "mixins";
 
-dt {
-  text-align: right;
+.card-featured {
+  margin-bottom: $spacer * 1.25;
 
   @include media-breakpoint-down(md) {
-    text-align: center;
+    margin-bottom: $spacer * .75;
+  }
+}
+
+.card-shadow {
+  box-shadow: 0 2px 2px rgba($black, .05);
+}
+
+.project-img {
+  height: 100px;
+
+  @include media-breakpoint-down(sm) {
+    height: 50px;
+  }
+}
+
+.card-columns {
+  @include media-breakpoint-down(md) {
+    column-count: 1;
+  }
+  @include media-breakpoint-up(lg) {
+    column-count: 2;
   }
 }

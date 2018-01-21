@@ -3,56 +3,108 @@ layout: page
 title: Projects
 permalink: /projects/
 stylesheets: ['/css/projects.css']
+
+featured_project:
+  title: Cryptomator
+  img: /assets/projects/cryptomator.png
+  img2x: /assets/projects/cryptomator@2x.png
+  text: >
+    Cryptomator provides transparent, client-side encryption for your cloud. Protect your documents from unauthorized access. Cryptomator is free and open source software, so you can rest assured there are no backdoors.
+  links:
+  - url: https://cryptomator.org/
+    text: cryptomator.org
+
+projects:
+- title: Evolution XPert
+  img: /assets/projects/evolution-xpert.png
+  img2x: /assets/projects/evolution-xpert@2x.png
+  text: >
+    Evolution XPert is an assistant app for Pokémon GO which helps players optimize their evolution XP gain. The app deduces the right amount of Pokémon of a particular kind to transfer in order to maximize the amount of possible evolutions.
+  links:
+  - url: https://itunes.apple.com/app/id1135176839
+    text: Download on the App Store
+- title: Spectrum Run
+  img: /assets/projects/spectrum-run.png
+  img2x: /assets/projects/spectrum-run@2x.png
+  text: >
+    Spectrum Run is a fast-paced action-arcade game. Jump, dive and slide through gates with the right color in a challenging hunt for the highscore. Master your reaction time while Doc White is gaining speed. Earn achievements and challenge your friends on Game Center.
+  links:
+  - url: https://itunes.apple.com/app/id516387678
+    text: Download on the App Store
+  - url: https://tobiha.bandcamp.com/album/spectrum-run
+    text: Listen to Soundtrack on Bandcamp
+- title: tooPassword
+  img: /assets/projects/toopassword.png
+  img2x: /assets/projects/toopassword@2x.png
+  text: >
+    tooPassword for iOS offers read-only access to AgileBits' 1Password keychains. The project has been discontinued and is now fully open source. You can still download it for free on the App Store.
+  links:
+  - url: https://itunes.apple.com/app/id596958240
+    text: Download on the App Store
+  - url: https://github.com/setoLabs/tooPassword
+    text: setoLabs/tooPassword on GitHub
+- title: Lemon Pharma
+  img: /assets/projects/lemon-pharma.png
+  img2x: /assets/projects/lemon-pharma@2x.png
+  text: >
+    Bach Flower by Lemon Pharma lets you select suitable flower essences directly and quickly. Find your individual Bach flowers intuitively through images of the Bach flower essences or that suit your current emotional state.
+  links:
+  - url: https://itunes.apple.com/app/id889650118
+    text: Download on the App Store
+- title: THLabel
+  text: >
+    THLabel is a subclass of UILabel, which additionally allows shadow blur, inner shadow, stroke text and fill gradient.
+  links:
+  - url: https://github.com/tobihagemann/THLabel
+    text: tobihagemann/THLabel on GitHub
+- title: sissy
+  text: >
+    Get notified when your grades for Hochschule Bonn-Rhein-Sieg (H-BRS) have updated. sissy is available for iOS and macOS, both run 100% locally.
+  links:
+  - url: https://github.com/tobihagemann/sissy
+    text: tobihagemann/sissy on GitHub
+- title: bonntermin
+  text: >
+    Automatically scrape Stadt Bonn's Dienstleistungszentrum appointment service for the earliest month that you can book. If the bookable month is the one you desire, you'll get notified by email.
+  links:
+  - url: https://github.com/tobihagemann/bonntermin
+    text: tobihagemann/bonntermin on GitHub
 ---
-<dl class="row">
-  <dt class="col-md-12 col-lg-2"><img class="img-fluid" src="/assets/projects/cryptomator.png" srcset="/assets/projects/cryptomator.png 1x, /assets/projects/cryptomator@2x.png 2x"/></dt>
-  <dd class="col-md-12 col-lg-10">
-    <p>Cryptomator provides transparent, client-side encryption for your cloud. Protect your documents from unauthorized access. Cryptomator is free and open source software, so you can rest assured there are no backdoors.</p>
-    <p><a href="https://cryptomator.org/">cryptomator.org</a><br/><a href="https://itunes.apple.com/app/id953086535">Download on the App Store</a></p>
-  </dd>
-</dl>
+{% assign project = page.featured_project %}
+<div class="card card-shadow card-featured">
+  <div class="card-body">
+    <div class="d-flex flex-row">
+{% if project.img %}
+      <img class="project-img mr-3" src="{{ project.img }}" srcset="{{ project.img }} 1x, {{ project.img2x }} 2x">
+{% endif %}
+      <div>
+        <h2 class="card-title h4">{{ project.title }}</h2>
+        <p class="card-text">{{ project.text }}</p>
+{% for link in project.links %}
+        <div><a href="{{ link.url }}" class="btn btn-link">{{ link.text }}</a></div>
+{% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
 
-<hr/>
-
-<dl class="row">
-  <dt class="col-md-12 col-lg-2"><img class="img-fluid" src="/assets/projects/evolution-xpert.png" srcset="/assets/projects/evolution-xpert.png 1x, /assets/projects/evolution-xpert@2x.png 2x"/></dt>
-  <dd class="col-md-12 col-lg-10">
-    <p>Evolution XPert is an assistant app for the highly popular augmented reality game Pokémon GO, which helps players optimize their evolution XP gain. The app deduces the right amount of Pokémon of a particular kind to transfer in order to maximize the amount of possible evolutions.</p>
-    <p><a href="https://itunes.apple.com/app/id1135176839">Download on the App Store</a></p>
-  </dd>
-  <dt class="col-md-12 col-lg-2"><img class="img-fluid" src="/assets/projects/spectrum-run.png" srcset="/assets/projects/spectrum-run.png 1x, /assets/projects/spectrum-run@2x.png 2x"/></dt>
-  <dd class="col-md-12 col-lg-10">
-    <p>Spectrum Run is all about the three colors Red, Blue and Yellow - packed in a fast-paced action-arcade game! Jump, dive and slide through gates with the right color in a challenging hunt for the Highscore! Master your reaction-time while Doc White is gaining speed. Earn Achievements and challenge your friends on Game Center!</p>
-    <p><a href="https://itunes.apple.com/app/id516387678">Download on the App Store</a><br/><a href="https://tobiha.bandcamp.com/album/spectrum-run">Listen to Soundtrack on Bandcamp</a></p>
-  </dd>
-  <dt class="col-md-12 col-lg-2"><img class="img-fluid" src="/assets/projects/toopassword.png" srcset="/assets/projects/toopassword.png 1x, /assets/projects/toopassword@2x.png 2x"/></dt>
-  <dd class="col-md-12 col-lg-10">
-    <p>tooPassword for iOS offers read-only(!) access to AgileBits' 1Password keychains. The project has been discontinued, that's why it's now fully open source. You can still download it for free on the App Store.</p>
-    <p><a href="https://itunes.apple.com/app/id596958240">Download on the App Store</a><br/><a href="https://github.com/setoLabs/tooPassword">setoLabs/tooPassword on GitHub</a></p>
-  </dd>
-  <dt class="col-md-12 col-lg-2"><img class="img-fluid" src="/assets/projects/lemon-pharma.png" srcset="/assets/projects/lemon-pharma.png 1x, /assets/projects/lemon-pharma@2x.png 2x"/></dt>
-  <dd class="col-md-12 col-lg-10">
-    <p>The Bach Flower app by Lemon Pharma lets you select suitable flower essences directly and quickly. Find your individual Bach Flowers intuitively through images of the Bach Flower essences or that suit your current emotional state.</p>
-    <p><a href="https://itunes.apple.com/app/id889650118">Download on the App Store</a></p>
-  </dd>
-</dl>
-
-<hr/>
-
-<dl class="row">
-  <dt class="col-md-12 col-lg-2">THLabel</dt>
-  <dd class="col-md-12 col-lg-10">
-    <p>THLabel is a subclass of UILabel, which additionally allows shadow blur, inner shadow, stroke text and fill gradient.</p>
-    <p><a href="https://github.com/tobihagemann/THLabel">tobihagemann/THLabel on GitHub</a></p>
-  </dd>
-  <dt class="col-md-12 col-lg-2">sissy</dt>
-  <dd class="col-md-12 col-lg-10">
-    <p>Get notified when your grades for Hochschule Bonn-Rhein-Sieg (H-BRS) have updated. It's both an iOS and OS X app that run 100% locally.</p>
-    <p><a href="https://github.com/tobihagemann/sissy">tobihagemann/sissy on GitHub</a></p>
-  </dd>
-  <dt class="col-md-12 col-lg-2">bonntermin</dt>
-  <dd class="col-md-12 col-lg-10">
-    <p>Automatically scrape Stadt Bonn's Dienstleistungszentrum appointment service for the earliest month that you can reserve. If this bookable month is the one you desire, you'll receive an email notification.</p>
-    <p><a href="https://github.com/tobihagemann/bonntermin">tobihagemann/bonntermin on GitHub</a></p>
-  </dd>
-</dl>
+<div class="card-columns">
+{% for project in page.projects %}
+  <div class="card card-shadow">
+    <div class="card-body">
+      <div class="d-flex flex-row">
+  {% if project.img %}
+        <img class="project-img mr-3" src="{{ project.img }}" srcset="{{ project.img }} 1x, {{ project.img2x }} 2x">
+  {% endif %}
+        <div>
+          <h2 class="card-title h4">{{ project.title }}</h2>
+          <p class="card-text">{{ project.text }}</p>
+  {% for link in project.links %}
+          <div><a href="{{ link.url }}" class="btn btn-link">{{ link.text }}</a></div>
+  {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>
