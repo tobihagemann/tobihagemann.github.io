@@ -7,12 +7,3 @@
 @import "variables";
 @import "mixins";
 @import "pagination";
-
-dt {
-  font-weight: $font-weight-normal;
-  text-align: right;
-
-  @include media-breakpoint-down(md) {
-    text-align: left;
-  }
-}

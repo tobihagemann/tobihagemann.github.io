@@ -3,15 +3,16 @@ layout: page
 title: Blog
 stylesheets: ['/css/blog.css']
 ---
-<dl class="row">
 {% for post in paginator.posts %}
-  <dt class="col-md-12 col-lg-2 text-muted">{{ post.date | date: "%Y-%m-%d" }}</dt>
-  <dd class="col-md-12 col-lg-10">
-    <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-    <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 320 }}</p>
-  </dd>
+<div class="card card-shadow mb-3">
+  <div class="card-body">
+    <h2 class="card-title h3 mb-1">{{ post.title }}</h2>
+    <div class="text-muted mb-2">{{ post.date | date: "%Y-%m-%d" }}</div>
+    <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 320 }}</p>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-link">Continue reading</a>
+  </div>
+</div>
 {% endfor %}
-</dl>
 
 {% if paginator.total_pages > 1 %}
 <nav class="my-4" aria-label="Page navigation">
