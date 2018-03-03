@@ -5,27 +5,6 @@
 @import "custom";
 
 //
-// Hover Mixin
-//
-@mixin hover-focus-active-active {
-  @if $enable-hover-media-query {
-    &:focus,
-    &:active,
-    &.active {
-      @content;
-    }
-    @include hover { @content; }
-  } @else {
-    &:focus,
-    &:active,
-    &.active,
-    &:hover {
-      @content;
-    }
-  }
-}
-
-//
 // Header & Footer
 //
 .navbar {
@@ -42,7 +21,10 @@
   .navbar-brand {
     color: $navbar-light-color;
 
-    @include hover-focus-active-active {
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
       color: theme-color("secondary");
     }
   }
@@ -101,7 +83,10 @@ footer {
 }
 
 .icon-tobiha {
-  @include hover-focus-active-active {
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
     > svg path {
       fill: theme-color("secondary");
     }
@@ -109,7 +94,9 @@ footer {
 }
 
 .icon-twitter {
-  @include hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
     > svg path {
       fill: #1da1f2;
     }
@@ -117,7 +104,9 @@ footer {
 }
 
 .icon-github {
-  @include hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
     > svg path {
       fill: #333333;
     }
@@ -125,7 +114,9 @@ footer {
 }
 
 .icon-facebook {
-  @include hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
     > svg path {
       fill: #3b5998;
     }
@@ -133,7 +124,9 @@ footer {
 }
 
 .icon-youtube {
-  @include hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
     > svg path {
       fill: #ff0000;
     }
@@ -141,7 +134,9 @@ footer {
 }
 
 .icon-keybase {
-  @include hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
     > svg path {
       fill: #33a0ff;
     }
@@ -149,7 +144,9 @@ footer {
 }
 
 .icon-rss {
-  @include hover-focus-active {
+  &:hover,
+  &:focus,
+  &:active {
     > svg path {
       fill: #f26522;
     }
