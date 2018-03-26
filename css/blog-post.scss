@@ -47,3 +47,89 @@ pre {
     }
   }
 }
+
+.card-tweet a {
+  @include hover {
+    text-decoration: none;
+  }
+}
+
+.card-author {
+  @include hover-focus {
+    .card-title {
+      color: darken($primary, 10%);
+    }
+  }
+}
+
+.card-author-img {
+  border-radius: 50%;
+  height: 36px;
+  width: 36px;
+}
+
+.card-tweet .card-title {
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacer * .25;
+}
+
+.card-tweet .card-subtitle {
+  color: $text-muted;
+  font-size: $font-size-sm;
+}
+
+.card-icon-twitter > svg {
+  display: inline-block;
+  height: 1.25rem;
+  vertical-align: middle;
+  width: 1.25rem;
+
+  path {
+    fill: #1da1f2;
+  }
+}
+
+.link-muted {
+  color: $text-muted;
+
+  @include hover-focus {
+    color: darken($primary, 10%) !important;
+  }
+}
+
+.card-media {
+  flex-direction: row;
+  font-size: $font-size-sm;
+
+  @include hover-focus {
+    background-color: $light;
+  }
+}
+
+.card-media-img {
+  max-height: 7.25rem;
+  max-width: 7.25rem;
+
+  @include media-breakpoint-down(xs) {
+    max-height: 4.625rem;
+    max-width: 4.625rem;
+  }
+}
+
+.card-media .card-body {
+  padding: $spacer;
+}
+
+.card-media .card-title {
+  font-weight: $font-weight-bold;
+}
+
+.card-media-text {
+  max-height: 3em * $line-height-sm;
+  overflow: hidden;
+
+  @include media-breakpoint-down(xs) {
+    max-height: 1em * $line-height-sm;
+  }
+}
