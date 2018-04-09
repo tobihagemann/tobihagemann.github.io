@@ -4,7 +4,7 @@ title: Blog
 stylesheets: ['/css/blog.css']
 ---
 {% for post in paginator.posts %}
-<div class="card card-shadow mb-3">
+<div class="card shadow-sm mb-3">
   <div class="card-body">
     <h2 class="card-title h3 mb-1">{{ post.title }}</h2>
     <div class="text-muted mb-2">{{ post.date | date: "%Y-%m-%d" }}</div>

@@ -4,9 +4,9 @@ stylesheets: ['/css/index.css']
 ---
 <div id="home" class="container-fluid p-0 text-center">
   <div class="d-inline-block mt-4 mt-sm-5 mb-3 mx-3" style="max-width: 200px;">
-    <img class="img-fluid img-shadow rounded-circle" src="https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=200" srcset="https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=200 1x, https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=400 2x"/>
+    <img class="img-fluid rounded-circle shadow" src="https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=200" srcset="https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=200 1x, https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=400 2x"/>
   </div>
-  <div class="headings text-shadow px-3 py-4 py-sm-5">
+  <div class="headings px-3 py-4 py-sm-5">
     <h1>{{ site.name }}</h1>
     <h2>iOS App Developer &amp; Designer</h2>
     <h3>Currently working on <a href="https://cryptomator.org/" target="_blank">Cryptomator</a></h3>
@@ -15,7 +15,7 @@ stylesheets: ['/css/index.css']
 <div class="container my-4 my-sm-5">
   <div class="card-deck">
 {% for post in site.posts limit:3 %}
-    <div class="card card-shadow">
+    <div class="card shadow-sm">
       <div class="card-body">
         <h4 class="card-title mb-0">{{ post.title }}</h4>
         <div class="text-muted mb-1">{{ post.date | date: "%Y-%m-%d" }}</div>

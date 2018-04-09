@@ -35,14 +35,7 @@
   }
 }
 
-.img-shadow {
-  box-shadow: 0 1px 0 rgba($black, .2);
-}
-
 .headings {
   background: linear-gradient(transparent, rgba(theme-color("secondary"), .8));
-}
-
-.text-shadow {
-  text-shadow: 0 1px 0 rgba($black, .2);
+  text-shadow: $box-shadow;
 }
