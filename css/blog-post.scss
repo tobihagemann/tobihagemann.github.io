@@ -48,10 +48,24 @@ pre {
   }
 }
 
+//
+// Tweets
+//
 .card-tweet a {
   @include hover {
     text-decoration: none;
   }
+}
+
+.card-tweet .card-title {
+  font-size: $font-size-base;
+  font-weight: $font-weight-bold;
+  margin-bottom: $spacer * .25;
+}
+
+.card-tweet .card-subtitle {
+  color: $text-muted;
+  font-size: $font-size-sm;
 }
 
 .card-author {
@@ -68,17 +82,6 @@ pre {
   width: 36px;
 }
 
-.card-tweet .card-title {
-  font-size: $font-size-base;
-  font-weight: $font-weight-bold;
-  margin-bottom: $spacer * .25;
-}
-
-.card-tweet .card-subtitle {
-  color: $text-muted;
-  font-size: $font-size-sm;
-}
-
 .card-icon-twitter > svg {
   display: inline-block;
   height: 1.25rem;
@@ -87,14 +90,6 @@ pre {
 
   path {
     fill: #1da1f2;
-  }
-}
-
-.link-muted {
-  color: $text-muted;
-
-  @include hover-focus {
-    color: darken($primary, 10%) !important;
   }
 }
 
@@ -107,6 +102,22 @@ pre {
   }
 }
 
+.card-media .card-body {
+  padding: $spacer;
+}
+
+.card-media .card-title {
+  font-weight: $font-weight-bold;
+}
+
+.card-media-link {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 .card-media-img {
   max-height: 7.25rem;
   max-width: 7.25rem;
@@ -117,19 +128,19 @@ pre {
   }
 }
 
-.card-media .card-body {
-  padding: $spacer;
-}
-
-.card-media .card-title {
-  font-weight: $font-weight-bold;
-}
-
 .card-media-text {
   max-height: 3em * $line-height-sm;
   overflow: hidden;
 
   @include media-breakpoint-down(xs) {
     max-height: 1em * $line-height-sm;
+  }
+}
+
+.link-muted {
+  color: $text-muted;
+
+  @include hover-focus {
+    color: darken($primary, 10%) !important;
   }
 }

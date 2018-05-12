@@ -1,0 +1,44 @@
+<div class="card card-tweet mx-auto mb-3" style="max-width: 500px;">
+{% if include.tweet.video %}
+  <video class="card-img-top" autoplay controls loop poster="https://pbs.twimg.com/tweet_video_thumb/{{ include.tweet.video.id }}.jpg">
+    <source type="video/mp4" src="https://video.twimg.com/tweet_video/{{ include.tweet.video.id }}.mp4">
+    Your browser does not support the video tag.
+  </video>
+{% endif %}
+  <div class="card-body">
+    <div class="d-flex align-items-start justify-content-between">
+      <a class="card-author text-dark" href="https://twitter.com/{{ include.tweet.screen_name }}" target="_blank">
+        <div class="d-flex align-items-center mb-2">
+          <img class="card-author-img mr-2" src="https://pbs.twimg.com/profile_images/{{ include.tweet.avatar_id }}_normal.jpg" srcset="https://pbs.twimg.com/profile_images/{{ include.tweet.avatar_id }}_normal.jpg 1x, https://pbs.twimg.com/profile_images/{{ include.tweet.avatar_id }}_bigger.jpg 2x"/>
+          <div class="d-flex flex-column">
+            <p class="card-title">{{ include.tweet.name }}</p>
+            <p class="card-subtitle">@{{ include.tweet.screen_name }}</p>
+          </div>
+        </div>
+      </a>
+      <a href="https://twitter.com/{{ include.tweet.screen_name }}/status/{{ include.tweet.id }}" target="_blank">
+        <div class="card-icon-twitter">{% include icon-twitter.svg %}</div>
+      </a>
+    </div>
+{% if include.tweet.text %}
+    <p class="card-text mb-1">{{ include.tweet.text }}</p>
+{% endif %}
+{% if include.tweet.reply_to %}
+    <p class="card-text small mb-1"><a class="link-muted" href="https://twitter.com/_/status/{{ include.tweet.reply_to.id }}" target="_blank">{{ include.tweet.reply_to.text }}</a></p>
+{% endif %}
+    <p class="card-text small"><a class="link-muted" href="https://twitter.com/{{ include.tweet.screen_name }}/status/{{ include.tweet.id }}" target="_blank">{{ include.tweet.date }}</a></p>
+{% if include.tweet.media %}
+    <div class="card card-media">
+      <a class="card-media-link" href="{{ include.tweet.media.url }}" target="_blank"></a>
+      <div class="card-body pr-0">
+        <img class="card-media-img" src="{{ include.tweet.media.img }}"/>
+      </div>
+      <div class="card-body">
+        <p class="card-title mb-1">{{ include.tweet.media.title }}</p>
+        <p class="card-text card-media-text mb-1">{{ include.tweet.media.text }}</p>
+        <p class="card-text text-muted">{{ include.tweet.media.destination }}</p>
+      </div>
+    </div>
+{% endif %}
+  </div>
+</div>
