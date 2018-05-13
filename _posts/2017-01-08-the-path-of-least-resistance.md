@@ -2,6 +2,7 @@
 layout: post
 title: "The Path of Least Resistance"
 date: 2017-01-08
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 ---
 <p class="lead">I've mostly chosen the <em>path of least resistance</em> for my decision-making. It's somewhat controversial, but this way of thinking has (not only, but mostly) positively complemented my decisions and supported me at solving problems in a creative way. This is not a blog post about giving advice. I wanted to reflect on the ups and downs in my life. I have the privilege to know and be able to pursue my passion from an early age. The transition from hobby to work has been challenging and most importantly it has been fun.</p>

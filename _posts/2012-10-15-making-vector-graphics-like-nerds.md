@@ -2,6 +2,7 @@
 layout: post
 title: "Making Vector Graphics Like Nerds"
 date: 2012-10-15
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 
 excerpt: "I'm working on a minor update for Spectrum Run. As for now, you can only see the global ranking of your scores in the \"End Game\" screen. I want to add friends ranking to it, so you don't have to switch to Game Center all the time to check your ranking. Instead of using texts I decided to visualize these separate rankings with icons."

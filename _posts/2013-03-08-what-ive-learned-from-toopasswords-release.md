@@ -2,6 +2,7 @@
 layout: post
 title: "What I've Learned from tooPassword's Release"
 date: 2013-03-08
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 ---
 _Trust is hard to gain._ Security of passwords is a very sensitive subject. People believe we are hackers, crackers or something like that. [Kerckhoffs's principle][wp-kerckhoffs-principle]{:target="_blank"} is a good read, why we're not breaching any security. Even AgileBits [blogged][agilebits-blog]{:target="_blank"} about us, because people were complaining. Communication solves a lot of misunderstandings.

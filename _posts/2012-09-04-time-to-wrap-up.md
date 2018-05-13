@@ -2,6 +2,7 @@
 layout: post
 title: "Time to Wrap Up!"
 date: 2012-09-04
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 ---
 Recently I got an E-Mail from Apple that it's time to upload Spectrum Run:

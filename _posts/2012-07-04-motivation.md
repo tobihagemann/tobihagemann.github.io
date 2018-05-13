@@ -2,6 +2,7 @@
 layout: post
 title: "Motivation"
 date: 2012-07-04
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 ---
 If you're looking for inspiration and motivation for your game development or are interested in what independent game developers are thinking and feeling about their games, just go watch this documentary. NOW! Here's a short trailer:

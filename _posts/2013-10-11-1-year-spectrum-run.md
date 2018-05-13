@@ -2,6 +2,7 @@
 layout: post
 title: "1 Year Spectrum Run"
 date: 2013-10-11
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 ---
 How time flies! Spectrum Run was released a year ago. It's time for a new blog post on my current developments. What happened in the meantime? Updates, other apps, iOS 7 (oh boy…), lots of prototyping / "hidden" development, Tobi's Weekly [Update: Removed], and of course I still have to study. :laughing:

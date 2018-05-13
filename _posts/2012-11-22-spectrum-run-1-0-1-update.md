@@ -2,6 +2,7 @@
 layout: post
 title: "Spectrum Run 1.0.1 Update"
 date: 2012-11-22
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 ---
 The first "minor" update of Spectrum Run is [out now][spectrum-run]{:target="_blank"} and took about a month with an unfortunate 1-week-delay because of a crash bug. I didn't expect it would take that long. My initial plan was to fix some bugs and optimize the game. Just small things that would fit into a "minor" update. The official changes are:

@@ -8,8 +8,8 @@ stylesheets: ['/css/index.css']
   </div>
   <div class="headings px-3 py-4 py-sm-5">
     <h1>{{ site.name }}</h1>
-    <h2>iOS App Developer &amp; Designer</h2>
-    <h3>Currently working on <a href="https://cryptomator.org/" target="_blank">Cryptomator</a></h3>
+    <h2>Developer &amp; Designer</h2>
+    <h3>Based in Bonn, Germany</h3>
   </div>
 </div>
 <div class="container my-4 my-sm-5">
@@ -17,7 +17,7 @@ stylesheets: ['/css/index.css']
 {% for post in site.posts limit:3 %}
     <div class="card shadow-sm">
       <div class="card-body">
-        <h4 class="card-title mb-0">{{ post.title }}</h4>
+        <h4 class="card-title text-truncate mb-0">{{ post.title }}</h4>
         <div class="text-muted mb-1">{{ post.date | date: "%Y-%m-%d" }}</div>
         <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
         <a href="{{ post.url }}" class="btn btn-link">Continue reading</a>

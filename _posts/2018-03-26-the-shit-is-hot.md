@@ -2,6 +2,7 @@
 layout: post
 title: "The Shit Is Hot"
 date: 2018-03-26
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 
 tweet1:

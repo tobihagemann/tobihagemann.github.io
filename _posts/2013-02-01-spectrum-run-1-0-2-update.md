@@ -2,6 +2,7 @@
 layout: post
 title: "Spectrum Run 1.0.2 Update"
 date: 2013-02-01
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 ---
 Spectrum Run 1.0.2 update just [came out][spectrum-run]{:target="_blank"} and offers more iOS 6 features. The changes are:

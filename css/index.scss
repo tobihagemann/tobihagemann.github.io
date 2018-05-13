@@ -23,15 +23,15 @@
   @include image-2x("/assets/background@2x.jpg");
   background-size: cover;
   color: $white;
+}
 
-  a {
-    color: $white;
-    text-decoration: underline;
+#home a {
+  color: $white;
+  text-decoration: underline;
 
-    @include hover {
-      color: darken($white, 15%);
-      text-decoration: none;
-    }
+  @include hover {
+    color: darken($white, 15%);
+    text-decoration: none;
   }
 }
 

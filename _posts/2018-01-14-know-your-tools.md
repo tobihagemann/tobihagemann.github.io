@@ -2,6 +2,7 @@
 layout: post
 title: "Know Your Tools"
 date: 2018-01-14
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 ---
 <p class="lead">Using new tools and learning to use them can be overwhelming. If you have been hesitant to approach something new, don't be. Take the new year as an opportunity to learn new things and get started right away!</p>

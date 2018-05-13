@@ -2,6 +2,7 @@
 layout: post
 title: "Sprite Sheet Video"
 date: 2012-06-22
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 ---
 Andreas Löw just released a quite amusing and informative video for game developers about why using Sprite Sheets is so important. I mentioned Texture Packer in the last post, so this video fits perfectly.

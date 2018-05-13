@@ -2,6 +2,7 @@
 layout: post
 title: "THLabel – UILabel Subclass"
 date: 2012-12-22
+activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 
 excerpt: "I am releasing a UILabel subclass, which allows shadow blur, stroke text and fill gradient. You can find it here: tobihagemann/THLabel"
