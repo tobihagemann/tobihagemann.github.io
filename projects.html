@@ -13,6 +13,7 @@ featured_project:
   links:
   - url: https://cryptomator.org/
     text: cryptomator.org
+  tags: [java, objective-c, crypto, fuse, dokany, webdav, cloud-storage, desktop, ios, android, utility]
 
 projects:
 - title: The Shit Is Hot
@@ -25,6 +26,7 @@ projects:
     text: Play on shitishot.de
   - url: https://github.com/tobihagemann/shitishot
     text: tobihagemann/shitishot on GitHub
+  tags: [typescript, angular, bootstrap, browser, game]
 - title: Evolution XPert
   img: /assets/projects/evolution-xpert.png
   img2x: /assets/projects/evolution-xpert@2x.png
@@ -33,6 +35,7 @@ projects:
   links:
   - url: https://itunes.apple.com/app/id1135176839
     text: Download on the App Store
+  tags: [objective-c, pokemon-go, ios, utility]
 - title: Spectrum Run
   img: /assets/projects/spectrum-run.png
   img2x: /assets/projects/spectrum-run@2x.png
@@ -43,6 +46,7 @@ projects:
     text: Download on the App Store
   - url: https://tobiha.bandcamp.com/album/spectrum-run
     text: Listen to Soundtrack on Bandcamp
+  tags: [objective-c, cocos2d, box2d, objectal, ios, game]
 - title: tooPassword
   img: /assets/projects/toopassword.png
   img2x: /assets/projects/toopassword@2x.png
@@ -53,6 +57,7 @@ projects:
     text: Download on the App Store
   - url: https://github.com/setoLabs/tooPassword
     text: setoLabs/tooPassword on GitHub
+  tags: [objective-c, crypto, 1password, ios, utility]
 - title: Bach Flower
   img: /assets/projects/bach-flower.png
   img2x: /assets/projects/bach-flower@2x.png
@@ -61,6 +66,7 @@ projects:
   links:
   - url: https://itunes.apple.com/app/id889650118
     text: Download on the App Store
+  tags: [objective-c, bach-flower, lemon-pharma, ios, utility]
 - title: THLabel
   img: /assets/projects/thlabel.png
   img2x: /assets/projects/thlabel@2x.png
@@ -69,6 +75,7 @@ projects:
   links:
   - url: https://github.com/tobihagemann/THLabel
     text: tobihagemann/THLabel on GitHub
+  tags: [objective-c, uilabel, ios, library]
 - title: sissy
   img: /assets/projects/sissy.png
   img2x: /assets/projects/sissy@2x.png
@@ -77,12 +84,14 @@ projects:
   links:
   - url: https://github.com/tobihagemann/sissy
     text: tobihagemann/sissy on GitHub
+  tags: [objective-c, h-brs, macos, ios, utility]
 - title: bonntermin
   text: >
     Automatically scrape Stadt Bonn's Dienstleistungszentrum appointment service for the earliest month that you can book. If the bookable month is the one you desire, you'll get notified by email.
   links:
   - url: https://github.com/tobihagemann/bonntermin
     text: tobihagemann/bonntermin on GitHub
+  tags: [python, scrapy, bonn, utility]
 ---
 {% assign project = page.featured_project %}
 <div class="card card-featured shadow-sm">
@@ -94,9 +103,16 @@ projects:
       <div>
         <h2 class="card-title h3 mb-2">{{ project.title }}</h2>
         <p class="card-text">{{ project.text }}</p>
+        <p class="card-text">
 {% for link in project.links %}
-        <div><a href="{{ link.url }}" class="btn btn-link">{{ link.text }}</a></div>
+          <div><a href="{{ link.url }}" class="btn btn-link">{{ link.text }}</a></div>
 {% endfor %}
+        </p>
+        <div>
+{% for tag in project.tags %}
+          <span class="badge badge-pill badge-light">{{ tag }}</span>
+{% endfor %}
+        </div>
       </div>
     </div>
   </div>
@@ -113,9 +129,16 @@ projects:
         <div>
           <h2 class="card-title h3 mb-2">{{ project.title }}</h2>
           <p class="card-text">{{ project.text }}</p>
+          <p class="card-text">
   {% for link in project.links %}
-          <div><a href="{{ link.url }}" class="btn btn-link">{{ link.text }}</a></div>
+            <div><a href="{{ link.url }}" class="btn btn-link">{{ link.text }}</a></div>
   {% endfor %}
+          </p>
+          <div>
+  {% for tag in project.tags %}
+            <span class="badge badge-pill badge-light">{{ tag }}</span>
+  {% endfor %}
+          </div>
         </div>
       </div>
     </div>
