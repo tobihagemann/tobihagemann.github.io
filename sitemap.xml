@@ -1,14 +1,15 @@
 ---
 layout: null
+pages:
+- url: '/'
+- url: '/blog/'
+- url: '/projects/'
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+{% for p in page.pages %}
   <url>
-    <loc>{{ "/" | prepend: site.baseurl | prepend: site.url }}</loc>
-  </url>
-{% for item in site.data.menu %}
-  <url>
-    <loc>{{ item.url | prepend: site.baseurl | prepend: site.url }}</loc>
+    <loc>{{ p.url | prepend: site.baseurl | prepend: site.url }}</loc>
   </url>
 {% endfor %}
 </urlset>
