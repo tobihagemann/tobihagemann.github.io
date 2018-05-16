@@ -29,8 +29,15 @@
 }
 
 .navbar .nav-item.active {
-  border-bottom: $border-width * 4 solid $secondary;
-  margin-bottom: -$navbar-padding-y;
+  @include media-breakpoint-down(xs) {
+    border-left: $border-width * 4 solid $secondary;
+    margin-left: -$navbar-padding-x;
+    padding-left: calc(#{$navbar-padding-x} - #{$border-width} * 4);
+  }
+  @include media-breakpoint-up(sm) {
+    border-bottom: $border-width * 4 solid $secondary;
+    margin-bottom: -$navbar-padding-y;
+  }
 }
 
 footer .icon {
