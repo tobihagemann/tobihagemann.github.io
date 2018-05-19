@@ -13,8 +13,8 @@ featured_project:
   links:
   - url: https://cryptomator.org/
     text: cryptomator.org
+    icon: fas fa-home
   tags: [java, objective-c, crypto, fuse, dokany, webdav, cloud-storage, desktop, ios, android, utility]
-
 projects:
 - title: The Shit Is Hot
   img: /assets/projects/shitishot.png
@@ -24,8 +24,10 @@ projects:
   links:
   - url: https://shitishot.de/
     text: Play on shitishot.de
+    icon: fas fa-play-circle
   - url: https://github.com/tobihagemann/shitishot
-    text: tobihagemann/shitishot on GitHub
+    text: Source Code on GitHub
+    icon: fab fa-github
   tags: [typescript, angular, bootstrap, browser, game]
 - title: Evolution XPert
   img: /assets/projects/evolution-xpert.png
@@ -35,6 +37,7 @@ projects:
   links:
   - url: https://itunes.apple.com/app/id1135176839
     text: Download on the App Store
+    icon: fab fa-app-store-ios
   tags: [objective-c, pokemon-go, ios, utility]
 - title: Spectrum Run
   img: /assets/projects/spectrum-run.png
@@ -44,8 +47,10 @@ projects:
   links:
   - url: https://itunes.apple.com/app/id516387678
     text: Download on the App Store
+    icon: fab fa-app-store-ios
   - url: https://tobiha.bandcamp.com/album/spectrum-run
     text: Listen to Soundtrack on Bandcamp
+    icon: fab fa-bandcamp
   tags: [objective-c, cocos2d, box2d, objectal, ios, game]
 - title: tooPassword
   img: /assets/projects/toopassword.png
@@ -55,8 +60,10 @@ projects:
   links:
   - url: https://itunes.apple.com/app/id596958240
     text: Download on the App Store
+    icon: fab fa-app-store-ios
   - url: https://github.com/setoLabs/tooPassword
-    text: setoLabs/tooPassword on GitHub
+    text: Source Code on GitHub
+    icon: fab fa-github
   tags: [objective-c, crypto, 1password, ios, utility]
 - title: Bach Flower
   img: /assets/projects/bach-flower.png
@@ -66,6 +73,7 @@ projects:
   links:
   - url: https://itunes.apple.com/app/id889650118
     text: Download on the App Store
+    icon: fab fa-app-store-ios
   tags: [objective-c, bach-flower, lemon-pharma, ios, utility]
 - title: THLabel
   img: /assets/projects/thlabel.png
@@ -74,9 +82,8 @@ projects:
     THLabel is a subclass of UILabel, which additionally allows shadow blur, inner shadow, stroke text and fill gradient.
   links:
   - url: https://github.com/tobihagemann/THLabel
-    text: tobihagemann/THLabel on GitHub
-  - url: https://cocoapods.org/pods/THLabel
-    text: THLabel on CocoaPods
+    text: Source Code on GitHub
+    icon: fab fa-github
   tags: [objective-c, uilabel, ios, library]
 - title: sissy
   img: /assets/projects/sissy.png
@@ -85,14 +92,16 @@ projects:
     Get notified when your grades for Hochschule Bonn-Rhein-Sieg (H-BRS) have updated. sissy is available for iOS and macOS, both run 100% locally.
   links:
   - url: https://github.com/tobihagemann/sissy
-    text: tobihagemann/sissy on GitHub
+    text: Source Code on GitHub
+    icon: fab fa-github
   tags: [objective-c, h-brs, macos, ios, utility]
 - title: bonntermin
   text: >
     Automatically scrape Stadt Bonn's Dienstleistungszentrum appointment service for the earliest month that you can book. If the bookable month is the one you desire, you'll get notified by email.
   links:
   - url: https://github.com/tobihagemann/bonntermin
-    text: tobihagemann/bonntermin on GitHub
+    text: Source Code on GitHub
+    icon: fab fa-github
   tags: [python, scrapy, bonn, script, utility]
 ---
 {% assign project = page.featured_project %}
@@ -105,11 +114,11 @@ projects:
       <div>
         <h2 class="card-title h3 mb-2">{{ project.title }}</h2>
         <p class="card-text">{{ project.text }}</p>
-        <p class="card-text">
+        <ul class="fa-ul">
 {% for link in project.links %}
-          <div><a href="{{ link.url }}" class="btn btn-link">{{ link.text }}</a></div>
+          <li><a href="{{ link.url }}" class="btn btn-link"><span class="fa-li"><i class="{{ link.icon }}"></i></span>{{ link.text }}</a></li>
 {% endfor %}
-        </p>
+        </ul>
         <div>
 {% for tag in project.tags %}
           <span class="badge badge-pill badge-light">{{ tag }}</span>
@@ -133,11 +142,11 @@ projects:
         <div>
           <h2 class="card-title h3 mb-2">{{ project.title }}</h2>
           <p class="card-text">{{ project.text }}</p>
-          <p class="card-text">
+          <ul class="fa-ul">
   {% for link in project.links %}
-            <div><a href="{{ link.url }}" class="btn btn-link">{{ link.text }}</a></div>
+            <li><a href="{{ link.url }}" class="btn btn-link"><span class="fa-li"><i class="{{ link.icon }}"></i></span>{{ link.text }}</a></li>
   {% endfor %}
-          </p>
+          </ul>
           <div>
   {% for tag in project.tags %}
             <span class="badge badge-pill badge-light">{{ tag }}</span>
