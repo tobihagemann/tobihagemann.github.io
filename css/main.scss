@@ -7,7 +7,21 @@
 //
 // Header & Footer
 //
-.navbar .icon > svg {
+.nav-brand {
+  color: $navbar-light-color;
+  font-size: $navbar-brand-font-size;
+  padding-bottom: $navbar-brand-padding-y;
+  padding-top: $navbar-brand-padding-y;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $secondary;
+  }
+}
+
+.nav-brand.icon > svg {
   height: 1.25rem;
   vertical-align: text-bottom;
   width: 1.25rem;
@@ -17,34 +31,48 @@
   }
 }
 
-.navbar .navbar-brand {
+.nav-link {
   color: $navbar-light-color;
 
-  &:hover,
-  &:focus,
-  &:active,
+  @include hover-focus {
+    color: $secondary;
+  }
+
+  &.disabled {
+    color: $navbar-light-disabled-color;
+  }
+
   &.active {
-    color: theme-color("secondary");
+    color: $secondary;
   }
 }
 
-.navbar .nav-item.active {
-  @include media-breakpoint-down(xs) {
-    border-left: $border-width * 4 solid $secondary;
-    margin-left: -$navbar-padding-x;
-    padding-left: calc(#{$navbar-padding-x} - #{$border-width} * 4);
+.nav-link:not(.nav-brand) .nav-text:after {
+  border-bottom: $border-width * 4 solid $secondary;
+  content: '';
+  display: block;
+  margin-bottom: calc(-#{$nav-link-padding-y} - #{$spacer} * .5);
+  padding-bottom: calc(#{$nav-link-padding-y} + #{$spacer} * .5 - #{$border-width} * 4);
+}
+
+.nav-link:not(.nav-brand):not(.active) {
+  .nav-text:after {
+    transition: transform 0.15s linear;
+    transform: scaleX(0);
   }
-  @include media-breakpoint-up(sm) {
-    border-bottom: $border-width * 4 solid $secondary;
-    margin-bottom: -$navbar-padding-y;
+
+  @include hover-focus {
+    .nav-text:after {
+      transform: scaleX(1);
+    }
   }
 }
 
 footer .icon {
-  margin: $grid-gutter-width / 2;
+  margin: $grid-gutter-width * .5;
 
   @include media-breakpoint-down(xs) {
-    margin: $grid-gutter-width / 4;
+    margin: $grid-gutter-width * .25;
   }
 }
 
@@ -89,7 +117,7 @@ footer .icon {
   &:active,
   &.active {
     > svg path {
-      fill: theme-color("secondary");
+      fill: $secondary;
     }
   }
 }

@@ -36,6 +36,6 @@
 }
 
 .headings {
-  background: linear-gradient(transparent, rgba(theme-color("secondary"), .8));
+  background: linear-gradient(transparent, rgba($secondary, .8));
   text-shadow: $box-shadow;
 }
