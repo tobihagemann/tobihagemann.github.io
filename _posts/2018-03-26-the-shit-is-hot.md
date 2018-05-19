@@ -10,14 +10,14 @@ tweet1:
   avatar_id: 729204803054743552/5H5szp7m
   name: Fynn Kliemann
   screen_name: fimbim
-  text: >
+  text: >-
     .<a href="https://twitter.com/tobihagemann" target="_blank">@tobihagemann</a> hat das Spiel, dass ich mit <a href="https://twitter.com/janboehm" target="_blank">@janboehm</a> beim <a href="https://twitter.com/neomagazin" target="_blank">@neomagazin</a> gespielt habe nachgebaut! Meistgesuchte Begriffe über Wikipedia API, Suchvolumen wahlweise über Yandex, Google oder Bing. R-E-S-T-E-C-P Alter :fire: <a href="https://shitishot.de" target="_blank">shitishot.de</a> <a href="https://twitter.com/tobihagemann/status/975700447649521665" target="_blank">twitter.com/tobihagemann/s…</a>
   date: "13:42 - 19. März 2018"
   media:
     url: "https://shitishot.de"
     img: "https://shitishot.de/assets/logo.png"
     title: Der Scheiß ist heiß
-    text: >
+    text: >-
       Ihr müsst raten, wie viele Treffer die gezeigten Begriffe bei einer Suchmaschine erzeugen und diese in der richtigen Reihenfolge platzieren. Und jetzt heißt es: Der Scheiß ist heiß.
     destination: shitishot.de
 tweet2:
@@ -30,7 +30,7 @@ tweet2:
     id: DYqp4kzW4AAbQTV
   reply_to:
     id: 975714061190037504
-    text: >
+    text: >-
       Antwort an @fimbim und 2 weitere
 ---
 <p class="lead" markdown="1">[The Shit Is Hot][the-shit-is-hot]{:target="_blank"} is my first browser game, based on the segment _Der Scheiß ist heiß_ on _NEO MAGAZIN ROYALE_. You have to guess how many hits the shown words generate in a search engine and then place them in the correct order. This blog post is in German since this game is inspired by a German late-night talk show.</p>
