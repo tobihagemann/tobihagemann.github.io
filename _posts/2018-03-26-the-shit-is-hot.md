@@ -39,7 +39,7 @@ Letzte Woche habe ich mein erstes Browser-Spiel veröffentlicht: [Der Scheiß is
 
 <div class="text-center">
   <div class="embed-responsive embed-responsive-16by9 mx-auto mb-2" style="max-width: 720px;">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/upm6SfYuGX4"></iframe>
+    <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/upm6SfYuGX4"></iframe>
   </div>
   <p class="figure-caption" markdown="1">[Der Scheiß ist heiß mit Fynn Kliemann | NEO MAGAZIN ROYALE mit Jan Böhmermann - ZDFneo][der-scheiss-ist-heiss]{:target="_blank"}</p>
 </div>
