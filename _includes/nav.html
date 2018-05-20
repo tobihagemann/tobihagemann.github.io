@@ -1,9 +1,9 @@
 <nav class="bg-light">
   <div class="container d-flex flex-column align-items-center py-2">
 {% if page.url == "/" %}
-    <a class="nav-link nav-brand icon icon-tobiha active" href="{{ "/" | prepend: site.baseurl }}">{% include icon-tobiha.svg %} tobiha.de</a>
+    <a class="nav-link nav-brand nav-icon icon-tobiha active" href="{{ "/" | prepend: site.baseurl }}">{% include icon-tobiha.svg %} tobiha.de</a>
 {% else %}
-    <a class="nav-link nav-brand icon icon-tobiha" href="{{ "/" | prepend: site.baseurl }}">{% include icon-tobiha.svg %} tobiha.de</a>
+    <a class="nav-link nav-brand nav-icon icon-tobiha" href="{{ "/" | prepend: site.baseurl }}">{% include icon-tobiha.svg %} tobiha.de</a>
 {% endif %}
     <div class="d-flex">
 {% for item in site.data.menu %}
