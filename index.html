@@ -2,16 +2,17 @@
 layout: default
 stylesheets: ['/css/index.css']
 ---
-<div id="home" class="container-fluid p-0 text-center">
-  <div class="d-inline-block mt-4 mt-sm-5 mb-3 mx-3" style="max-width: 200px;">
+<div id="home" class="container-fluid d-flex flex-column p-0 text-center">
+  <div class="mx-3 my-4 my-sm-5">
     <img class="img-fluid rounded-circle shadow" src="{{ "/assets/profile.jpg" | prepend: site.baseurl }}" srcset="{{ "/assets/profile.jpg" | prepend: site.baseurl }} 1x, {{ "/assets/profile@2x.jpg" | prepend: site.baseurl }} 2x"/>
   </div>
-  <div class="headings px-3 py-4 py-sm-5">
+  <div class="headings px-3 pb-4 pb-sm-5">
     <h1>{{ site.name }}</h1>
     <h2>Developer &amp; Designer</h2>
     <h3>Based in Bonn, Germany</h3>
   </div>
 </div>
+
 <div class="container my-4 my-sm-5">
   <div class="card-deck">
 {% for post in site.posts limit:3 %}
