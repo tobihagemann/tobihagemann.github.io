@@ -11,7 +11,7 @@ Andreas Löw just released a quite amusing and informative video for game develo
   <div class="embed-responsive embed-responsive-16by9 mx-auto mb-2" style="max-width: 720px;">
     <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/44440528"></iframe>
   </div>
-  <p class="figure-caption" markdown="1">[SpriteSheets – TheMovie – Part 1][what-is-a-sprite-sheet]{:target="_blank"} by [Code'n'Web][codeandweb]{:target="_blank"}</p>
+  <p class="figure-caption" markdown="1">[SpriteSheets – TheMovie – Part 1][what-is-a-sprite-sheet]{:target="_blank"}{:rel="noopener"} by [Code'n'Web][codeandweb]{:target="_blank"}{:rel="noopener"}</p>
 </div>
 
 [what-is-a-sprite-sheet]: https://www.codeandweb.com/what-is-a-sprite-sheet "SpriteSheets – TheMovie – Part 1"

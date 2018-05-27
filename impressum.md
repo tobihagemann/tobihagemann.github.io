@@ -43,4 +43,4 @@ Wenn die SSL Verschlüsselung aktiviert ist, können die Daten, die Sie an uns
 ## Widerspruch Werbe-Mails
 Der Nutzung von im Rahmen der Impressumspflicht veröffentlichten Kontaktdaten zur Übersendung von nicht ausdrücklich angeforderter Werbung und Informationsmaterialien wird hiermit widersprochen. Die Betreiber der Seiten behalten sich ausdrücklich rechtliche Schritte im Falle der unverlangten Zusendung von Werbeinformationen, etwa durch Spam-E-Mails, vor.
 
-Quelle: [e-recht24.de](https://www.e-recht24.de){:target="_blank"}
+Quelle: [e-recht24.de](https://www.e-recht24.de){:target="_blank"}{:rel="noopener"}

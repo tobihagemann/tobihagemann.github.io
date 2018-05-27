@@ -7,7 +7,7 @@
 {% endif %}
   <div class="card-body">
     <div class="d-flex align-items-start justify-content-between">
-      <a class="card-author text-dark" href="https://twitter.com/{{ include.tweet.screen_name }}" target="_blank">
+      <a class="card-author text-dark" href="https://twitter.com/{{ include.tweet.screen_name }}" target="_blank" rel="noopener">
         <div class="d-flex align-items-center mb-2">
           <img class="card-author-img mr-2" src="https://pbs.twimg.com/profile_images/{{ include.tweet.avatar_id }}_normal.jpg" srcset="https://pbs.twimg.com/profile_images/{{ include.tweet.avatar_id }}_normal.jpg 1x, https://pbs.twimg.com/profile_images/{{ include.tweet.avatar_id }}_bigger.jpg 2x"/>
           <div class="d-flex flex-column">
@@ -16,7 +16,7 @@
           </div>
         </div>
       </a>
-      <a href="https://twitter.com/{{ include.tweet.screen_name }}/status/{{ include.tweet.id }}" target="_blank">
+      <a href="https://twitter.com/{{ include.tweet.screen_name }}/status/{{ include.tweet.id }}" target="_blank" rel="noopener">
         <div class="card-icon-twitter">{% include icon-twitter.svg %}</div>
       </a>
     </div>
@@ -24,12 +24,12 @@
     <p class="card-text mb-1">{{ include.tweet.text }}</p>
 {% endif %}
 {% if include.tweet.reply_to %}
-    <p class="card-text small mb-1"><a class="link-muted" href="https://twitter.com/_/status/{{ include.tweet.reply_to.id }}" target="_blank">{{ include.tweet.reply_to.text }}</a></p>
+    <p class="card-text small mb-1"><a class="link-muted" href="https://twitter.com/_/status/{{ include.tweet.reply_to.id }}" target="_blank" rel="noopener">{{ include.tweet.reply_to.text }}</a></p>
 {% endif %}
-    <p class="card-text small"><a class="link-muted" href="https://twitter.com/{{ include.tweet.screen_name }}/status/{{ include.tweet.id }}" target="_blank">{{ include.tweet.date }}</a></p>
+    <p class="card-text small"><a class="link-muted" href="https://twitter.com/{{ include.tweet.screen_name }}/status/{{ include.tweet.id }}" target="_blank" rel="noopener">{{ include.tweet.date }}</a></p>
 {% if include.tweet.media %}
     <div class="card card-media">
-      <a class="card-media-link" href="{{ include.tweet.media.url }}" target="_blank"></a>
+      <a class="card-media-link" href="{{ include.tweet.media.url }}" target="_blank" rel="noopener"></a>
       <div class="card-body pr-0">
         <img class="card-media-img" src="{{ include.tweet.media.img }}"/>
       </div>

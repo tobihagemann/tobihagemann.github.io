@@ -5,7 +5,7 @@ date: 2012-05-09
 activelink: /blog/
 stylesheets: ['/css/blog-post.css']
 ---
-I mentioned in the [first post][first-post] that I'm using cocos2d for Spectrum Run. It basically is a 2D game framework. You can import images/sprites, move them around, do whatever you want with them and much more! I'm using [Texture Packer][texture-packer]{:target="_blank"} by Andreas Löw / code'n'web, which is a VERY handy tool for organizing sprite sheets. I was thinking about improving performance and generally how I should handle textures better. I didn't really know all features of Texture Packer until I recently came across [this tutorial][rw-tutorial]{:target="_blank"} by Ray Wenderlich and this tool just became more awesome!
+I mentioned in the [first post][first-post] that I'm using cocos2d for Spectrum Run. It basically is a 2D game framework. You can import images/sprites, move them around, do whatever you want with them and much more! I'm using [Texture Packer][texture-packer]{:target="_blank"}{:rel="noopener"} by Andreas Löw / code'n'web, which is a VERY handy tool for organizing sprite sheets. I was thinking about improving performance and generally how I should handle textures better. I didn't really know all features of Texture Packer until I recently came across [this tutorial][rw-tutorial]{:target="_blank"}{:rel="noopener"} by Ray Wenderlich and this tool just became more awesome!
 
 <div class="text-center">
   <figure class="figure float-md-right" style="max-width: 320px;">

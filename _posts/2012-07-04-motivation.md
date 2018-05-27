@@ -11,7 +11,7 @@ If you're looking for inspiration and motivation for your game development or ar
   <div class="embed-responsive embed-responsive-16by9 mx-auto mb-2" style="max-width: 720px;">
     <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/GhaT78i1x2M"></iframe>
   </div>
-  <p class="figure-caption" markdown="1">You can watch the full movie here: [Indie Game: The Movie][indie-game-the-movie]{:target="_blank"}</p>
+  <p class="figure-caption" markdown="1">You can watch the full movie here: [Indie Game: The Movie][indie-game-the-movie]{:target="_blank"}{:rel="noopener"}</p>
 </div>
 
 [indie-game-the-movie]: http://buy.indiegamethemovie.com/ "Indie Game: The Movie"

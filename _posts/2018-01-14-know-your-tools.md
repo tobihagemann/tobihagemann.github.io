@@ -21,7 +21,7 @@ Don't forget that a tool is just a tool. You're still in charge to execute. But 
   <div class="embed-responsive embed-responsive-16by9 mx-auto mb-2" style="max-width: 720px;">
     <iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/KxGRhd_iWuE"></iframe>
   </div>
-  <p class="figure-caption" markdown="1">[Matsuoka Shuzo (松岡修造) - あきらめかけているあなた (NEVER GIVE UP!!)][never-give-up]{:target="_blank"}</p>
+  <p class="figure-caption" markdown="1">[Matsuoka Shuzo (松岡修造) - あきらめかけているあなた (NEVER GIVE UP!!)][never-give-up]{:target="_blank"}{:rel="noopener"}</p>
 </div>
 
 [never-give-up]: https://www.youtube.com/watch?v=KxGRhd_iWuE "Matsuoka Shuzo (松岡修造) - あきらめかけているあなた (NEVER GIVE UP!!)"
