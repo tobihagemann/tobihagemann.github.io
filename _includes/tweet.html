@@ -7,16 +7,16 @@
 {% endif %}
   <div class="card-body">
     <div class="d-flex align-items-start justify-content-between">
-      <a class="card-author text-dark" href="https://twitter.com/{{ include.tweet.screen_name }}" target="_blank" rel="noopener">
+      <a class="card-author text-dark" href="https://twitter.com/{{ include.tweet.screen_name }}" target="_blank" rel="noopener" aria-label="{{ include.tweet.screen_name }} on Twitter">
         <div class="d-flex align-items-center mb-2">
-          <img class="card-author-img mr-2" src="https://pbs.twimg.com/profile_images/{{ include.tweet.avatar_id }}_normal.jpg" srcset="https://pbs.twimg.com/profile_images/{{ include.tweet.avatar_id }}_normal.jpg 1x, https://pbs.twimg.com/profile_images/{{ include.tweet.avatar_id }}_bigger.jpg 2x"/>
+          <img class="card-author-img mr-2" src="https://pbs.twimg.com/profile_images/{{ include.tweet.avatar_id }}_normal.jpg" srcset="https://pbs.twimg.com/profile_images/{{ include.tweet.avatar_id }}_bigger.jpg 2x" alt=""/>
           <div class="d-flex flex-column">
             <p class="card-title">{{ include.tweet.name }}</p>
             <p class="card-subtitle">@{{ include.tweet.screen_name }}</p>
           </div>
         </div>
       </a>
-      <a href="https://twitter.com/{{ include.tweet.screen_name }}/status/{{ include.tweet.id }}" target="_blank" rel="noopener">
+      <a href="https://twitter.com/{{ include.tweet.screen_name }}/status/{{ include.tweet.id }}" target="_blank" rel="noopener" aria-label="Tweet on Twitter">
         <div class="card-icon-twitter">{% include icon-twitter.svg %}</div>
       </a>
     </div>
@@ -29,9 +29,9 @@
     <p class="card-text small"><a class="link-muted" href="https://twitter.com/{{ include.tweet.screen_name }}/status/{{ include.tweet.id }}" target="_blank" rel="noopener">{{ include.tweet.date }}</a></p>
 {% if include.tweet.media %}
     <div class="card card-media">
-      <a class="card-media-link" href="{{ include.tweet.media.url }}" target="_blank" rel="noopener"></a>
+      <a class="card-media-link" href="{{ include.tweet.media.url }}" target="_blank" rel="noopener" aria-label="{{ include.tweet.media.title }}"></a>
       <div class="card-body pr-0">
-        <img class="card-media-img" src="{{ include.tweet.media.img }}"/>
+        <img class="card-media-img" src="{{ include.tweet.media.img }}" alt=""/>
       </div>
       <div class="card-body">
         <p class="card-title mb-1">{{ include.tweet.media.title }}</p>

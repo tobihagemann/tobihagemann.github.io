@@ -9,7 +9,7 @@ stylesheets: ['/css/blog.css']
     <h2 class="card-title h3 mb-1">{{ post.title }}</h2>
     <div class="text-muted mb-2">{{ post.date | date: "%Y-%m-%d" }}</div>
     <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 320 }}</p>
-    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-link">Continue reading</a>
+    <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-link">Continue reading <span class="sr-only">{{ post.title }}</span></a>
   </div>
 </div>
 {% endfor %}

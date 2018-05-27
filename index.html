@@ -4,7 +4,7 @@ stylesheets: ['/css/index.css']
 ---
 <div id="home" class="container-fluid d-flex flex-column p-0 text-center">
   <div class="mx-3 my-4 my-sm-5">
-    <img class="img-fluid rounded-circle shadow" src="{{ "/assets/profile.jpg" | prepend: site.baseurl }}" srcset="{{ "/assets/profile.jpg" | prepend: site.baseurl }} 1x, {{ "/assets/profile@2x.jpg" | prepend: site.baseurl }} 2x"/>
+    <img class="img-fluid rounded-circle shadow" src="{{ "/assets/profile.jpg" | prepend: site.baseurl }}" srcset="{{ "/assets/profile@2x.jpg" | prepend: site.baseurl }} 2x" alt="tobiha.de Logo"/>
   </div>
   <div class="headings px-3 pb-4 pb-sm-5">
     <h1>{{ site.name }}</h1>
@@ -21,7 +21,7 @@ stylesheets: ['/css/index.css']
         <h4 class="card-title text-truncate mb-0">{{ post.title }}</h4>
         <div class="text-muted mb-1">{{ post.date | date: "%Y-%m-%d" }}</div>
         <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
-        <a href="{{ post.url }}" class="btn btn-link">Continue reading</a>
+        <a href="{{ post.url }}" class="btn btn-link">Continue reading <span class="sr-only">{{ post.title }}</span></a>
       </div>
     </div>
 {% endfor %}

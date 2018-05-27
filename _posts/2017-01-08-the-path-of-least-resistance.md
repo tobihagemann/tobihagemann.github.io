@@ -26,7 +26,7 @@ Everyone has a _passion_ for something. It can be any topic, e.g. politics, or h
 <div class="text-center">
   <figure class="figure" style="max-width: 720px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-tobi-1994.jpg" | prepend: site.baseurl }}" alt="Tobi 1994"/>
-    <figcaption class="figure-caption">Playing some educational game on my dad's <a href="https://en.wikipedia.org/wiki/Macintosh_Quadra_650" title="Macintosh Quadra 650" target="_blank" rel="noopener">Macintosh Quadra 650</a> in 1994 (5 years old)</figcaption>
+    <figcaption class="figure-caption">Playing some educational game on my dad's <a href="https://en.wikipedia.org/wiki/Macintosh_Quadra_650" target="_blank" rel="noopener">Macintosh Quadra 650</a> in 1994 (5 years old)</figcaption>
   </figure>
 </div>
 
@@ -51,7 +51,7 @@ As you can imagine, I did it all for fun. Programming was my _hobby_ and it stil
 <div class="text-center">
   <figure class="figure" style="max-width: 720px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-tobi-2004.jpg" | prepend: site.baseurl }}" alt="Tobi 2004"/>
-    <figcaption class="figure-caption">Playing the original Ghost Recon on my <a href="https://en.wikipedia.org/wiki/EMac" title="eMac" target="_blank" rel="noopener">eMac</a> in 2004 (14 years old)</figcaption>
+    <figcaption class="figure-caption">Playing the original Ghost Recon on my <a href="https://en.wikipedia.org/wiki/EMac" target="_blank" rel="noopener">eMac</a> in 2004 (14 years old)</figcaption>
   </figure>
 </div>
 
@@ -60,7 +60,7 @@ I graduated from school in 2007 and there was a period of time when playing a ga
 <div class="text-center">
   <figure class="figure" style="max-width: 720px;">
     <img class="figure-img img-fluid rounded" src="{{ "/assets/2017-01-08-world-of-warcraft.jpg" | prepend: site.baseurl }}" alt="World of Warcraft"/>
-    <figcaption class="figure-caption">One of my highlights in World of Warcraft in 2009, getting realm first on the <a href="http://www.wowhead.com/achievement=3819/a-tribute-to-insanity-25-player" title="A Tribute to Insanity (25 player)" target="_blank" rel="noopener">Tribute to Insanity</a> achievement, which granted the <a href="http://www.wowhead.com/title=170/grand-crusader" title="Grand Crusader" target="_blank" rel="noopener">Grand Crusader</a> title; I've also made a <a href="https://www.youtube.com/watch?v=ja7g3P_-Ix8" title="Sturmreiter vs. Anub'arak (Tribute to Insanity)" target="_blank" rel="noopener">video</a></figcaption>
+    <figcaption class="figure-caption">One of my highlights in World of Warcraft in 2009, getting realm first on the <a href="http://www.wowhead.com/achievement=3819/a-tribute-to-insanity-25-player" target="_blank" rel="noopener">Tribute to Insanity</a> achievement, which granted the <a href="http://www.wowhead.com/title=170/grand-crusader" target="_blank" rel="noopener">Grand Crusader</a> title; I've also made a <a href="https://www.youtube.com/watch?v=ja7g3P_-Ix8" title="Sturmreiter vs. Anub'arak (Tribute to Insanity)" target="_blank" rel="noopener">video</a></figcaption>
   </figure>
 </div>
 
