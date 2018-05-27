@@ -17,11 +17,11 @@ stylesheets: ['/css/index.css']
   <div class="card-deck">
 {% for post in site.posts limit:3 %}
     <div class="card shadow-sm">
-      <div class="card-body">
-        <h4 class="card-title text-truncate mb-0">{{ post.title }}</h4>
-        <div class="text-muted mb-1">{{ post.date | date: "%Y-%m-%d" }}</div>
+      <div class="card-body d-flex flex-column">
+        <h4 class="card-title text-truncate mb-1">{{ post.title }}</h4>
+        <p class="small text-muted mb-2">{{ post.date | date: "%Y-%m-%d" }}</p>
         <p class="card-text">{{ post.excerpt | strip_html | strip_newlines | truncate: 100 }}</p>
-        <a href="{{ post.url }}" class="btn btn-link">Continue reading <span class="sr-only">{{ post.title }}</span></a>
+        <a href="{{ post.url }}" class="btn btn-link mt-auto">Continue reading <span class="sr-only">{{ post.title }}</span></a>
       </div>
     </div>
 {% endfor %}
