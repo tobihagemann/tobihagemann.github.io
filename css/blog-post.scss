@@ -74,7 +74,7 @@ pre {
 .card-author {
   @include hover-focus {
     .card-title {
-      color: darken($primary, 10%);
+      color: $link-hover-color;
     }
   }
 }
@@ -144,6 +144,6 @@ pre {
   color: $text-muted;
 
   @include hover-focus {
-    color: darken($primary, 10%) !important;
+    color: $link-hover-color;
   }
 }

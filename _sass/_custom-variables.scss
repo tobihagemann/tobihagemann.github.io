@@ -3,7 +3,9 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
-$primary: #3498db;
-$secondary: #34495e;
+$theme-colors: (
+  "primary": #3498db,
+  "secondary": #34495e
+);
 
 $badge-font-weight: 400;

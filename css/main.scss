@@ -14,11 +14,11 @@
   padding-top: $navbar-brand-padding-y;
 
   @include hover-focus {
-    color: $secondary;
+    color: theme-color("secondary");
   }
 
   &.active {
-    color: $secondary;
+    color: theme-color("secondary");
   }
 }
 
@@ -37,16 +37,16 @@
   color: $navbar-light-color;
 
   @include hover-focus {
-    color: $secondary;
+    color: theme-color("secondary");
   }
 
   &.active {
-    color: $secondary;
+    color: theme-color("secondary");
   }
 }
 
 .nav-link:not(.nav-brand) .nav-text:after {
-  border-bottom: $border-width * 4 solid $secondary;
+  border-bottom: $border-width * 4 solid theme-color("secondary");
   content: '';
   display: block;
   margin-bottom: calc(-#{$nav-link-padding-y} - #{$spacer} * .5);
@@ -117,13 +117,13 @@ footer .icon {
 .icon-tobiha {
   @include hover-focus {
     > svg path {
-      fill: $secondary;
+      fill: theme-color("secondary");
     }
   }
 
   &.active {
     > svg path {
-      fill: $secondary;
+      fill: theme-color("secondary");
     }
   }
 }
