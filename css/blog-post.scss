@@ -18,23 +18,11 @@ blockquote {
   }
 }
 
-code,
 pre {
   background-color: $light;
   border-radius: $border-radius;
   color: $body-color;
-  padding-left: 2px;
-  padding-right: 2px;
-}
-
-pre {
   padding: $spacer * .75;
-
-  > code {
-    border: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -49,6 +37,10 @@ pre {
       margin-left: $spacer;
     }
   }
+}
+
+video {
+  width: 100%;
 }
 
 //
