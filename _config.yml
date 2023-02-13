@@ -5,10 +5,10 @@ email: tobias [dot] hagemann [at] gmail [dot] com
 description: Tobias Hagemann • Developer & Designer • Based in Bonn, Germany
 baseurl: ""
 url: "https://tobiha.de"
+mastodon_username: tobihagemann
 twitter_username: tobihagemann
 github_username: tobihagemann
-facebook_username: hagemann.tobias
-youtube_username: Caibot
+youtube_username: tobihagemann
 keybase_username: tobihagemann
 
 # Plugins

@@ -1,9 +1,9 @@
 <footer class="container my-4 my-sm-5 text-center">
   <div class="mb-3">
+    <a class="icon icon-mastodon hvr-pop" href="https://mastodon.social/@{{ site.mastodon_username }}" aria-label="{{ site.mastodon_username }} on mastodon.social">{% include icon-mastodon.svg %}</a>
     <a class="icon icon-twitter hvr-pop" href="https://twitter.com/{{ site.twitter_username }}" aria-label="{{ site.twitter_username }} on Twitter">{% include icon-twitter.svg %}</a>
     <a class="icon icon-github hvr-pop" href="https://github.com/{{ site.github_username }}" aria-label="{{ site.github_username }} on GitHub">{% include icon-github.svg %}</a>
-    <a class="icon icon-facebook hvr-pop" href="https://www.facebook.com/{{ site.facebook_username }}" aria-label="{{ site.facebook_username }} on Facebook">{% include icon-facebook.svg %}</a>
-    <a class="icon icon-youtube hvr-pop" href="https://www.youtube.com/user/{{ site.youtube_username }}" aria-label="{{ site.youtube_username }} on YouTube">{% include icon-youtube.svg %}</a>
+    <a class="icon icon-youtube hvr-pop" href="https://www.youtube.com/@{{ site.youtube_username }}" aria-label="{{ site.youtube_username }} on YouTube">{% include icon-youtube.svg %}</a>
     <a class="icon icon-keybase hvr-pop" href="https://keybase.io/{{ site.keybase_username }}" aria-label="{{ site.keybase_username }} on Keybase">{% include icon-keybase.svg %}</a>
     <a class="icon icon-rss hvr-pop" href="{{ "/feed.xml" | prepend: site.baseurl }}" aria-label="RSS Feed">{% include icon-rss.svg %}</a>
   </div>
