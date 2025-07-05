@@ -27,7 +27,7 @@ Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unt
 
 Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
 
-## Datenschutzhinweis
+## Datenschutz
 Diese Website erhebt und verarbeitet keine personenbezogenen Daten. Es werden keine Cookies, Analyse-Tools oder Tracking-Dienste eingesetzt.
 
 Die technische Bereitstellung erfolgt über GitHub Pages (GitHub Inc.) und Cloudflare Inc. Diese Anbieter können für den Betrieb erforderliche technische Daten (z.B. IP-Adressen, Zugriffsdaten) verarbeiten. Weitere Informationen dazu finden Sie in den jeweiligen Datenschutzerklärungen der Anbieter.
