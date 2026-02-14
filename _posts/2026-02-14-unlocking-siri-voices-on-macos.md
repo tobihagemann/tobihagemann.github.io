@@ -109,11 +109,11 @@ A few things to keep in mind:
 
 ## ClawHub Skills
 
-I've created a [say][clawhub-say] skill on ClawHub that wraps all of this into a reusable skill for Claude Code. If you're also interested in the opposite direction, speech-to-text, check out my [yap][clawhub-yap] skill. It's based on [yap][yap-github] by Finn Voorhees, which uses Apple's Speech framework for fast on-device transcription. I prefer it over Whisper CLI, which was less reliable and slower for me. Both skills are macOS only.
+I've created a [say][clawhub-say] skill on ClawHub that wraps all of this into a reusable agent skill (while very useful for [OpenClaw][openclaw]). If you're also interested in the opposite direction, speech-to-text, check out my [yap][clawhub-yap] skill. It's based on [yap][yap-github] by Finn Voorhees, which uses Apple's Speech framework for fast on-device transcription. I prefer it over Whisper CLI, which was less reliable and slower for me. Both skills are macOS only.
 
 I hope this helps if you've ever been frustrated by not being able to use Siri voices in your scripts. It's a simple trick, but it took me a while to even think of this approach. :wink:
 
+[openclaw]: https://openclaw.ai/ "OpenClaw"
 [clawhub-say]: https://clawhub.ai/tobihagemann/say "say skill on ClawHub"
 [clawhub-yap]: https://clawhub.ai/tobihagemann/yap "yap skill on ClawHub"
 [yap-github]: https://github.com/finnvoor/yap "yap by Finn Voorhees"
-[openclaw]: https://openclaw.ai/ "OpenClaw"
