@@ -25,15 +25,15 @@ I've tried a bunch of alternatives: ElevenLabs (too expensive for my use case), 
 Before any of this works, the Siri voices need to be downloaded. Open **System Settings > Accessibility > Spoken Content**, click the info button next to "System voice", and download the voices you want from there. Make sure to select the downloaded Siri voice in the list, so that it's set as default for the language. Otherwise, the voice assignments will remain empty in the next step.
 
 <div class="text-center">
-  <figure class="figure" style="max-width: 100%;">
-    <img class="figure-img img-fluid rounded" src="{{ "/assets/2026-02-14-spoken-content-settings.png" | prepend: site.baseurl }}" alt="System Settings showing Spoken Content with the System voice selector" style="max-width: 835px;"/>
+  <figure class="figure" style="max-width: 835px;">
+    <img class="figure-img img-fluid rounded" src="{{ "/assets/2026-02-14-spoken-content-settings.png" | prepend: site.baseurl }}" alt="System Settings showing Spoken Content with the System voice selector"/>
     <figcaption class="figure-caption">System Settings > Accessibility > Spoken Content</figcaption>
   </figure>
 </div>
 
 <div class="text-center">
-  <figure class="figure" style="max-width: 100%;">
-    <img class="figure-img img-fluid rounded" src="{{ "/assets/2026-02-14-voice-selection.png" | prepend: site.baseurl }}" alt="Voice selection panel showing language list and voice settings" style="max-width: 862px;"/>
+  <figure class="figure" style="max-width: 862px;">
+    <img class="figure-img img-fluid rounded" src="{{ "/assets/2026-02-14-voice-selection.png" | prepend: site.baseurl }}" alt="Voice selection panel showing language list and voice settings"/>
     <figcaption class="figure-caption">Selecting a Siri voice for a language</figcaption>
   </figure>
 </div>
