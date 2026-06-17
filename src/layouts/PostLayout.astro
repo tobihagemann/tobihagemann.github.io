@@ -1,0 +1,36 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { formatDate } from '../lib/date';
+import '../styles/blog-post.scss';
+
+interface Props {
+  title: string;
+  date: Date;
+  description?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const { title, date, description, ogImage, noindex } = Astro.props;
+const formattedDate = formatDate(date);
+---
+<BaseLayout
+  {title}
+  {description}
+  ogType="article"
+  {ogImage}
+  publishedTime={formattedDate}
+  {noindex}
+  activelink="/blog/"
+>
+  <div class="container">
+    <header class="border-bottom mt-4 mt-sm-5 mb-3">
+      <h1 class="mb-1">{title}</h1>
+      <p class="text-muted">{formattedDate}</p>
+    </header>
+
+    <article class="clearfix">
+      <slot />
+    </article>
+  </div>
+</BaseLayout>

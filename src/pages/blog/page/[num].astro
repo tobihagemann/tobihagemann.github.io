@@ -1,0 +1,29 @@
+---
+import PageLayout from '../../../layouts/PageLayout.astro';
+import BlogList from '../../../components/BlogList.astro';
+import { PAGE_SIZE } from '../../../lib/pagination';
+import { getSortedPosts } from '../../../lib/posts';
+import '../../../styles/blog.scss';
+
+export async function getStaticPaths() {
+  const posts = await getSortedPosts();
+  const totalPages = Math.ceil(posts.length / PAGE_SIZE);
+  const paths = [];
+  for (let num = 2; num <= totalPages; num++) {
+    paths.push({
+      params: { num: String(num) },
+      props: {
+        entries: posts.slice((num - 1) * PAGE_SIZE, num * PAGE_SIZE),
+        currentPage: num,
+        totalPages,
+      },
+    });
+  }
+  return paths;
+}
+
+const { entries, currentPage, totalPages } = Astro.props;
+---
+<PageLayout title="Blog">
+  <BlogList entries={entries} currentPage={currentPage} totalPages={totalPages} />
+</PageLayout>

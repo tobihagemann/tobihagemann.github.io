@@ -1,26 +1,34 @@
 # tobihagemann.github.io
 
-Personal portfolio and blog website built with Jekyll and hosted on GitHub Pages.
+Personal portfolio and blog website built with [Astro](https://astro.build/) and hosted on GitHub Pages.
 
 ## Prerequisites
 
-- Ruby (version 2.5 or higher)
-- Bundler (`gem install bundler`)
+- Node.js (version 20 or higher)
+- pnpm (`npm install -g pnpm`)
 
 ## Setup
 
 1. Install dependencies:
    ```bash
-   bundle install
+   pnpm install
    ```
 
 2. Run the development server:
    ```bash
-   bundle exec jekyll serve
+   pnpm dev
    ```
 
-3. Open http://localhost:4000 in your browser
+3. Open http://localhost:4321 in your browser
+
+## Build
+
+```bash
+pnpm build
+```
+
+The static site is generated into `dist/`.
 
 ## Deployment
 
-Push changes to the `master` branch. GitHub Pages will automatically build and deploy the site.
+Push changes to the `main` branch. The GitHub Actions workflow (`.github/workflows/deploy.yml`) builds the site and deploys it to GitHub Pages.

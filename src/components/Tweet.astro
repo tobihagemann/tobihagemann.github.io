@@ -1,0 +1,71 @@
+---
+import IconTwitter from './icons/IconTwitter.astro';
+
+interface TweetMedia {
+  url: string;
+  img: string;
+  title: string;
+  text: string;
+  destination: string;
+}
+
+interface TweetData {
+  id: string;
+  avatar_id: string;
+  name: string;
+  screen_name: string;
+  text?: string;
+  date: string;
+  video?: { id: string };
+  reply_to?: { id: string; text: string };
+  media?: TweetMedia;
+}
+
+interface Props {
+  tweet: TweetData;
+}
+
+const { tweet } = Astro.props;
+---
+<div class="card card-tweet mx-auto mb-3" style="max-width: 500px;">
+{ tweet.video && (
+  <video class="card-img-top" autoplay controls loop poster={`https://pbs.twimg.com/tweet_video_thumb/${tweet.video.id}.jpg`}>
+    <source type="video/mp4" src={`https://video.twimg.com/tweet_video/${tweet.video.id}.mp4`} />
+    Your browser does not support the video tag.
+  </video>
+) }
+  <div class="card-body">
+    <div class="d-flex align-items-start justify-content-between">
+      <a class="card-author text-dark" href={`https://twitter.com/${tweet.screen_name}`} target="_blank" rel="noopener" aria-label={`${tweet.screen_name} on Twitter`}>
+        <div class="d-flex align-items-center mb-2">
+          <img class="card-author-img mr-2" src={`https://pbs.twimg.com/profile_images/${tweet.avatar_id}_normal.jpg`} srcset={`https://pbs.twimg.com/profile_images/${tweet.avatar_id}_bigger.jpg 2x`} alt="" />
+          <div class="d-flex flex-column">
+            <p class="card-title">{tweet.name}</p>
+            <p class="card-subtitle">@{tweet.screen_name}</p>
+          </div>
+        </div>
+      </a>
+      <a href={`https://twitter.com/${tweet.screen_name}/status/${tweet.id}`} target="_blank" rel="noopener" aria-label="Tweet on Twitter">
+        <div class="card-icon-twitter"><IconTwitter /></div>
+      </a>
+    </div>
+{ tweet.text && <p class="card-text mb-1" set:html={tweet.text}></p> }
+{ tweet.reply_to && (
+    <p class="card-text small mb-1"><a class="link-muted" href={`https://twitter.com/_/status/${tweet.reply_to.id}`} target="_blank" rel="noopener">{tweet.reply_to.text}</a></p>
+) }
+    <p class="card-text small"><a class="link-muted" href={`https://twitter.com/${tweet.screen_name}/status/${tweet.id}`} target="_blank" rel="noopener">{tweet.date}</a></p>
+{ tweet.media && (
+    <div class="card card-media">
+      <a class="card-media-link" href={tweet.media.url} target="_blank" rel="noopener" aria-label={tweet.media.title}></a>
+      <div class="card-body pr-0">
+        <img class="card-media-img" src={tweet.media.img} alt="" />
+      </div>
+      <div class="card-body">
+        <p class="card-title mb-1">{tweet.media.title}</p>
+        <p class="card-text card-media-text mb-1">{tweet.media.text}</p>
+        <p class="card-text text-muted">{tweet.media.destination}</p>
+      </div>
+    </div>
+) }
+  </div>
+</div>

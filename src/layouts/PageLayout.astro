@@ -1,0 +1,19 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title?: string;
+  noindex?: boolean;
+  activelink?: string;
+  frontmatter?: { title?: string; noindex?: boolean };
+}
+
+const { frontmatter, activelink } = Astro.props;
+const title = Astro.props.title ?? frontmatter?.title;
+const noindex = Astro.props.noindex ?? frontmatter?.noindex;
+---
+<BaseLayout {title} {noindex} {activelink}>
+  <div class="container mt-4 mt-sm-5">
+    <slot />
+  </div>
+</BaseLayout>

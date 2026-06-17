@@ -1,0 +1,54 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { permalink } from '../lib/permalink';
+import { getExcerpt } from '../lib/excerpt';
+import { formatDate } from '../lib/date';
+import { pagePath } from '../lib/pagination';
+
+interface Props {
+  entries: CollectionEntry<'blog'>[];
+  currentPage: number;
+  totalPages: number;
+}
+
+const { entries, currentPage, totalPages } = Astro.props;
+const cards = entries.map((entry) => ({
+  title: entry.data.title,
+  date: formatDate(entry.data.date),
+  url: permalink(entry.id),
+  excerpt: getExcerpt(entry, 320),
+}));
+const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
+---
+{ cards.map((card) => (
+<div class="card shadow-sm mb-3">
+  <div class="card-body">
+    <h2 class="card-title h3 mb-1">{card.title}</h2>
+    <p class="text-muted mb-2">{card.date}</p>
+    <p class="card-text">{card.excerpt}</p>
+    <a href={card.url} class="btn btn-link">Continue reading <span class="sr-only">{card.title}</span></a>
+  </div>
+</div>
+)) }
+
+{ totalPages > 1 && (
+<nav class="my-4" aria-label="Page navigation">
+  <ul class="pagination justify-content-center">
+  { currentPage > 1 ? (
+    <li class="page-item"><a class="page-link" href={pagePath(currentPage - 1)} aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+  ) : (
+    <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+  ) }
+  { pages.map((num) => num === currentPage ? (
+    <li class="page-item active"><a class="page-link" href="#">{num} <span class="sr-only">(current)</span></a></li>
+  ) : (
+    <li class="page-item"><a class="page-link" href={pagePath(num)}>{num}</a></li>
+  )) }
+  { currentPage < totalPages ? (
+    <li class="page-item"><a class="page-link" href={pagePath(currentPage + 1)} aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+  ) : (
+    <li class="page-item disabled"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+  ) }
+  </ul>
+</nav>
+) }

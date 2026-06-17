@@ -1,0 +1,27 @@
+---
+import { getCollection, render } from 'astro:content';
+import { parsePermalink } from '../../../../lib/permalink';
+import { getExcerpt } from '../../../../lib/excerpt';
+import PostLayout from '../../../../layouts/PostLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => {
+    const { year, month, day, slug } = parsePermalink(post.id);
+    return { params: { year, month, day, slug }, props: { post } };
+  });
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const description = getExcerpt(post, 160);
+---
+<PostLayout
+  title={post.data.title}
+  date={post.data.date}
+  description={description}
+  ogImage={post.data.ogimage}
+  noindex={post.data.noindex}
+>
+  <Content />
+</PostLayout>

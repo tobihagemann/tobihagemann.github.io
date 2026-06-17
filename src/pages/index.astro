@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { permalink } from '../lib/permalink';
+import { getExcerpt } from '../lib/excerpt';
+import { getSortedPosts } from '../lib/posts';
+import { formatDate } from '../lib/date';
+import { site } from '../data/site';
+import '../styles/index.scss';
+
+const posts = (await getSortedPosts()).slice(0, 3);
+const cards = posts.map((post) => ({
+  title: post.data.title,
+  date: formatDate(post.data.date),
+  url: permalink(post.id),
+  excerpt: getExcerpt(post, 100),
+}));
+---
+<BaseLayout>
+  <div id="home" class="container-fluid d-flex flex-column p-0 text-center">
+    <div class="mx-3 my-4 my-sm-5">
+      <img class="img-fluid rounded-circle shadow" src="https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=200" srcset="https://s.gravatar.com/avatar/c3c0759120c7bcd0117d237cb356cd6e?s=400 2x" alt="Profile Image" />
+    </div>
+    <div class="headings px-3 pb-4 pb-sm-5">
+      <h1>{site.name}</h1>
+      <h2>Developer &amp; Designer</h2>
+      <h3>Based in Bonn, Germany</h3>
+    </div>
+  </div>
+
+  <div class="container my-4 my-sm-5">
+    <div class="card-deck">
+{ cards.map((card) => (
+      <div class="card shadow-sm">
+        <div class="card-body d-flex flex-column">
+          <h4 class="card-title text-truncate mb-1">{card.title}</h4>
+          <p class="small text-muted mb-2">{card.date}</p>
+          <p class="card-text">{card.excerpt}</p>
+          <a href={card.url} class="btn btn-link mt-auto">Continue reading <span class="sr-only">{card.title}</span></a>
+        </div>
+      </div>
+)) }
+    </div>
+  </div>
+</BaseLayout>

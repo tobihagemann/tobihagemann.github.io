@@ -1,0 +1,218 @@
+@charset "utf-8";
+@import "custom";
+
+//
+// Nav
+//
+.nav-brand {
+  color: $navbar-light-color;
+  font-size: $navbar-brand-font-size;
+  padding-bottom: $navbar-brand-padding-y;
+  padding-top: $navbar-brand-padding-y;
+
+  @include hover-focus {
+    color: theme-color("secondary");
+  }
+
+  &.active {
+    color: theme-color("secondary");
+  }
+}
+
+.nav-icon > svg {
+  display: inline-block;
+  height: 1.25rem;
+  vertical-align: text-bottom;
+  width: 1.25rem;
+
+  path {
+    fill: $navbar-light-color;
+  }
+}
+
+.nav-link {
+  color: $navbar-light-color;
+
+  @include hover-focus {
+    color: theme-color("secondary");
+  }
+
+  &.active {
+    color: theme-color("secondary");
+  }
+}
+
+.nav-link:not(.nav-brand) .nav-text:after {
+  border-bottom: $border-width * 4 solid theme-color("secondary");
+  content: '';
+  display: block;
+  margin-bottom: calc(-#{$nav-link-padding-y} - #{$spacer} * .5);
+  padding-bottom: calc(#{$nav-link-padding-y} + #{$spacer} * .5 - #{$border-width} * 4);
+}
+
+.nav-link:not(.nav-brand):not(.active) {
+  .nav-text:after {
+    transition: transform 0.15s linear;
+    transform: scaleX(0);
+  }
+
+  @include hover-focus {
+    .nav-text:after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+//
+// Footer
+//
+footer .icon {
+  margin: $grid-gutter-width * .5;
+
+  @include media-breakpoint-down(xs) {
+    margin: $grid-gutter-width * .25;
+  }
+}
+
+//
+// Responsive Headings
+//
+@include media-breakpoint-down(sm) {
+  h1, .h1 { font-size: $h2-font-size; }
+  h2, .h2 { font-size: $h3-font-size; }
+  h3, .h3 { font-size: $h4-font-size; }
+  h4, .h4 { font-size: $h5-font-size; }
+  h5, .h5 { font-size: $h5-font-size; }
+  h6, .h6 { font-size: $h5-font-size; }
+}
+
+@include media-breakpoint-down(xs) {
+  h1, .h1 { font-size: $h3-font-size; }
+  h2, .h2 { font-size: $h4-font-size; }
+  h3, .h3 { font-size: $h5-font-size; }
+  h4, .h4 { font-size: $h5-font-size; }
+  h5, .h5 { font-size: $h5-font-size; }
+  h6, .h6 { font-size: $h5-font-size; }
+}
+
+//
+// Icons
+// from https://github.com/simple-icons/simple-icons/tree/develop/icons
+// with https://brandcolors.net/
+//
+.icon > svg {
+  display: inline-block;
+  height: 2rem;
+  vertical-align: middle;
+  width: 2rem;
+
+  path {
+    fill: gray("600");
+  }
+}
+
+.icon-tobiha {
+  @include hover-focus {
+    > svg path {
+      fill: theme-color("secondary");
+    }
+  }
+
+  &.active {
+    > svg path {
+      fill: theme-color("secondary");
+    }
+  }
+}
+
+.icon-mastodon {
+  @include hover-focus {
+    > svg path {
+      fill: #6364ff;
+    }
+  }
+}
+
+.icon-twitter {
+  @include hover-focus {
+    > svg path {
+      fill: #1da1f2;
+    }
+  }
+}
+
+.icon-github {
+  @include hover-focus {
+    > svg path {
+      fill: #333333;
+    }
+  }
+}
+
+.icon-youtube {
+  @include hover-focus {
+    > svg path {
+      fill: #ff0000;
+    }
+  }
+}
+
+.icon-keybase {
+  @include hover-focus {
+    > svg path {
+      fill: #33a0ff;
+    }
+  }
+}
+
+.icon-rss {
+  @include hover-focus {
+    > svg path {
+      fill: #f26522;
+    }
+  }
+}
+
+//
+// Animations
+// from https://github.com/IanLunn/Hover/blob/master/css/hover.css
+//
+@-webkit-keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes hvr-pop {
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+.hvr-pop {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+}
+
+.hvr-pop:hover, .hvr-pop:focus, .hvr-pop:active {
+  -webkit-animation-name: hvr-pop;
+  animation-name: hvr-pop;
+  -webkit-animation-duration: 0.15s;
+  animation-duration: 0.15s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+//
+// Font Awesome
+//
+.fa-ul {
+  margin-left: 2em;
+}

@@ -1,0 +1,62 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { featuredProject, projects } from '../data/projects';
+import '../styles/projects.scss';
+
+const project = featuredProject;
+---
+<PageLayout title="Projects">
+  <div class="card card-featured shadow-sm">
+    <div class="card-body">
+      <div class="d-flex flex-row">
+{ project.img && (
+        <img class="project-img" src={project.img} srcset={`${project.img2x} 2x`} alt={`${project.title} Icon`} />
+) }
+        <div>
+          <h2 class="card-title h3 mb-2">{project.title}</h2>
+          <p class="card-text" set:html={project.text}></p>
+          <ul class="fa-ul">
+{ project.links.map((link) => (
+            <li><a href={link.url} class="btn btn-link"><span class="fa-li"><i class={link.icon}></i></span>{link.text}</a></li>
+)) }
+          </ul>
+          <div>
+{ project.tags.map((tag) => (
+            <Fragment><span class="badge badge-pill badge-light">{tag}</span>{' '}</Fragment>
+)) }
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-columns">
+{ projects.map((project) => (
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="d-flex flex-row">
+{ project.img ? (
+          <img class="project-img" src={project.img} srcset={`${project.img2x} 2x`} alt={`${project.title} Icon`} />
+) : (
+          <img class="project-img" src="/assets/projects/generic.png" srcset="/assets/projects/generic@2x.png 2x" alt={`Placeholder Icon for ${project.title}`} />
+) }
+          <div>
+            <h2 class="card-title h3 mb-2">{project.title}</h2>
+            <p class="card-text" set:html={project.text}></p>
+            <ul class="fa-ul">
+{ project.links.map((link) => (
+              <li><a href={link.url} class="btn btn-link"><span class="fa-li"><i class={link.icon}></i></span>{link.text}</a></li>
+)) }
+            </ul>
+            <div>
+{ project.tags.map((tag) => (
+              <Fragment><span class="badge badge-pill badge-light">{tag}</span>{' '}</Fragment>
+)) }
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+)) }
+  </div>
+</PageLayout>
