@@ -17,7 +17,7 @@ const isActive = (url: string) => pathname.includes(url) || (activelink ?? '').i
     <div class="d-flex">
 { menu.map((item) => (
       <a class:list={['nav-link', { active: isActive(item.url) }]} href={item.url}>
-        <span class="nav-text">{item.text}</span>{isActive(item.url) && <> <span class="sr-only">(current)</span></>}
+        <span class="nav-text">{item.text}</span>{isActive(item.url) && <> <span class="visually-hidden">(current)</span></>}
       </a>
 )) }
     </div>

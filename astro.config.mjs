@@ -20,6 +20,7 @@ export default defineConfig({
     css: {
       preprocessorOptions: {
         scss: {
+          loadPaths: ['node_modules'],
           quietDeps: true,
           silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'if-function', 'abs-percent'],
         },

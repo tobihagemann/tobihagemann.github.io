@@ -1,5 +1,17 @@
 @charset "utf-8";
-@import "custom";
+@import "bootstrap-config";
+
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/nav";
+@import "bootstrap/scss/card";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/utilities/api";
 
 //
 // Nav
@@ -10,12 +22,12 @@
   padding-bottom: $navbar-brand-padding-y;
   padding-top: $navbar-brand-padding-y;
 
-  @include hover-focus {
-    color: theme-color("secondary");
+  &:hover, &:focus {
+    color: $secondary;
   }
 
   &.active {
-    color: theme-color("secondary");
+    color: $secondary;
   }
 }
 
@@ -31,19 +43,24 @@
 }
 
 .nav-link {
+  // Bootstrap 5 reads .nav-link padding from these custom properties, which it
+  // only sets on a `.nav` ancestor; these links live in a plain flex row, so
+  // restore Bootstrap's defaults here to keep their horizontal spacing.
+  --bs-nav-link-padding-x: #{$nav-link-padding-x};
+  --bs-nav-link-padding-y: #{$nav-link-padding-y};
   color: $navbar-light-color;
 
-  @include hover-focus {
-    color: theme-color("secondary");
+  &:hover, &:focus {
+    color: $secondary;
   }
 
   &.active {
-    color: theme-color("secondary");
+    color: $secondary;
   }
 }
 
 .nav-link:not(.nav-brand) .nav-text:after {
-  border-bottom: $border-width * 4 solid theme-color("secondary");
+  border-bottom: $border-width * 4 solid $secondary;
   content: '';
   display: block;
   margin-bottom: calc(-#{$nav-link-padding-y} - #{$spacer} * .5);
@@ -56,7 +73,7 @@
     transform: scaleX(0);
   }
 
-  @include hover-focus {
+  &:hover, &:focus {
     .nav-text:after {
       transform: scaleX(1);
     }
@@ -69,7 +86,7 @@
 footer .icon {
   margin: $grid-gutter-width * .5;
 
-  @include media-breakpoint-down(xs) {
+  @include media-breakpoint-down(sm) {
     margin: $grid-gutter-width * .25;
   }
 }
@@ -77,7 +94,7 @@ footer .icon {
 //
 // Responsive Headings
 //
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   h1, .h1 { font-size: $h2-font-size; }
   h2, .h2 { font-size: $h3-font-size; }
   h3, .h3 { font-size: $h4-font-size; }
@@ -86,7 +103,7 @@ footer .icon {
   h6, .h6 { font-size: $h5-font-size; }
 }
 
-@include media-breakpoint-down(xs) {
+@include media-breakpoint-down(sm) {
   h1, .h1 { font-size: $h3-font-size; }
   h2, .h2 { font-size: $h4-font-size; }
   h3, .h3 { font-size: $h5-font-size; }
@@ -107,26 +124,26 @@ footer .icon {
   width: 2rem;
 
   path {
-    fill: gray("600");
+    fill: $gray-600;
   }
 }
 
 .icon-tobiha {
-  @include hover-focus {
+  &:hover, &:focus {
     > svg path {
-      fill: theme-color("secondary");
+      fill: $secondary;
     }
   }
 
   &.active {
     > svg path {
-      fill: theme-color("secondary");
+      fill: $secondary;
     }
   }
 }
 
 .icon-mastodon {
-  @include hover-focus {
+  &:hover, &:focus {
     > svg path {
       fill: #6364ff;
     }
@@ -134,7 +151,7 @@ footer .icon {
 }
 
 .icon-twitter {
-  @include hover-focus {
+  &:hover, &:focus {
     > svg path {
       fill: #1da1f2;
     }
@@ -142,7 +159,7 @@ footer .icon {
 }
 
 .icon-github {
-  @include hover-focus {
+  &:hover, &:focus {
     > svg path {
       fill: #333333;
     }
@@ -150,7 +167,7 @@ footer .icon {
 }
 
 .icon-youtube {
-  @include hover-focus {
+  &:hover, &:focus {
     > svg path {
       fill: #ff0000;
     }
@@ -158,7 +175,7 @@ footer .icon {
 }
 
 .icon-keybase {
-  @include hover-focus {
+  &:hover, &:focus {
     > svg path {
       fill: #33a0ff;
     }
@@ -166,7 +183,7 @@ footer .icon {
 }
 
 .icon-rss {
-  @include hover-focus {
+  &:hover, &:focus {
     > svg path {
       fill: #f26522;
     }

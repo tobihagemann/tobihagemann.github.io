@@ -1,9 +1,5 @@
 @charset "utf-8";
-@import "custom-variables";
-@import "functions";
-@import "variables";
-@import "mixins";
-@import "code";
+@import "bootstrap-config";
 
 blockquote {
   border-left: $border-width * 4 solid $border-color;
@@ -31,11 +27,11 @@ pre.astro-code {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 
-    figure.float#{$infix}-left {
+    figure.float#{$infix}-start {
       margin-right: $spacer;
     }
 
-    figure.float#{$infix}-right {
+    figure.float#{$infix}-end {
       margin-left: $spacer;
     }
   }
@@ -49,7 +45,7 @@ video {
 // Tweets
 //
 .card-tweet a {
-  @include hover {
+  &:hover {
     text-decoration: none;
   }
 }
@@ -61,12 +57,12 @@ video {
 }
 
 .card-tweet .card-subtitle {
-  color: $text-muted;
+  color: $gray-600;
   font-size: $font-size-sm;
 }
 
 .card-author {
-  @include hover-focus {
+  &:hover, &:focus {
     .card-title {
       color: $link-hover-color;
     }
@@ -94,7 +90,7 @@ video {
   flex-direction: row;
   font-size: $font-size-sm;
 
-  @include hover-focus {
+  &:hover, &:focus {
     background-color: $light;
   }
 }
@@ -119,7 +115,7 @@ video {
   max-height: 7.25rem;
   max-width: 7.25rem;
 
-  @include media-breakpoint-down(xs) {
+  @include media-breakpoint-down(sm) {
     max-height: 4.625rem;
     max-width: 4.625rem;
   }
@@ -129,15 +125,15 @@ video {
   max-height: 3em * $line-height-sm;
   overflow: hidden;
 
-  @include media-breakpoint-down(xs) {
+  @include media-breakpoint-down(sm) {
     max-height: 1em * $line-height-sm;
   }
 }
 
 .link-muted {
-  color: $text-muted;
+  color: $gray-600;
 
-  @include hover-focus {
+  &:hover, &:focus {
     color: $link-hover-color;
   }
 }

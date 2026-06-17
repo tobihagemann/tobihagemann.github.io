@@ -38,7 +38,7 @@ const { tweet } = Astro.props;
     <div class="d-flex align-items-start justify-content-between">
       <a class="card-author text-dark" href={`https://twitter.com/${tweet.screen_name}`} target="_blank" rel="noopener" aria-label={`${tweet.screen_name} on Twitter`}>
         <div class="d-flex align-items-center mb-2">
-          <img class="card-author-img mr-2" src={`https://pbs.twimg.com/profile_images/${tweet.avatar_id}_normal.jpg`} srcset={`https://pbs.twimg.com/profile_images/${tweet.avatar_id}_bigger.jpg 2x`} alt="" />
+          <img class="card-author-img me-2" src={`https://pbs.twimg.com/profile_images/${tweet.avatar_id}_normal.jpg`} srcset={`https://pbs.twimg.com/profile_images/${tweet.avatar_id}_bigger.jpg 2x`} alt="" />
           <div class="d-flex flex-column">
             <p class="card-title">{tweet.name}</p>
             <p class="card-subtitle">@{tweet.screen_name}</p>
@@ -57,7 +57,7 @@ const { tweet } = Astro.props;
 { tweet.media && (
     <div class="card card-media">
       <a class="card-media-link" href={tweet.media.url} target="_blank" rel="noopener" aria-label={tweet.media.title}></a>
-      <div class="card-body pr-0">
+      <div class="card-body pe-0">
         <img class="card-media-img" src={tweet.media.img} alt="" />
       </div>
       <div class="card-body">
