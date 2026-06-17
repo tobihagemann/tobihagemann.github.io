@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/mdx':
         specifier: ^6.0.3
-        version: 6.0.3(astro@6.4.7(@types/node@24.13.2)(rollup@4.62.0)(sass@1.101.0))
+        version: 6.0.3(astro@6.4.8(@types/node@24.13.2)(rollup@4.62.0)(sass@1.101.0))
       '@astrojs/rss':
         specifier: ^4.0.18
         version: 4.0.18
@@ -18,8 +18,8 @@ importers:
         specifier: ^3.7.3
         version: 3.7.3
       astro:
-        specifier: ^6.4.7
-        version: 6.4.7(@types/node@24.13.2)(rollup@4.62.0)(sass@1.101.0)
+        specifier: ^6.4.8
+        version: 6.4.8(@types/node@24.13.2)(rollup@4.62.0)(sass@1.101.0)
       rehype-external-links:
         specifier: ^3.0.0
         version: 3.0.0
@@ -764,8 +764,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@6.4.7:
-    resolution: {integrity: sha512-5vsXx0H52u23Jpshs9tM81D03Tb3Oh2Vt2Zo0bpqjXN+njkAWjFyGjTfmWJLAcrCQd9Q+iWB1eqfhR1sZJEaUA==}
+  astro@6.4.8:
+    resolution: {integrity: sha512-KK5lX90uU9EeVaTjINyj3sy9/NFXVa59aowaqbWBDDKLXZh4rr7GwIaCFYVetE22MJtsCNFerQXn0vlCLmpP/Q==}
     engines: {node: '>=22.12.0', npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1825,13 +1825,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@6.0.3(astro@6.4.7(@types/node@24.13.2)(rollup@4.62.0)(sass@1.101.0))':
+  '@astrojs/mdx@6.0.3(astro@6.4.8(@types/node@24.13.2)(rollup@4.62.0)(sass@1.101.0))':
     dependencies:
       '@astrojs/internal-helpers': 0.10.0
       '@astrojs/markdown-remark': 7.2.0
       '@mdx-js/mdx': 3.1.1
       acorn: 8.17.0
-      astro: 6.4.7(@types/node@24.13.2)(rollup@4.62.0)(sass@1.101.0)
+      astro: 6.4.8(@types/node@24.13.2)(rollup@4.62.0)(sass@1.101.0)
       es-module-lexer: 2.1.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.5
@@ -2363,7 +2363,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@6.4.7(@types/node@24.13.2)(rollup@4.62.0)(sass@1.101.0):
+  astro@6.4.8(@types/node@24.13.2)(rollup@4.62.0)(sass@1.101.0):
     dependencies:
       '@astrojs/compiler': 4.0.0
       '@astrojs/internal-helpers': 0.10.0

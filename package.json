@@ -3,7 +3,7 @@
   "type": "module",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@11.5.1",
+  "packageManager": "pnpm@11.7.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -14,7 +14,7 @@
     "@astrojs/mdx": "^6.0.3",
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.3",
-    "astro": "^6.4.7",
+    "astro": "^6.4.8",
     "rehype-external-links": "^3.0.0",
     "remark-gemoji": "^8.0.0"
   },
