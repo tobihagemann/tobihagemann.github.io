@@ -23,7 +23,10 @@
   }
 }
 
-.card-columns {
+// Astro emits this page's CSS before the global Bootstrap bundle, so a bare
+// `.card-columns` override would lose to Bootstrap's `column-count: 3`. The
+// `.container` ancestor (from PageLayout) raises specificity so it wins.
+.container .card-columns {
   @include media-breakpoint-down(md) {
     column-count: 1;
   }
