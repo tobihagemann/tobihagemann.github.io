@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { unified } from '@astrojs/markdown-remark';
 import remarkGemoji from 'remark-gemoji';
 import rehypeExternalLinks from 'rehype-external-links';
 
@@ -13,8 +14,10 @@ export default defineConfig({
   build: { format: 'directory' },
   integrations: [mdx(), sitemap()],
   markdown: {
-    remarkPlugins: [remarkGemoji],
-    rehypePlugins: [[rehypeExternalLinks, { target: '_blank', rel: ['noopener'] }]],
+    processor: unified({
+      remarkPlugins: [remarkGemoji],
+      rehypePlugins: [[rehypeExternalLinks, { target: '_blank', rel: ['noopener'] }]],
+    }),
     shikiConfig: { theme: 'github-light' },
   },
   vite: {
