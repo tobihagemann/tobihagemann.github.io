@@ -1,11 +1,11 @@
 # Repository Overview
 
-This is a personal portfolio/blog website (tobihagemann.github.io) built with [Astro](https://astro.build/), a static site generator. The site is hosted on GitHub Pages and uses a custom Bootstrap 4 implementation.
+This is a personal portfolio/blog website (tobihagemann.github.io) built with [Astro](https://astro.build/), a static site generator. The site is hosted on GitHub Pages and styled with Tailwind CSS v4.
 
 # Technology Stack
 
 - **Static Site Generator**: Astro
-- **CSS Framework**: Bootstrap 4 with custom SCSS
+- **CSS Framework**: Tailwind CSS v4 (CSS-first config via `@theme`/`@utility`, no `tailwind.config.js`; the `@tailwindcss/vite` plugin + `@tailwindcss/typography` for post bodies)
 - **Templating**: Astro components (`.astro`) and MDX
 - **Content**: Markdown/MDX with YAML front matter (content collections)
 - **Icons**: Font Awesome (prebuilt CSS) + inlined SVG components
@@ -35,20 +35,23 @@ pnpm preview
 - **Projects**: data in `src/data/projects.ts`, rendered by `src/pages/projects.astro`
 - **Pages**: `src/pages/` (`.astro` routes and `.md` pages like `impressum.md`, `privacy.md`)
 
-### Authoring posts with styled wrapper blocks
-Some posts need a class on a block (e.g. `<p class="lead">`, `<p class="figure-caption">`, `<dl>` timelines). Write the **inner content as Markdown** inside the HTML wrapper, e.g. `<p class="lead">Text with [a link](url) and 'quotes'.</p>`. MDX reprocesses that Markdown, so smartypants curls quotes and `rehype-external-links` adds `target="_blank" rel="noopener"` to external links automatically — the equivalent of kramdown's `markdown="1"`. Do **not** pre-convert the inner content to literal inline HTML (`<a>`, `<em>`, `<code>`): literal inline elements split the block and stop MDX from reprocessing the surrounding text, leaving straight quotes and unprocessed links.
+### Authoring posts with components
+Non-markdown blocks are Astro components imported at the top of the `.mdx` file (see `src/components/`): `<Figure>` (images, with `float`/`href`/`rounded`/`maxWidth`), `<Embed>` (YouTube/Vimeo iframes), `<Video>` (self-hosted mp4), `<Tweet>` (embedded tweet card), and `<DescriptionList>`/`<DescriptionEntry>` (the year-review date/event lists). Each wraps itself in Tailwind's `not-prose` so the typography plugin doesn't style its internals; caption/description **slots still process Markdown**.
+
+For the remaining inline class blocks (e.g. `<p class="lead">`) and for those component slots, write the **inner content as Markdown** inside the wrapper, e.g. `<p class="lead">Text with [a link](url) and 'quotes'.</p>`. MDX reprocesses that Markdown, so smartypants curls quotes and `rehype-external-links` adds `target="_blank" rel="noopener"` to external links automatically — the equivalent of kramdown's `markdown="1"`. Do **not** pre-convert the inner content to literal inline HTML (`<a>`, `<em>`, `<code>`): literal inline elements split the block and stop MDX from reprocessing the surrounding text, leaving straight quotes and unprocessed links.
 
 ## Styling System
-- Bootstrap 4 source partials live in `src/styles/`
-- `src/styles/main.scss` imports a curated subset of Bootstrap (not the full framework) plus custom styles
-- Per-page SCSS (`blog.scss`, `blog-post.scss`, `projects.scss`, `index.scss`) is imported by the page/layout that needs it
+- A single `src/styles/global.css` holds everything: `@import "tailwindcss"`, `@plugin "@tailwindcss/typography"`, `@theme` design tokens (colors, BS5-matched breakpoints, font stack), `@utility` definitions (`container`, `lead`, `figure*`, `ratio*`, `badge`, etc.), an `@layer base` (element defaults + responsive heading scale), an `@layer components` block (nav, footer, cards, pagination, tweet, hero), and an unlayered `.prose` override block for post bodies
+- `global.css` is imported once by `BaseLayout.astro`; there is no per-page CSS
+- **Prose override gotcha**: the typography plugin emits `.prose` rules into the `utilities` layer, so post-body overrides must be **unlayered** to win on cascade order (specificity alone loses). `not-prose` blocks prose's selectors but not CSS inheritance — components reset inherited values (e.g. `line-height`) where a value-dependent style needs it
 - `public/css/fontawesome-all.css` is linked globally from `<head>`
 
 ## Layout & Component System
-- `src/layouts/BaseLayout.astro`: HTML shell (head + nav + footer), imports global `main.scss`
-- `src/layouts/PostLayout.astro`: blog post template (extends BaseLayout)
-- `src/layouts/PageLayout.astro`: generic page template (extends BaseLayout)
-- `src/components/`: reusable components (`BaseHead`, `Nav`, `Footer`, `BlogList`, `Tweet`, `icons/`)
+- `src/layouts/BaseLayout.astro`: HTML shell (head + nav + footer), imports global `global.css`
+- `src/layouts/PostLayout.astro`: blog post template (extends BaseLayout); wraps the post body in `<article class="prose">`
+- `src/layouts/PageLayout.astro`: generic page template (extends BaseLayout, non-prose)
+- `src/layouts/MarkdownPageLayout.astro`: `prose` wrapper for the standalone markdown pages (`impressum.md`, `privacy.md`)
+- `src/components/`: reusable components (`BaseHead`, `Nav`, `Footer`, `BlogList`, `icons/`) plus the post content components (`Figure`, `Embed`, `Video`, `Tweet`, `DescriptionList`, `DescriptionEntry`)
 
 ## Routing
 - Post permalinks `/:year/:month/:day/:slug/` are generated by `src/pages/[year]/[month]/[day]/[slug].astro` using the helper in `src/lib/permalink.ts`
@@ -56,7 +59,7 @@ Some posts need a class on a block (e.g. `<p class="lead">`, `<p class="figure-c
 - `trailingSlash: 'always'` and `build.format: 'directory'` preserve the original URL structure
 
 ## Key Configuration
-- `astro.config.mjs`: site URL, integrations (MDX, sitemap), Markdown plugins (`remark-gemoji`, `rehype-external-links`), Shiki theme, and SCSS options
+- `astro.config.mjs`: site URL, integrations (MDX, sitemap), the `@tailwindcss/vite` plugin, Markdown plugins (`remark-gemoji`, `rehype-external-links`), and the Shiki theme
 - `src/data/site.ts`: site metadata and social usernames
 - `src/data/menu.ts`: navigation menu structure
 

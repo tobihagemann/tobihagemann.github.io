@@ -2,6 +2,9 @@
 title: "Quick Tips for macOS"
 date: 2018-06-19
 ---
+import Figure from '../../components/Figure.astro';
+import Video from '../../components/Video.astro';
+
 <p class="lead">Here are some quick tips for macOS users. Most of them are shortcuts that I use on a daily basis. I'll throw essential tips in as well so that _everyone_ is up to speed but maybe you can find some hidden gems. 😉</p>
 
 ## 1. Spotlight
@@ -11,12 +14,7 @@ For the love of God, [use Spotlight][spotlight]! You can activate it with <kbd><
 - After performing a calculation, press <kbd><kbd>Cmd</kbd> + <kbd>C</kbd></kbd> to copy the result.
 - Instead of opening the selected file, reveal it in Finder by holding <kbd><kbd>Cmd</kbd></kbd> when pressing <kbd><kbd>Return</kbd></kbd> or double-clicking.
 
-<div class="text-center mb-3">
-  <video controls loop poster="/assets/2018-06-19-spotlight.png" preload="none" style="max-width: 800px;">
-    <source type="video/mp4" src="/assets/2018-06-19-spotlight.mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
+<Video src="/assets/2018-06-19-spotlight.mp4" poster="/assets/2018-06-19-spotlight.png" maxWidth="800" />
 
 ## 2. Screenshots
 You probably already know [how to take screenshots][screenshots] but for the sake of completeness, these are the shortcuts:
@@ -27,12 +25,7 @@ You probably already know [how to take screenshots][screenshots] but for the sak
 
 I'm looking forward to macOS 10.14 Mojave which will introduce <kbd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>5</kbd></kbd> to bring up the screenshot toolbar. With that, you'll also be able to quickly record your screen. Until then, you have to use QuickTime Player. Use Spotlight and type <kbd>qt</kbd> :wink:, then press <kbd><kbd>Cmd</kbd> + <kbd>Ctrl</kbd> + <kbd>N</kbd></kbd>, and then <kbd><kbd>Space</kbd></kbd>. You see what I'm doing here? Use keyboard shortcuts as much as possible.
 
-<div class="text-center mb-3">
-  <video controls loop poster="/assets/2018-06-19-screenshots.png" preload="none" style="max-width: 800px;">
-    <source type="video/mp4" src="/assets/2018-06-19-screenshots.mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
+<Video src="/assets/2018-06-19-screenshots.mp4" poster="/assets/2018-06-19-screenshots.png" maxWidth="800" />
 
 ## 3. Text Navigation
 I used to navigate through text via arrow keys without using any modifiers. Utilizing these two keys will speed up your text navigation immensely:
@@ -42,34 +35,19 @@ I used to navigate through text via arrow keys without using any modifiers. Util
 
 As you might imagine, this is also very useful for selecting text by additionally holding <kbd><kbd>Shift</kbd></kbd>. Or you can use these modifiers to delete whole words or lines when pressing <kbd><kbd>Backspace</kbd></kbd>/<kbd><kbd>Delete</kbd></kbd>. If you don't have a delete key, hold <kbd><kbd>fn</kbd></kbd> when pressing backspace.
 
-<div class="text-center mb-3">
-  <video controls loop poster="/assets/2018-06-19-text-navigation.png" preload="none" style="max-width: 800px;">
-    <source type="video/mp4" src="/assets/2018-06-19-text-navigation.mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
+<Video src="/assets/2018-06-19-text-navigation.mp4" poster="/assets/2018-06-19-text-navigation.png" maxWidth="800" />
 
 ## 4. Do Not Disturb
 Hold <kbd><kbd>Option</kbd></kbd> and click the notification icon in the menu bar to enter Do Not Disturb mode. This mode will turn off notifications, both the banners/alerts and notification sounds.
 
 If you'd like to automatically enter Do Not Disturb mode while screen sharing, I recommend [Muzzle][muzzle].
 
-<div class="text-center mb-3">
-  <video controls loop poster="/assets/2018-06-19-do-not-disturb.png" preload="none" style="max-width: 400px;">
-    <source type="video/mp4" src="/assets/2018-06-19-do-not-disturb.mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
+<Video src="/assets/2018-06-19-do-not-disturb.mp4" poster="/assets/2018-06-19-do-not-disturb.png" maxWidth="400" />
 
 ## 5. Hidden Files
 It used to be quite cumbersome to show hidden files in Finder. You had to execute a command in Terminal that you probably had to google and even relaunch Finder. Since macOS 10.12 Sierra, you can press <kbd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>.</kbd></kbd> to show hidden files instantly.
 
-<div class="text-center mb-3">
-  <video controls loop poster="/assets/2018-06-19-hidden-files.png" preload="none" style="max-width: 800px;">
-    <source type="video/mp4" src="/assets/2018-06-19-hidden-files.mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
+<Video src="/assets/2018-06-19-hidden-files.mp4" poster="/assets/2018-06-19-hidden-files.png" maxWidth="800" />
 
 ## 6. Modal Dialogs
 In most cases, you can "press" the buttons inside modal dialogs via keyboard shortcuts. If the obvious shortcuts <kbd><kbd>Enter</kbd></kbd>/<kbd><kbd>Return</kbd></kbd> for the default button and <kbd><kbd>Esc</kbd></kbd> for cancel don't work or aren't sufficient, try the following:
@@ -77,23 +55,14 @@ In most cases, you can "press" the buttons inside modal dialogs via keyboard sho
 - <kbd><kbd>Cmd</kbd> + <kbd>First Letter on Button</kbd></kbd> presses that button.
 - <kbd><kbd>Cmd</kbd> + <kbd>.</kbd></kbd> cancels.
 
-<div class="text-center">
-  <figure class="figure" style="max-width: 516px;">
-    <img class="figure-img img-fluid rounded" src="/assets/2018-06-19-modal-dialogs.png" alt="Modal Dialog Example"/>
-  </figure>
-</div>
+<Figure src="/assets/2018-06-19-modal-dialogs.png" alt="Modal Dialog Example" maxWidth="516" />
 
 ## 7. Change Directory in Terminal
 To change the working directory in Terminal, type <kbd>cd</kbd>, hit <kbd><kbd>Space</kbd></kbd>, and then drag & drop the directory from Finder into Terminal.
 
 But wait, you can do that even faster and don't have to type anything at all. Hold <kbd><kbd>Cmd</kbd></kbd> when dropping the directory into Terminal and it will change the working directory for you. If you drop a file, Terminal will change to the parent directory.
 
-<div class="text-center mb-3">
-  <video controls loop poster="/assets/2018-06-19-change-directory.png" preload="none" style="max-width: 800px;">
-    <source type="video/mp4" src="/assets/2018-06-19-change-directory.mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
+<Video src="/assets/2018-06-19-change-directory.mp4" poster="/assets/2018-06-19-change-directory.png" maxWidth="800" />
 
 ## 8. Item Operations
 Move an item in Finder with <kbd><kbd>Cmd</kbd> + <kbd>C</kbd></kbd> and <kbd><kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>V</kbd></kbd>. This is the equivalent of cut & paste on Windows.
@@ -104,12 +73,7 @@ Other useful shortcuts in Finder:
 - <kbd><kbd>Cmd</kbd> + <kbd>D</kbd></kbd> to duplicate the selected item. It's almost the same as copy & paste but not for folders because Finder will try to paste the copied folder into itself since it's still selected.
 - <kbd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd></kbd> to go to a specified folder.
 
-<div class="text-center mb-3">
-  <video controls loop poster="/assets/2018-06-19-item-operations.png" preload="none" style="max-width: 800px;">
-    <source type="video/mp4" src="/assets/2018-06-19-item-operations.mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
+<Video src="/assets/2018-06-19-item-operations.mp4" poster="/assets/2018-06-19-item-operations.png" maxWidth="800" />
 
 ## 9. Turn Off
 Sleep, restart, or shut down your Mac by showing the dialog with <kbd><kbd>Ctrl</kbd> + <kbd>Eject</kbd></kbd>. If you don't have an eject key, press <kbd><kbd>Ctrl</kbd> + <kbd>Power</kbd></kbd> or press the power button for 1.5 seconds. In that dialog, press
@@ -120,22 +84,14 @@ Sleep, restart, or shut down your Mac by showing the dialog with <kbd><kbd>Ctrl<
 
 Yes, there are shortcuts to directly execute these commands but I find them quite hard to remember. Putting a MacBook to sleep is of course much easier by closing the lid.
 
-<div class="text-center">
-  <figure class="figure" style="max-width: 552px;">
-    <img class="figure-img img-fluid rounded" src="/assets/2018-06-19-turn-off.png" alt="Turn Off Dialog"/>
-  </figure>
-</div>
+<Figure src="/assets/2018-06-19-turn-off.png" alt="Turn Off Dialog" maxWidth="552" />
 
 ## Bonus: Window Management
 This tip doesn't really fit in since all the other ones can be directly applied without installing third-party software. But I can highly recommend using a window management tool. I'm using [Spectacle][spectacle] and with that, you can quickly move and resize windows using keyboard shortcuts.
 
 If you have a keyboard with a numpad, take advantage of [natural mapping][natural-mapping] for your keyboard shortcuts to position a window accordingly. Here are my settings in Spectacle:
 
-<div class="text-center">
-  <figure class="figure" style="max-width: 712px;">
-    <img class="figure-img img-fluid rounded" src="/assets/2018-06-19-spectacle-settings.png" alt="Spectacle Settings"/>
-  </figure>
-</div>
+<Figure src="/assets/2018-06-19-spectacle-settings.png" alt="Spectacle Settings" maxWidth="712" />
 
 <hr />
 

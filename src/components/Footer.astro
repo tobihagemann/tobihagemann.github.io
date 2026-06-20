@@ -7,14 +7,14 @@ import IconYoutube from './icons/IconYoutube.astro';
 import IconKeybase from './icons/IconKeybase.astro';
 import IconRss from './icons/IconRss.astro';
 ---
-<footer class="container my-4 my-sm-5 text-center">
-  <div class="mb-3">
-    <a class="icon icon-mastodon hvr-pop" href={`https://mastodon.social/@${site.mastodon_username}`} aria-label={`${site.mastodon_username} on mastodon.social`}><IconMastodon /></a>
-    <a class="icon icon-twitter hvr-pop" href={`https://twitter.com/${site.twitter_username}`} aria-label={`${site.twitter_username} on Twitter`}><IconTwitter /></a>
-    <a class="icon icon-github hvr-pop" href={`https://github.com/${site.github_username}`} aria-label={`${site.github_username} on GitHub`}><IconGithub /></a>
-    <a class="icon icon-youtube hvr-pop" href={`https://www.youtube.com/@${site.youtube_username}`} aria-label={`${site.youtube_username} on YouTube`}><IconYoutube /></a>
-    <a class="icon icon-keybase hvr-pop" href={`https://keybase.io/${site.keybase_username}`} aria-label={`${site.keybase_username} on Keybase`}><IconKeybase /></a>
-    <a class="icon icon-rss hvr-pop" href="/feed.xml" aria-label="RSS Feed"><IconRss /></a>
+<footer class="container my-6 text-center sm:my-12">
+  <div class="mb-4">
+    <a class="hvr-pop icon icon-mastodon" href={`https://mastodon.social/@${site.mastodon_username}`} aria-label={`${site.mastodon_username} on mastodon.social`}><IconMastodon /></a>
+    <a class="hvr-pop icon icon-twitter" href={`https://twitter.com/${site.twitter_username}`} aria-label={`${site.twitter_username} on Twitter`}><IconTwitter /></a>
+    <a class="hvr-pop icon icon-github" href={`https://github.com/${site.github_username}`} aria-label={`${site.github_username} on GitHub`}><IconGithub /></a>
+    <a class="hvr-pop icon icon-youtube" href={`https://www.youtube.com/@${site.youtube_username}`} aria-label={`${site.youtube_username} on YouTube`}><IconYoutube /></a>
+    <a class="hvr-pop icon icon-keybase" href={`https://keybase.io/${site.keybase_username}`} aria-label={`${site.keybase_username} on Keybase`}><IconKeybase /></a>
+    <a class="hvr-pop icon icon-rss" href="/feed.xml" aria-label="RSS Feed"><IconRss /></a>
   </div>
-  <p class="text-muted small">© {site.name} • Powered by <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>, <a href="https://astro.build/" target="_blank" rel="noopener">Astro</a>, and <a href="https://getbootstrap.com/" target="_blank" rel="noopener">Bootstrap</a></p>
+  <p class="small text-muted">© {site.name} • Powered by <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>, <a href="https://astro.build/" target="_blank" rel="noopener">Astro</a>, and <a href="https://tailwindcss.com/" target="_blank" rel="noopener">Tailwind CSS</a></p>
 </footer>

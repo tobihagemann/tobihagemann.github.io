@@ -3,7 +3,6 @@ import PageLayout from '../../../layouts/PageLayout.astro';
 import BlogList from '../../../components/BlogList.astro';
 import { PAGE_SIZE } from '../../../lib/pagination';
 import { getSortedPosts } from '../../../lib/posts';
-import '../../../styles/blog.scss';
 
 export async function getStaticPaths() {
   const posts = await getSortedPosts();

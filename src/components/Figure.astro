@@ -1,0 +1,26 @@
+---
+import { maxWidthStyle } from '../lib/style';
+
+interface Props {
+  src: string;
+  alt: string;
+  maxWidth?: number | string;
+  float?: boolean;
+  href?: string;
+  rounded?: boolean;
+}
+
+const { src, alt, maxWidth, float, href, rounded = true } = Astro.props;
+const style = maxWidthStyle(maxWidth);
+const hasCaption = Astro.slots.has('default');
+---
+<div class:list={['not-prose', { 'my-8': !float }, 'text-center']}>
+  <figure class:list={['figure', { 'md:float-end md:ml-4': float }]} style={style}>
+    {href ? (
+      <a href={href} target="_blank" rel="noopener"><img class:list={['figure-img', 'img-fluid', { rounded }]} src={src} alt={alt} /></a>
+    ) : (
+      <img class:list={['figure-img', 'img-fluid', { rounded }]} src={src} alt={alt} />
+    )}
+    {hasCaption && <figcaption class="figure-caption"><slot /></figcaption>}
+  </figure>
+</div>

@@ -1,0 +1,18 @@
+---
+import { maxWidthStyle } from '../lib/style';
+
+interface Props {
+  src: string;
+  maxWidth?: number | string;
+}
+
+const { src, maxWidth } = Astro.props;
+const style = maxWidthStyle(maxWidth);
+const hasCaption = Astro.slots.has('default');
+---
+<div class="not-prose my-8 text-center">
+  <div class="ratio ratio-16x9 mx-auto mb-2" style={style}>
+    <iframe src={src} allowfullscreen></iframe>
+  </div>
+  {hasCaption && <p class="figure-caption"><slot /></p>}
+</div>

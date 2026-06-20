@@ -14,6 +14,8 @@ const noindex = Astro.props.noindex ?? frontmatter?.noindex;
 ---
 <BaseLayout {title} {noindex} {activelink}>
   <div class="container mt-6 sm:mt-12">
-    <slot />
+    <div class="prose max-w-none">
+      <slot />
+    </div>
   </div>
 </BaseLayout>

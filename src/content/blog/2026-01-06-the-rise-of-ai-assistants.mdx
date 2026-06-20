@@ -3,6 +3,8 @@ title: "The Rise of AI Assistants"
 date: 2026-01-06
 ogimage: /assets/2026-01-06-ogimage.png
 ---
+import Figure from '../../components/Figure.astro';
+
 <p class="lead">In December 2025, something clicked for me. Over the last month, I've spent a lot of my time developing AI assistants. Is "AI Assistant Engineering" even a thing? I'm pretty sure this will become a normal job title at some point.</p>
 
 ## Example: Support Assistant
@@ -11,23 +13,13 @@ I'd like to give you one example that I've been working on: an AI support assist
 
 What does handling support usually look like? I would say it starts with a support request, typically an email. You might even be using a help desk tool for this. And now your job is to understand the request, gather information (most of it is probably in your head already), take action if needed, write a response, and send it out. A simplified visual representation could look like this:
 
-<div class="text-center">
-  <figure class="figure" style="max-width: 100%;">
-    <img class="figure-img img-fluid" src="/assets/2026-01-06-human-process.svg" alt="How a human support agent handles a request"/>
-    <figcaption class="figure-caption">Human support workflow (simplified)</figcaption>
-  </figure>
-</div>
+<Figure src="/assets/2026-01-06-human-process.svg" alt="How a human support agent handles a request" maxWidth="100%" rounded={false}>Human support workflow (simplified)</Figure>
 
 I would argue that this takes a significant amount of time for each request. Sometimes you even get stuck and have to delegate it to someone else, and they have to start the whole process all over again. It's not always because the information is not retrievable, but sometimes it just takes too much time to find the right information if someone else can do it faster. In reality, the process is likely more complex.
 
 So then I asked myself: is it possible to let an AI assistant take action and draft a response for me? Well, yes, of course, that's why we're here. An AI assistant can actually go through all these steps as well. Let's take a look at this:
 
-<div class="text-center">
-  <figure class="figure" style="max-width: 100%;">
-    <img class="figure-img img-fluid" src="/assets/2026-01-06-ai-process.svg" alt="How the AI support assistant handles a request"/>
-    <figcaption class="figure-caption">AI-assisted support workflow (simplified)</figcaption>
-  </figure>
-</div>
+<Figure src="/assets/2026-01-06-ai-process.svg" alt="How the AI support assistant handles a request" maxWidth="100%" rounded={false}>AI-assisted support workflow (simplified)</Figure>
 
 For simplicity's sake, my example is heavily based on Claude Code's tooling and wording, because that's what I'm using, but feel free to experiment with other tools. And I simplified the commands and skills to avoid getting lost in complexity. So what does this all mean?
 
@@ -45,12 +37,7 @@ However, to make this work, AI assistants need the right context and information
 
 All right, now let's put it together and let's see how we can work together with an AI assistant. Let's take a look at this:
 
-<div class="text-center">
-  <figure class="figure" style="max-width: 100%;">
-    <img class="figure-img img-fluid" src="/assets/2026-01-06-human-ai-process.svg" alt="How a human uses the AI support assistant"/>
-    <figcaption class="figure-caption">Human-in-the-loop workflow (review &amp; approvals)</figcaption>
-  </figure>
-</div>
+<Figure src="/assets/2026-01-06-human-ai-process.svg" alt="How a human uses the AI support assistant" maxWidth="100%" rounded={false}>Human-in-the-loop workflow (review &amp; approvals)</Figure>
 
 As you can see, I don't have to do all that much anymore myself, but it's still important to me to review and approve certain steps. While I rarely use the _exact_ response from the draft, most of the time it's astoundingly correct. I still like to give it a final review and add some personal touch, but the whole new process is still saving me _so much_ time and effort.
 
@@ -62,12 +49,7 @@ The visual representation of the "Process Ticket" command (in the images above) 
 
 If I left it like that, you might think this process could be solved with workflow automation tools like n8n. Why does it feel so different here, and what makes it so amazing? Because in reality, it's more like this:
 
-<div class="text-center">
-  <figure class="figure" style="max-width: 100%;">
-    <img class="figure-img img-fluid" src="/assets/2026-01-06-claude-code.svg" alt="How Claude Code works"/>
-    <figcaption class="figure-caption">Claude Code mental model (high-level)</figcaption>
-  </figure>
-</div>
+<Figure src="/assets/2026-01-06-claude-code.svg" alt="How Claude Code works" maxWidth="100%" rounded={false}>Claude Code mental model (high-level)</Figure>
 
 There are no "arrows" that I'm drawing between the components. It's not a fixed workflow. Those Markdown files are just text files inside my filesystem. Claude Code (the tool) with its LLM (the brain) is reading those files, interpreting them, and deciding what to do next on its own. And its skill set is humongous. The LLM "knows" sooo much more than I can ever write down in skills.
 

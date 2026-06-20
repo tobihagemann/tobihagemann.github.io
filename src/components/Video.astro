@@ -1,0 +1,18 @@
+---
+import { maxWidthStyle } from '../lib/style';
+
+interface Props {
+  src: string;
+  poster: string;
+  maxWidth?: number | string;
+}
+
+const { src, poster, maxWidth } = Astro.props;
+const style = maxWidthStyle(maxWidth);
+---
+<div class="not-prose my-8 text-center">
+  <video class="w-full" controls loop poster={poster} preload="none" style={style}>
+    <source type="video/mp4" src={src} />
+    Your browser does not support the video tag.
+  </video>
+</div>

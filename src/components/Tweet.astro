@@ -27,7 +27,7 @@ interface Props {
 
 const { tweet } = Astro.props;
 ---
-<div class="card card-tweet mx-auto mb-3" style="max-width: 500px;">
+<div class="card card-tweet not-prose mx-auto my-8" style="max-width: 500px;">
 { tweet.video && (
   <video class="card-img-top" autoplay controls loop poster={`https://pbs.twimg.com/tweet_video_thumb/${tweet.video.id}.jpg`}>
     <source type="video/mp4" src={`https://video.twimg.com/tweet_video/${tweet.video.id}.mp4`} />
@@ -35,11 +35,11 @@ const { tweet } = Astro.props;
   </video>
 ) }
   <div class="card-body">
-    <div class="d-flex align-items-start justify-content-between">
+    <div class="flex items-start justify-between">
       <a class="card-author text-dark" href={`https://twitter.com/${tweet.screen_name}`} target="_blank" rel="noopener" aria-label={`${tweet.screen_name} on Twitter`}>
-        <div class="d-flex align-items-center mb-2">
-          <img class="card-author-img me-2" src={`https://pbs.twimg.com/profile_images/${tweet.avatar_id}_normal.jpg`} srcset={`https://pbs.twimg.com/profile_images/${tweet.avatar_id}_bigger.jpg 2x`} alt="" />
-          <div class="d-flex flex-column">
+        <div class="mb-2 flex items-center">
+          <img class="card-author-img mr-2" src={`https://pbs.twimg.com/profile_images/${tweet.avatar_id}_normal.jpg`} srcset={`https://pbs.twimg.com/profile_images/${tweet.avatar_id}_bigger.jpg 2x`} alt="" />
+          <div class="flex flex-col">
             <p class="card-title">{tweet.name}</p>
             <p class="card-subtitle">@{tweet.screen_name}</p>
           </div>
@@ -57,12 +57,12 @@ const { tweet } = Astro.props;
 { tweet.media && (
     <div class="card card-media">
       <a class="card-media-link" href={tweet.media.url} target="_blank" rel="noopener" aria-label={tweet.media.title}></a>
-      <div class="card-body pe-0">
+      <div class="card-body pr-0">
         <img class="card-media-img" src={tweet.media.img} alt="" />
       </div>
       <div class="card-body">
         <p class="card-title mb-1">{tweet.media.title}</p>
-        <p class="card-text card-media-text mb-1">{tweet.media.text}</p>
+        <p class="card-media-text card-text mb-1">{tweet.media.text}</p>
         <p class="card-text text-muted">{tweet.media.destination}</p>
       </div>
     </div>

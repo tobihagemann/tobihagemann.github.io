@@ -1,14 +1,13 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
 import { featuredProject, projects } from '../data/projects';
-import '../styles/projects.scss';
 
 const project = featuredProject;
 ---
 <PageLayout title="Projects">
   <div class="card card-featured shadow-sm">
     <div class="card-body">
-      <div class="d-flex flex-row">
+      <div class="flex flex-row">
 { project.img && (
         <img class="project-img" src={project.img} srcset={`${project.img2x} 2x`} alt={`${project.title} Icon`} />
 ) }
@@ -17,7 +16,7 @@ const project = featuredProject;
           <p class="card-text" set:html={project.text}></p>
           <ul class="fa-ul">
 { project.links.map((link) => (
-            <li><a href={link.url} class="btn btn-link"><span class="fa-li"><i class={link.icon}></i></span>{link.text}</a></li>
+            <li><a href={link.url}><span class="fa-li"><i class={link.icon}></i></span>{link.text}</a></li>
 )) }
           </ul>
           <div>
@@ -34,7 +33,7 @@ const project = featuredProject;
 { projects.map((project) => (
     <div class="card shadow-sm">
       <div class="card-body">
-        <div class="d-flex flex-row">
+        <div class="flex flex-row">
 { project.img ? (
           <img class="project-img" src={project.img} srcset={`${project.img2x} 2x`} alt={`${project.title} Icon`} />
 ) : (
@@ -45,7 +44,7 @@ const project = featuredProject;
             <p class="card-text" set:html={project.text}></p>
             <ul class="fa-ul">
 { project.links.map((link) => (
-              <li><a href={link.url} class="btn btn-link"><span class="fa-li"><i class={link.icon}></i></span>{link.text}</a></li>
+              <li><a href={link.url}><span class="fa-li"><i class={link.icon}></i></span>{link.text}</a></li>
 )) }
             </ul>
             <div>

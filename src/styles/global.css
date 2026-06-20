@@ -1,0 +1,708 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/* Design tokens — reproduce the former Bootstrap values for visual fidelity. */
+@theme {
+  --color-primary: #3498db;
+  --color-secondary: #34495e;
+  --color-light: #f8f9fa;
+  --color-dark: #212529;
+  --color-muted: rgba(33, 37, 41, .75);
+  --color-border: #dee2e6;
+
+  /* Match Bootstrap 5 breakpoints (576/768/992/1200/1400). */
+  --breakpoint-sm: 36rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 62rem;
+  --breakpoint-xl: 75rem;
+  --breakpoint-2xl: 87.5rem;
+
+  /* Bootstrap 5's native system font stack. */
+  --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-border);
+  }
+
+  body {
+    color: #212529;
+    background-color: #fff;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #2a7aaf;
+    text-decoration: underline;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  small {
+    font-size: .875em;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  h1, .h1 { font-size: 2.5rem; }
+  h2, .h2 { font-size: 2rem; }
+  h3, .h3 { font-size: 1.75rem; }
+  h4, .h4 { font-size: 1.5rem; }
+  h5, .h5 { font-size: 1.25rem; }
+  h6, .h6 { font-size: 1rem; }
+
+  @media (max-width: 767.98px) {
+    h1, .h1 { font-size: 2rem; }
+    h2, .h2 { font-size: 1.75rem; }
+    h3, .h3 { font-size: 1.5rem; }
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 { font-size: 1.25rem; }
+  }
+
+  @media (max-width: 575.98px) {
+    h1, .h1 { font-size: 1.75rem; }
+    h2, .h2 { font-size: 1.5rem; }
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 { font-size: 1.25rem; }
+  }
+}
+
+/*
+ * Semantic classes content reuses, plus a few Bootstrap-compatible utilities
+ * (rounded/img-fluid/small) the markup still references.
+ */
+@utility container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (width >= 36rem) { max-width: 540px; }
+  @media (width >= 48rem) { max-width: 720px; }
+  @media (width >= 62rem) { max-width: 960px; }
+  @media (width >= 75rem) { max-width: 1140px; }
+  @media (width >= 87.5rem) { max-width: 1320px; }
+}
+
+@utility lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+@utility blockquote {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+@utility small {
+  font-size: .875em;
+}
+
+@utility img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+@utility rounded {
+  border-radius: .25rem;
+}
+
+@utility rounded-circle {
+  border-radius: 50%;
+}
+
+@utility figure {
+  display: inline-block;
+}
+
+@utility figure-img {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  line-height: 1;
+}
+
+@utility figure-caption {
+  font-size: .875em;
+  color: var(--color-muted);
+}
+
+@utility ratio {
+  position: relative;
+  width: 100%;
+}
+
+@utility ratio-16x9 {
+  aspect-ratio: 16 / 9;
+}
+
+@utility badge {
+  display: inline-block;
+  padding: .25em .6em;
+  font-size: .75em;
+  font-weight: 400;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+}
+
+@utility rounded-pill {
+  border-radius: 50rem;
+}
+
+@utility text-bg-light {
+  color: #212529;
+  background-color: #f8f9fa;
+}
+
+@utility clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@layer components {
+  .ratio > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  /*
+   * Nav
+   */
+  .nav-link {
+    padding: .5rem 1rem;
+    color: rgba(0, 0, 0, .65);
+    text-decoration: none;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    text-decoration: none;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus,
+  .nav-link.active {
+    color: #34495e;
+  }
+
+  .nav-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    font-size: 1.25rem;
+  }
+
+  .nav-icon > svg {
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.25rem;
+    vertical-align: text-bottom;
+  }
+
+  .nav-icon > svg path {
+    fill: rgba(0, 0, 0, .65);
+  }
+
+  .nav-link:not(.nav-brand) .nav-text::after {
+    display: block;
+    margin-bottom: calc(-.5rem - .5rem);
+    padding-bottom: calc(.5rem + .5rem - 4px);
+    border-bottom: 4px solid #34495e;
+    content: '';
+  }
+
+  .nav-link:not(.nav-brand):not(.active) .nav-text::after {
+    transform: scaleX(0);
+    transition: transform .15s linear;
+  }
+
+  .nav-link:not(.nav-brand):not(.active):hover .nav-text::after,
+  .nav-link:not(.nav-brand):not(.active):focus .nav-text::after {
+    transform: scaleX(1);
+  }
+
+  /*
+   * Footer
+   */
+  footer .icon {
+    margin: 15px;
+  }
+
+  @media (max-width: 575.98px) {
+    footer .icon {
+      margin: 7.5px;
+    }
+  }
+
+  /*
+   * Icons
+   */
+  .icon > svg {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    vertical-align: middle;
+  }
+
+  .icon > svg path {
+    fill: #6c757d;
+  }
+
+  .icon-tobiha:hover > svg path,
+  .icon-tobiha:focus > svg path,
+  .icon-tobiha.active > svg path { fill: #34495e; }
+
+  .icon-mastodon:hover > svg path,
+  .icon-mastodon:focus > svg path { fill: #6364ff; }
+
+  .icon-twitter:hover > svg path,
+  .icon-twitter:focus > svg path { fill: #1da1f2; }
+
+  .icon-github:hover > svg path,
+  .icon-github:focus > svg path { fill: #333333; }
+
+  .icon-youtube:hover > svg path,
+  .icon-youtube:focus > svg path { fill: #ff0000; }
+
+  .icon-keybase:hover > svg path,
+  .icon-keybase:focus > svg path { fill: #33a0ff; }
+
+  .icon-rss:hover > svg path,
+  .icon-rss:focus > svg path { fill: #f26522; }
+
+  /*
+   * Animations — from https://github.com/IanLunn/Hover
+   */
+  @keyframes hvr-pop {
+    50% {
+      transform: scale(1.2);
+    }
+  }
+
+  .hvr-pop {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+  }
+
+  .hvr-pop:hover,
+  .hvr-pop:focus,
+  .hvr-pop:active {
+    animation-name: hvr-pop;
+    animation-duration: .15s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+
+  .fa-ul {
+    margin-left: 2em;
+  }
+
+  /*
+   * Cards — shared shell reused by the blog list, homepage, projects, and tweets.
+   */
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .175);
+    border-radius: .25rem;
+  }
+
+  .card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+  }
+
+  .card-title {
+    margin-bottom: .5rem;
+  }
+
+  .card-subtitle {
+    margin-top: -.25rem;
+    margin-bottom: 0;
+  }
+
+  .card-text:last-child {
+    margin-bottom: 0;
+  }
+
+  .card-img-top {
+    width: 100%;
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+  }
+
+  .card-featured {
+    margin-bottom: 1.25rem;
+  }
+
+  @media (max-width: 991.98px) {
+    .card-featured {
+      margin-bottom: .75rem;
+    }
+  }
+
+  .project-img {
+    height: 100px;
+    margin-right: 1.125rem;
+  }
+
+  @media (max-width: 767.98px) {
+    .project-img {
+      height: 50px;
+      margin-right: 1rem;
+    }
+  }
+
+  .card-columns {
+    column-count: 1;
+    column-gap: 1.25rem;
+  }
+
+  .card-columns > .card {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: .75rem;
+  }
+
+  @media (width >= 62rem) {
+    .card-columns {
+      column-count: 2;
+    }
+  }
+
+  /*
+   * Pagination
+   */
+  .pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+  }
+
+  .page-link {
+    position: relative;
+    display: block;
+    padding: .5rem .75rem;
+    color: #3498db;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    text-decoration: none;
+  }
+
+  .page-link:hover {
+    color: #2a7aaf;
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+  }
+
+  .page-item:not(:first-child) .page-link {
+    margin-left: -1px;
+  }
+
+  .page-item:first-child .page-link {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+  }
+
+  .page-item:last-child .page-link {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+  }
+
+  .page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #3498db;
+    border-color: #3498db;
+  }
+
+  .page-item.disabled .page-link {
+    color: rgba(33, 37, 41, .75);
+    pointer-events: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+  }
+
+  /*
+   * Tweets
+   */
+  .card-tweet {
+    line-height: 1.5;
+  }
+
+  .card-tweet a:hover {
+    text-decoration: none;
+  }
+
+  .card-tweet .card-title {
+    margin-bottom: .25rem;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .card-tweet .card-subtitle {
+    font-size: .875rem;
+    color: #6c757d;
+  }
+
+  .card-author:hover .card-title,
+  .card-author:focus .card-title {
+    color: #2a7aaf;
+  }
+
+  .card-author-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+
+  .card-icon-twitter > svg {
+    display: inline-block;
+    height: 1.25rem;
+    width: 1.25rem;
+    vertical-align: middle;
+  }
+
+  .card-icon-twitter > svg path {
+    fill: #1da1f2;
+  }
+
+  .card-media {
+    flex-direction: row;
+    font-size: .875rem;
+  }
+
+  .card-media:hover,
+  .card-media:focus {
+    background-color: #f8f9fa;
+  }
+
+  .card-media .card-body {
+    padding: 1rem;
+  }
+
+  .card-media .card-title {
+    font-weight: 700;
+  }
+
+  .card-media-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card-media-img {
+    max-width: 7.25rem;
+    max-height: 7.25rem;
+  }
+
+  @media (max-width: 575.98px) {
+    .card-media-img {
+      max-width: 4.625rem;
+      max-height: 4.625rem;
+    }
+  }
+
+  .card-media-text {
+    max-height: calc(3em * 1.5);
+    overflow: hidden;
+  }
+
+  @media (max-width: 575.98px) {
+    .card-media-text {
+      max-height: calc(1em * 1.5);
+    }
+  }
+
+  .link-muted {
+    color: #6c757d;
+  }
+
+  .link-muted:hover,
+  .link-muted:focus {
+    color: #2a7aaf;
+  }
+
+  /*
+   * Home
+   */
+  #home {
+    background: url("/assets/background.jpg") no-repeat center;
+    background-size: cover;
+    color: #fff;
+  }
+
+  @media (min-resolution: 1.3dppx) {
+    #home {
+      background-image: url("/assets/background@2x.jpg");
+    }
+  }
+
+  #home a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  #home a:hover {
+    color: #d9d9d9;
+    text-decoration: none;
+  }
+
+  .headings {
+    background: linear-gradient(transparent, rgba(52, 73, 94, .8));
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  }
+}
+
+/*
+ * Blog post bodies — override the typography plugin where the former Bootstrap
+ * look differs. These rules are intentionally unlayered: the plugin emits its
+ * `.prose` styles into the `utilities` layer, so a layered override would lose
+ * on cascade-layer order regardless of selector specificity.
+ */
+.prose {
+  --tw-prose-body: #212529;
+  --tw-prose-headings: #212529;
+  --tw-prose-bold: #212529;
+  --tw-prose-links: #3498db;
+  --tw-prose-counters: #212529;
+  --tw-prose-bullets: #212529;
+  --tw-prose-hr: #dee2e6;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6) {
+  margin-top: 0;
+  margin-bottom: .5rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.prose h1 { font-size: 2.5rem; }
+.prose h2 { font-size: 2rem; }
+.prose h3 { font-size: 1.75rem; }
+.prose h4 { font-size: 1.5rem; }
+.prose h5 { font-size: 1.25rem; }
+.prose h6 { font-size: 1rem; }
+
+@media (max-width: 767.98px) {
+  .prose h1 { font-size: 2rem; }
+  .prose h2 { font-size: 1.75rem; }
+  .prose h3 { font-size: 1.5rem; }
+  .prose h4,
+  .prose h5,
+  .prose h6 { font-size: 1.25rem; }
+}
+
+@media (max-width: 575.98px) {
+  .prose h1 { font-size: 1.75rem; }
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 { font-size: 1.5rem; }
+}
+
+.prose a {
+  text-decoration: none;
+}
+
+.prose a:hover {
+  color: #2a7aaf;
+  text-decoration: underline;
+}
+
+.prose blockquote {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: .75rem 1rem;
+  font-style: normal;
+  font-weight: 400;
+  border-left: 4px solid #dee2e6;
+}
+
+.prose blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.prose blockquote p:first-of-type::before,
+.prose blockquote p:last-of-type::after {
+  content: none;
+}
+
+.prose :where(code):not(pre code) {
+  color: #d63384;
+  font-size: .875em;
+  font-weight: inherit;
+  background-color: transparent;
+  padding: 0;
+}
+
+.prose :where(code):not(pre code)::before,
+.prose :where(code):not(pre code)::after {
+  content: none;
+}
+
+.prose pre {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-radius: .25rem;
+  padding: .75rem;
+  font-size: .875em;
+}
+
+.prose pre.astro-code {
+  background-color: #f8f9fa !important;
+}
+
+.prose kbd {
+  padding: .1875rem .375rem;
+  font-family: var(--font-mono);
+  font-size: .875em;
+  color: #fff;
+  background-color: #34495e;
+  border-radius: .25rem;
+  box-shadow: none;
+}
+
+.prose kbd kbd {
+  padding: 0;
+  font-size: 1em;
+  background-color: transparent;
+}

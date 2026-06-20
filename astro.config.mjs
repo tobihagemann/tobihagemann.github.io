@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import tailwindcss from '@tailwindcss/vite';
 import remarkGemoji from 'remark-gemoji';
 import rehypeExternalLinks from 'rehype-external-links';
 
@@ -17,14 +18,6 @@ export default defineConfig({
     shikiConfig: { theme: 'github-light' },
   },
   vite: {
-    css: {
-      preprocessorOptions: {
-        scss: {
-          loadPaths: ['node_modules'],
-          quietDeps: true,
-          silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'if-function', 'abs-percent'],
-        },
-      },
-    },
+    plugins: [tailwindcss()],
   },
 });

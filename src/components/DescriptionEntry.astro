@@ -1,0 +1,9 @@
+---
+interface Props {
+  term: string;
+}
+
+const { term } = Astro.props;
+---
+<dt class="mb-1 text-left font-bold lg:col-span-2 lg:text-right">{term}</dt>
+<dd class="mb-4 lg:col-span-10"><slot /></dd>
