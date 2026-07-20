@@ -26,6 +26,17 @@ export const featuredProject: Project = {
 
 export const projects: Project[] = [
   {
+    title: 'Viral oder Egal',
+    img: '/assets/projects/viraloderegal.png',
+    img2x: '/assets/projects/viraloderegal@2x.png',
+    text: 'Compete with your friends to guess the YouTube view count of short clips. This project is inspired by the segment <a href="https://www.youtube.com/watch?v=WZgXo-xfS5A&amp;list=PLHeo4sayeLKquxYPYoElpGcjPi-60sIkf" target="_blank" rel="noopener">Viral oder egal</a> on <a href="https://de.wikipedia.org/wiki/Neo_Magazin_Royale" target="_blank" rel="noopener">NEO MAGAZIN ROYALE</a>.',
+    links: [
+      { url: 'https://viraloderegal.de/', text: 'Play on viraloderegal.de', icon: 'fas fa-play-circle' },
+      { url: 'https://github.com/tobihagemann/viraloderegal', text: 'Source Code on GitHub', icon: 'fab fa-github' },
+    ],
+    tags: ['typescript', 'open source', 'vue', 'hono', 'postgres', 'websocket', 'browser', 'game'],
+  },
+  {
     title: 'Energiekuchen',
     img: '/assets/projects/energiekuchen.png',
     img2x: '/assets/projects/energiekuchen@2x.png',
@@ -34,7 +45,7 @@ export const projects: Project[] = [
       { url: 'http://energiekuchen.de/', text: 'energiekuchen.de', icon: 'fas fa-home' },
       { url: 'https://github.com/tobihagemann/energiekuchen', text: 'Source Code on GitHub', icon: 'fab fa-github' },
     ],
-    tags: ['typescript', 'react', 'next.js', 'tailwind css', 'chart.js', 'browser', 'utility'],
+    tags: ['typescript', 'open source', 'react', 'next.js', 'tailwind css', 'chart.js', 'browser', 'utility'],
   },
   {
     title: 'The Shit Is Hot',
@@ -45,7 +56,7 @@ export const projects: Project[] = [
       { url: 'https://shitishot.de/', text: 'Play on shitishot.de', icon: 'fas fa-play-circle' },
       { url: 'https://github.com/tobihagemann/shitishot', text: 'Source Code on GitHub', icon: 'fab fa-github' },
     ],
-    tags: ['typescript', 'angular', 'bootstrap', 'browser', 'game'],
+    tags: ['typescript', 'open source', 'angular', 'bootstrap', 'browser', 'game'],
   },
   {
     title: 'Spectrum Run',
