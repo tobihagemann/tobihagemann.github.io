@@ -36,6 +36,17 @@ export const projects: Project[] = [
     tags: ['typescript', 'vue', 'hono', 'postgres', 'yjs', 'crypto', 'tailwind css', 'browser', 'utility'],
   },
   {
+    title: 'Ducko',
+    img: '/assets/projects/ducko.png',
+    img2x: '/assets/projects/ducko@2x.png',
+    text: 'A modern macOS XMPP client and spiritual successor to <a href="https://adium.im/" target="_blank" rel="noopener">Adium</a>. Ducko carries forward its spirit: personality-driven, deeply customizable, and unapologetically Mac-native.',
+    links: [
+      { url: 'https://ducko.im/', text: 'ducko.im', icon: 'fas fa-home' },
+      { url: 'https://github.com/tobihagemann/ducko', text: 'Source Code on GitHub', icon: 'fab fa-github' },
+    ],
+    tags: ['swift', 'open source', 'swiftui', 'swiftdata', 'xmpp', 'macos', 'utility'],
+  },
+  {
     title: 'Viral oder Egal',
     img: '/assets/projects/viraloderegal.png',
     img2x: '/assets/projects/viraloderegal@2x.png',
