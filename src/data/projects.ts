@@ -47,6 +47,17 @@ export const projects: Project[] = [
     tags: ['swift', 'open source', 'swiftui', 'swiftdata', 'xmpp', 'macos', 'utility'],
   },
   {
+    title: 'Somnio',
+    img: '/assets/projects/somnio.png',
+    img2x: '/assets/projects/somnio@2x.png',
+    text: 'A browser-based mini-MMORPG with a 3D world. Somnio is a from-scratch port of an old REALbasic project, with a TypeScript gameplay server and a Three.js client.',
+    links: [
+      { url: 'https://somnio.tobiha.de/', text: 'Play on somnio.tobiha.de', icon: 'fas fa-play-circle' },
+      { url: 'https://github.com/tobihagemann/somnio', text: 'Source Code on GitHub', icon: 'fab fa-github' },
+    ],
+    tags: ['typescript', 'open source', 'three.js', 'hono', 'postgres', 'websocket', 'browser', 'game'],
+  },
+  {
     title: 'Viral oder Egal',
     img: '/assets/projects/viraloderegal.png',
     img2x: '/assets/projects/viraloderegal@2x.png',
@@ -91,26 +102,6 @@ export const projects: Project[] = [
     tags: ['objective-c', 'cocos2d', 'box2d', 'objectal', 'ios', 'game'],
   },
   {
-    title: 'Evolution XPert',
-    img: '/assets/projects/evolution-xpert.png',
-    img2x: '/assets/projects/evolution-xpert@2x.png',
-    text: 'Evolution XPert is an assistant app for Pokémon GO which helps players optimize their evolution XP gain. The app deduces the right amount of Pokémon of a particular kind to transfer in order to maximize the amount of possible evolutions.',
-    links: [
-      { url: 'https://apps.apple.com/app/id1135176839', text: 'Download on the App Store', icon: 'fab fa-app-store-ios' },
-    ],
-    tags: ['objective-c', 'pokemon go', 'ios', 'utility'],
-  },
-  {
-    title: 'tooPassword',
-    img: '/assets/projects/toopassword.png',
-    img2x: '/assets/projects/toopassword@2x.png',
-    text: "tooPassword for iOS offers read-only access to AgileBits' 1Password keychains. The project has been discontinued and is now fully open source.",
-    links: [
-      { url: 'https://github.com/setoLabs/tooPassword', text: 'Source Code on GitHub', icon: 'fab fa-github' },
-    ],
-    tags: ['objective-c', 'open source', 'crypto', '1password', 'ios', 'utility'],
-  },
-  {
     title: 'THLabel',
     img: '/assets/projects/thlabel.png',
     img2x: '/assets/projects/thlabel@2x.png',
@@ -119,23 +110,5 @@ export const projects: Project[] = [
       { url: 'https://github.com/tobihagemann/THLabel', text: 'Source Code on GitHub', icon: 'fab fa-github' },
     ],
     tags: ['objective-c', 'open source', 'uilabel', 'ios', 'library'],
-  },
-  {
-    title: 'sissy',
-    img: '/assets/projects/sissy.png',
-    img2x: '/assets/projects/sissy@2x.png',
-    text: 'Get notified when your grades for Hochschule Bonn-Rhein-Sieg (H-BRS) have updated. sissy is available for iOS and macOS, both run 100% locally.',
-    links: [
-      { url: 'https://github.com/tobihagemann/sissy', text: 'Source Code on GitHub', icon: 'fab fa-github' },
-    ],
-    tags: ['objective-c', 'open source', 'h-brs', 'macos', 'ios', 'utility'],
-  },
-  {
-    title: 'bonntermin',
-    text: "Automatically scrape Stadt Bonn's Dienstleistungszentrum appointment service for the earliest month that you can book. If the bookable month is the one you desire, you'll get notified by email.",
-    links: [
-      { url: 'https://github.com/tobihagemann/bonntermin', text: 'Source Code on GitHub', icon: 'fab fa-github' },
-    ],
-    tags: ['python', 'open source', 'scrapy', 'bonn', 'script', 'utility'],
   },
 ];
