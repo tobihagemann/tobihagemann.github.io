@@ -26,6 +26,16 @@ export const featuredProject: Project = {
 
 export const projects: Project[] = [
   {
+    title: 'PsyBoard',
+    img: '/assets/projects/psyboard.png',
+    img2x: '/assets/projects/psyboard@2x.png',
+    text: 'Interactive exercises for therapy, counseling, and coaching that you work through together with clients. Clients work at their own pace without an account, between sessions or live with you in the room. Names and content are end-to-end encrypted.',
+    links: [
+      { url: 'https://psyboard.net/', text: 'psyboard.net', icon: 'fas fa-home' },
+    ],
+    tags: ['typescript', 'vue', 'hono', 'postgres', 'yjs', 'crypto', 'tailwind css', 'browser', 'utility'],
+  },
+  {
     title: 'Viral oder Egal',
     img: '/assets/projects/viraloderegal.png',
     img2x: '/assets/projects/viraloderegal@2x.png',
