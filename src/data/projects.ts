@@ -13,18 +13,28 @@ export interface Project {
   tags: string[];
 }
 
-export const featuredProject: Project = {
-  title: 'Cryptomator',
-  img: '/assets/projects/cryptomator.png',
-  img2x: '/assets/projects/cryptomator@2x.png',
-  text: 'Cryptomator provides transparent, client-side encryption for your cloud. Protect your documents from unauthorized access. Cryptomator is free and open source software, so you can rest assured there are no backdoors.',
-  links: [
-    { url: 'https://cryptomator.org/', text: 'cryptomator.org', icon: 'fas fa-home' },
-  ],
-  tags: ['java', 'swift', 'objective-c', 'open source', 'crypto', 'fuse', 'dokany', 'webdav', 'cloud storage', 'desktop', 'ios', 'android', 'utility'],
-};
-
 export const projects: Project[] = [
+  {
+    title: 'Cryptomator',
+    img: '/assets/projects/cryptomator.png',
+    img2x: '/assets/projects/cryptomator@2x.png',
+    text: 'Client-side encryption for your cloud storage on all major platforms. Cryptomator encrypts your files before they leave your device, so only you can read them. It is free and open source, so anyone can verify there are no backdoors.',
+    links: [
+      { url: 'https://cryptomator.org/', text: 'cryptomator.org', icon: 'fas fa-home' },
+      { url: 'https://github.com/cryptomator/cryptomator', text: 'Source Code on GitHub', icon: 'fab fa-github' },
+    ],
+    tags: ['java', 'kotlin', 'swift', 'open source', 'fuse', 'webdav', 'crypto', 'cloud storage', 'desktop', 'ios', 'android', 'utility'],
+  },
+  {
+    title: 'Turbo',
+    img: '/assets/projects/turbo.png',
+    img2x: '/assets/projects/turbo@2x.png',
+    text: 'Reusable workflows for planning, building, reviewing, and shipping with Claude Code and Codex. Turbo packages a repeatable development process as Markdown skills that take a change from idea to pull request.',
+    links: [
+      { url: 'https://github.com/tobihagemann/turbo', text: 'Source Code on GitHub', icon: 'fab fa-github' },
+    ],
+    tags: ['markdown', 'open source', 'agent skills', 'claude code', 'codex', 'developer tools'],
+  },
   {
     title: 'PsyBoard',
     img: '/assets/projects/psyboard.png',
@@ -33,7 +43,7 @@ export const projects: Project[] = [
     links: [
       { url: 'https://psyboard.net/', text: 'psyboard.net', icon: 'fas fa-home' },
     ],
-    tags: ['typescript', 'vue', 'hono', 'postgres', 'yjs', 'crypto', 'tailwind css', 'browser', 'utility'],
+    tags: ['typescript', 'vue', 'tailwind css', 'yjs', 'hono', 'postgres', 'crypto', 'browser', 'utility'],
   },
   {
     title: 'Ducko',
@@ -66,7 +76,7 @@ export const projects: Project[] = [
       { url: 'https://viraloderegal.de/', text: 'Play on viraloderegal.de', icon: 'fas fa-play-circle' },
       { url: 'https://github.com/tobihagemann/viraloderegal', text: 'Source Code on GitHub', icon: 'fab fa-github' },
     ],
-    tags: ['typescript', 'open source', 'vue', 'hono', 'postgres', 'websocket', 'browser', 'game'],
+    tags: ['typescript', 'open source', 'vue', 'tailwind css', 'hono', 'postgres', 'websocket', 'browser', 'game'],
   },
   {
     title: 'Energiekuchen',
@@ -77,7 +87,7 @@ export const projects: Project[] = [
       { url: 'http://energiekuchen.de/', text: 'energiekuchen.de', icon: 'fas fa-home' },
       { url: 'https://github.com/tobihagemann/energiekuchen', text: 'Source Code on GitHub', icon: 'fab fa-github' },
     ],
-    tags: ['typescript', 'open source', 'react', 'next.js', 'tailwind css', 'chart.js', 'browser', 'utility'],
+    tags: ['typescript', 'open source', 'react', 'next.js', 'tailwind css', 'browser', 'utility'],
   },
   {
     title: 'The Shit Is Hot',

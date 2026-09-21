@@ -1,35 +1,9 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import { featuredProject, projects } from '../data/projects';
-
-const project = featuredProject;
+import { projects } from '../data/projects';
 ---
 <PageLayout title="Projects">
-  <div class="card card-featured shadow-sm">
-    <div class="card-body">
-      <div class="flex flex-row">
-{ project.img && (
-        <img class="project-img" src={project.img} srcset={`${project.img2x} 2x`} alt={`${project.title} Icon`} />
-) }
-        <div>
-          <h2 class="card-title h3 mb-2">{project.title}</h2>
-          <p class="card-text" set:html={project.text}></p>
-          <ul class="fa-ul">
-{ project.links.map((link) => (
-            <li><a href={link.url}><span class="fa-li"><i class={link.icon}></i></span>{link.text}</a></li>
-)) }
-          </ul>
-          <div>
-{ project.tags.map((tag) => (
-            <Fragment><span class="badge rounded-pill text-bg-light">{tag}</span>{' '}</Fragment>
-)) }
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="card-columns">
+  <div class="flex flex-col gap-3">
 { projects.map((project) => (
     <div class="card shadow-sm">
       <div class="card-body">

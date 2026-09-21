@@ -366,16 +366,6 @@
     border-top-right-radius: calc(.25rem - 1px);
   }
 
-  .card-featured {
-    margin-bottom: 1.25rem;
-  }
-
-  @media (max-width: 991.98px) {
-    .card-featured {
-      margin-bottom: .75rem;
-    }
-  }
-
   .project-img {
     height: 100px;
     margin-right: 1.125rem;
@@ -385,23 +375,6 @@
     .project-img {
       height: 50px;
       margin-right: 1rem;
-    }
-  }
-
-  .card-columns {
-    column-count: 1;
-    column-gap: 1.25rem;
-  }
-
-  .card-columns > .card {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: .75rem;
-  }
-
-  @media (width >= 62rem) {
-    .card-columns {
-      column-count: 2;
     }
   }
 
