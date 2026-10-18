@@ -12,6 +12,7 @@ export default defineConfig({
   site: 'https://tobiha.de',
   trailingSlash: 'always',
   build: { format: 'directory' },
+  compressHTML: true,
   integrations: [mdx(), sitemap()],
   markdown: {
     processor: unified({
