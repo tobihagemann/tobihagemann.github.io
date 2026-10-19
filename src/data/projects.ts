@@ -93,12 +93,12 @@ export const projects: Project[] = [
     title: 'The Shit Is Hot',
     img: '/assets/projects/shitishot.png',
     img2x: '/assets/projects/shitishot@2x.png',
-    text: 'You have to guess how many hits the shown terms generate in a search engine and place them in the correct order. This project is inspired by the segment <a href="https://www.youtube.com/watch?v=upm6SfYuGX4" target="_blank" rel="noopener">Der Scheiß ist heiß</a> on <a href="https://www.zdf.de/comedy/neo-magazin-mit-jan-boehmermann/" target="_blank" rel="noopener">NEO MAGAZIN ROYALE</a>.',
+    text: 'You have to guess how often the shown Wikipedia articles were viewed in the last 30 days and place them in the correct order. This project is inspired by the segment <a href="https://www.youtube.com/watch?v=upm6SfYuGX4" target="_blank" rel="noopener">Der Scheiß ist heiß</a> on <a href="https://www.zdf.de/comedy/neo-magazin-mit-jan-boehmermann/" target="_blank" rel="noopener">NEO MAGAZIN ROYALE</a>.',
     links: [
       { url: 'https://shitishot.de/', text: 'Play on shitishot.de', icon: 'fas fa-play-circle' },
       { url: 'https://github.com/tobihagemann/shitishot', text: 'Source Code on GitHub', icon: 'fab fa-github' },
     ],
-    tags: ['typescript', 'open source', 'angular', 'bootstrap', 'browser', 'game'],
+    tags: ['typescript', 'open source', 'vue', 'vite', 'tailwind css', 'browser', 'game'],
   },
   {
     title: 'Spectrum Run',
