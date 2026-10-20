@@ -33,7 +33,7 @@ pnpm preview
 ## Content Organization
 - **Blog Posts**: `src/content/blog/` (all `.mdx`), exposed via the `blog` content collection defined in `src/content.config.ts`
 - **Projects**: data in `src/data/projects.ts`, rendered by `src/pages/projects.astro`
-  - Icons live at `public/assets/projects/<slug>.png` (100px) and `<slug>@2x.png` (200px). After resizing, convert Display P3 sources to sRGB, then optimize losslessly with ImageOptim (`/Applications/ImageOptim.app/Contents/MacOS/ImageOptim <files>`); no lossy quantization
+  - Icons live at `public/assets/projects/<slug>.png` (100px) and `<slug>@2x.png` (200px). Downsample to 8-bit with `magick <source> -filter Lanczos -resize 200x200 -depth 8 <out>` (`100x100` for 1x). Keep the source's embedded color profile (e.g. Display P3), since browsers color-manage tagged PNGs. Optimize losslessly with ImageOptim's bundled zopflipng instead of the ImageOptim app, which strips the profile with its current settings: `/Applications/ImageOptim.app/Contents/Frameworks/ImageOptimGPL.framework/Versions/A/Resources/zopflipng -y -m --keepchunks=iCCP <in> <out>`. No lossy quantization
   - Tag order: language(s) → `open source` → frontend libs → backend → database → protocol/tech → domain → platform → category. Verify tags against the repo's actual languages and dependencies; accuracy beats fitting the shared category set
 - **Pages**: `src/pages/` (`.astro` routes and `.md` pages like `impressum.md`, `privacy.md`)
 
