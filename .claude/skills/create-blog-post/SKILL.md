@@ -34,7 +34,7 @@ The schema is defined in `src/content.config.ts`. Only `title` and `date` are re
 
 ## Lead Paragraph
 
-The first element after front matter is always a styled lead paragraph:
+The first content element, after the front matter and any component imports, is always a styled lead paragraph:
 
 ```html
 <p class="lead">Lead text here with [a link](https://example.com/) and _markdown_ support.</p>
@@ -52,6 +52,12 @@ The blog has a distinct personal voice. Before writing, read recent posts to mat
 - **Emoji**: Use sparingly, as gemoji shortcodes (`:wink:`, `:joy:`, `:tada:`) not Unicode. The `remark-gemoji` plugin converts them.
 - **Headers**: Use `##` for sections, `###` for subsections
 - **Code blocks**: Use fenced code blocks with language identifiers (Shiki highlights them with the `github-light` theme)
+- **Plain words**: Prefer plain words over metaphors and wordplay that need explaining, in headings too
+- **The author's voice**: Attribute to the author only feelings, opinions, and claims they have stated in their posts, talks, or notes, or in the conversation. When the author supplies wording, keep it and fix only grammar and typos
+
+## Facts
+
+Describe a project's current status (released, live, on the App Store) from its entry in `src/data/projects.ts` and its live site. Use git history for numbers and timelines; a commit message records an intermediate step, not where the project ended up. For posts that report the author's activity (contributions, commits, a year in review), follow [references/activity-stats.md](references/activity-stats.md).
 
 ## Links
 
@@ -67,77 +73,60 @@ Internal links (to other blog posts) use the permalink path, e.g. `[The Shit Is 
 
 ## Assets
 
-Asset files go in `public/assets/` with the naming pattern `YYYY-MM-DD-description.{png,jpg,svg,mp4}`. The date prefix matches the post date. Reference them with a root-absolute path: `/assets/YYYY-MM-DD-description.png` (no Jekyll `prepend: site.baseurl` filter).
+Asset files go in `public/assets/` with the naming pattern `YYYY-MM-DD-description.{png,jpg,webp,svg,mp4}`. The date prefix matches the post date. Reference them with a root-absolute path: `/assets/YYYY-MM-DD-description.png` (no Jekyll `prepend: site.baseurl` filter).
 
-For screenshots taken on a Retina display (@2x), set the displayed `max-width` to half the actual pixel width.
+For screenshots taken on a Retina display (@2x), set the displayed `maxWidth` to half the actual pixel width.
 
-## HTML Patterns
+Capture product screenshots fresh from the live site or app rather than reusing older assets from slides or past posts, which drift from the current design:
 
-These blocks are written as literal HTML/JSX inside the `.mdx` file. MDX requires self-closing tags (`<img ... />`, `<source ... />`).
+- Use light mode and a 2x device scale (`agent-browser set media light`, `agent-browser set viewport 1280 800 2`)
+- Keep one aspect ratio across screenshots shown together, e.g. a 1280x800 viewport for 16:10 tiles
+- Wait for intro animations to settle before capturing
+- When an empty state looks bare, seed demo data through the app's own storage or import, then clear it afterwards
+- For an app behind a login, open a headed browser (`agent-browser --session <name> --headed open <url>`), let the user log in and arrange the scene, and capture when they say so
+- Convert to `.webp` at about 1200px wide
 
-### Image with Caption
+## Post Components
 
-Set `max-width` on the `<figure>` (not the `<img>`) to half the pixel width for @2x screenshots. This ensures `img-fluid` scales correctly on mobile.
+Non-markdown blocks are the Astro components in `src/components/`, imported at the top of the `.mdx` file after the front matter. Each wraps itself in `not-prose`, and its caption slot still processes Markdown.
 
-```html
-<div class="text-center">
-  <figure class="figure" style="max-width: 835px;">
-    <img class="figure-img img-fluid rounded" src="/assets/YYYY-MM-DD-name.png" alt="Alt text"/>
-    <figcaption class="figure-caption">Caption text</figcaption>
-  </figure>
-</div>
+```mdx
+import Figure from '../../components/Figure.astro';
+import Embed from '../../components/Embed.astro';
+import Video from '../../components/Video.astro';
 ```
 
-### Image without Caption
+### Figure
 
-```html
-<div class="text-center">
-  <figure class="figure" style="max-width: 516px;">
-    <img class="figure-img img-fluid rounded" src="/assets/YYYY-MM-DD-name.png" alt="Alt text"/>
-  </figure>
-</div>
+`src` and `alt` are required. `maxWidth` takes a number (px) or a string such as `"100%"`. `rounded` defaults to `true`; set `rounded={false}` for SVGs and diagrams. `float` floats the figure right on wider screens, and `href` links the image. The slot is the caption. For an uncaptioned image, self-close the tag, since MDX rejects an unclosed one.
+
+```mdx
+<Figure src="/assets/YYYY-MM-DD-name.png" alt="Alt text" maxWidth="835">Caption with [a link](https://example.com/)</Figure>
+
+<Figure src="/assets/YYYY-MM-DD-diagram.svg" alt="Alt text" maxWidth="100%" rounded={false}>Caption text</Figure>
+
+<Figure src="/assets/YYYY-MM-DD-name.png" alt="Alt text" maxWidth="600" />
 ```
 
-### Full-Width Image (SVGs, Diagrams)
+### Embed (YouTube, Vimeo)
 
-No `rounded` class, no fixed `max-width`.
+Use the nocookie domain for YouTube. The slot is the caption.
 
-```html
-<div class="text-center">
-  <figure class="figure" style="max-width: 100%;">
-    <img class="figure-img img-fluid" src="/assets/YYYY-MM-DD-name.svg" alt="Alt text"/>
-    <figcaption class="figure-caption">Caption text</figcaption>
-  </figure>
-</div>
+```mdx
+<Embed src="https://www.youtube-nocookie.com/embed/VIDEO_ID" maxWidth="720">[Video Title](https://www.youtube.com/watch?v=VIDEO_ID) by Author</Embed>
 ```
 
-### Video
+### Video (self-hosted mp4)
 
-Add `mb-3` to the wrapper div if content follows.
-
-```html
-<div class="text-center mb-3">
-  <video controls loop poster="/assets/YYYY-MM-DD-name.png" preload="none" style="max-width: 800px;">
-    <source type="video/mp4" src="/assets/YYYY-MM-DD-name.mp4" />
-    Your browser does not support the video tag.
-  </video>
-</div>
+```mdx
+<Video src="/assets/YYYY-MM-DD-name.mp4" poster="/assets/YYYY-MM-DD-name.png" maxWidth="800" />
 ```
 
-### YouTube Embed
+### Tweet and Description Lists
 
-Use the nocookie domain. The caption is a `<p class="figure-caption">` with inline Markdown (MDX reprocesses it).
+For an embedded tweet card, follow the `<Tweet>` usage in `src/content/blog/2018-03-26-the-shit-is-hot.mdx`. For the year-review date/event lists, follow `<DescriptionList>`/`<DescriptionEntry term="...">` in `src/content/blog/2017-12-29-reviewing-2017.mdx`.
 
-```html
-<div class="text-center">
-  <div class="ratio ratio-16x9 mx-auto mb-2" style="max-width: 720px;">
-    <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID"></iframe>
-  </div>
-  <p class="figure-caption">[Video Title](https://www.youtube.com/watch?v=VIDEO_ID) by Author</p>
-</div>
-```
-
-### Keyboard Shortcuts
+## Keyboard Shortcuts
 
 ```html
 <kbd><kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>3</kbd></kbd>
