@@ -11,7 +11,7 @@ const cards = posts.map((post) => ({
   title: post.data.title,
   date: formatDate(post.data.date),
   url: permalink(post.id),
-  excerpt: getExcerpt(post, 100),
+  excerpt: getExcerpt(post, 320),
 }));
 ---
 <BaseLayout>
@@ -33,7 +33,7 @@ const cards = posts.map((post) => ({
         <div class="card-body flex flex-col">
           <h4 class="card-title mb-1 truncate">{card.title}</h4>
           <p class="small text-muted mb-2">{card.date}</p>
-          <p class="card-text">{card.excerpt}</p>
+          <p class="card-text line-clamp-3">{card.excerpt}</p>
           <a href={card.url} class="mt-auto">Continue reading <span class="sr-only">{card.title}</span></a>
         </div>
       </div>
